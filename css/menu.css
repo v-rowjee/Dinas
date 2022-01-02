@@ -1,0 +1,54 @@
+/* MENU PAGE */
+section {
+  width: 100%;
+  padding: 11vh 0;
+}
+section:nth-of-type(odd) {
+  background-color: var(--bg-dark);
+}
+
+#menu {
+  padding-top: 120px;
+  background-color: var(--bg-light);
+}
+
+#menu button {
+  padding: 0.5rem 3rem;
+  margin: 1rem 0rem;
+}
+
+/* CARD */
+.card {
+  background-color: var(--bg);
+  border: 1px solid var(--primary-dark);
+  overflow: hidden;
+}
+.card:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-light);
+}
+.card img {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+.card-title {
+  opacity: 1;
+}
+
+/* PILLS */
+#menu .nav-link {
+  color: var(--primary-light);
+  border: 1px solid var(--primary-light);
+}
+#menu .nav-link::after {
+  content: none;
+}
+#menu .active {
+  color: var(--bg);
+  background-color: var(--primary-light);
+}
+#menu .nav-link:hover {
+  color: var(--bg);
+  background-color: var(--primary-light);
+  opacity: 0.9;
+}

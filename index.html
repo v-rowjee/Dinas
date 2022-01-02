@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dina's</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/css/import/bootstrap.min.css" />
+
+    <!-- Font Awesome icon -->
+    <script
+      src="https://kit.fontawesome.com/2a2db1875f.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- My Styles -->
+    <link rel="stylesheet" href="/css/default.css" />
+    <link rel="stylesheet" href="/css/index.css" />
+  </head>
+
+  <body data-bs-spy="scroll" data-bs-target="#spy-target" data-bs-offset="100">
+    <!-- Nav Bar -->
+    <nav
+      class="
+        navbar navbar-expand-lg navbar-dark
+        bg-dark
+        fixed-top
+        my-md-3
+        mx-md-5
+        rounded
+      "
+    >
+      <div class="container">
+        <a class="navbar-brand">DINA'S</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0" id="spy-target">
+            <li class="nav-item active">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#menu">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#reservation">Reservation</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#online-order">Online Order</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact" role="button">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#reviews" role="button">Reviews</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                id="sign-in"
+                role="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasRight"
+                aria-controls="offcanvasRight"
+                >Sign In</a
+              >
+            </li>
+            <li>
+              <button
+                class="btn btn-primary text-dark"
+                id="join-us"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasRight"
+                aria-controls="offcanvasRight"
+              >
+                Join Us
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Offcanvas for Authentication -->
+    <div
+      class="offcanvas offcanvas-end p-2"
+      data-bs-scroll="true"
+      id="offcanvasRight"
+      aria-labelledby="offcanvasRightLabel"
+    >
+      <div class="offcanvas-header mx-2">
+        <h2 id="auth-title">Login</h2>
+        <button
+          type="button"
+          class="btn-close btn-close-white text-reset"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body mx-2">
+        <a
+          class="btn btn-outline-secondary mb-4"
+          href="<?php echo $client->createAuthUrl() ?>"
+        >
+          Sign in with google
+        </a>
+        <!-- LOGIN -->
+        <form id="login-form" action="./includes/login.php" method="$_POST">
+          <div class="mb-5">
+            <label for="username" class="form-label">Username</label>
+            <input
+              type="text"
+              class="form-control"
+              id="username"
+              name="username"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input
+              type="password"
+              class="form-control password"
+              id="password"
+              name="password"
+              required
+            />
+          </div>
+          <div class="mb-5 form-check">
+            <input type="checkbox" class="form-check-input" id="checkbox" />
+            <label class="form-check-label" for="checkbox">Show password</label>
+          </div>
+          <button
+            type="submit"
+            name="submit"
+            class="btn btn-primary text-dark px-5"
+          >
+            Login
+          </button>
+        </form>
+
+        <!-- REGISTER -->
+        <form id="register-form" action="register.php" method="$_POST">
+          <div class="mb-5">
+            <label for="username_" class="form-label">New Username</label>
+            <input
+              type="text"
+              class="form-control"
+              id="username_"
+              name="username_"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="password_" class="form-label">New Password</label>
+            <input
+              type="password"
+              class="form-control password"
+              id="password_"
+              name="password_"
+              required
+            />
+          </div>
+          <div class="mb-5 form-check">
+            <input type="checkbox" class="form-check-input" id="checkbox_" />
+            <label class="form-check-label" for="checkbox_"
+              >Show password</label
+            >
+          </div>
+          <button
+            type="submit"
+            name="submit"
+            class="btn btn-primary text-dark px-5"
+          >
+            Register
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Home Section -->
+    <section id="home">
+      <div class="container h-100">
+        <div class="row align-items-center">
+          <div class="col-xxs-6 col-sm-12 col-lg-7 py-5 bg-blur">
+            <h6><i>Mauritian Bistronomy</i></h6>
+            <h1 style="white-space: nowrap">Dina's Restaurant</h1>
+            <h5 class="mb-5">
+              Treat yourself to a moment of bistronomic delight at Dina's! The
+              gourmet bistro's specials feature the “Trust Me” six-course
+              discovery menu designed and regularly updated by the chef.
+              “Home-made” signature products like delis will also add to the
+              flavour of the experience.
+            </h5>
+
+            <a href="/pages/about.html" class="btn btn-outline-primary px-5"
+              >Read More</a
+            >
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col social-media">
+            <a href=""><i class="fa fa-facebook"></i></a>
+            <a href=""><i class="fa fa-google"></i></a>
+            <a href=""><i class="fa fa-instagram"></i></a>
+            <a href="" class="phone">
+              <i class="fa fa-phone-alt me-2"></i>
+              <p class="d-inline">(+230) 407-9000</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="divider">
+      <svg
+        preserveAspectRatio="none"
+        viewBox="0 0 1200 120"
+        xmlns="http://www.w3.org/2000/svg"
+        style="fill: #010d0d; width: 145%; height: 60px"
+      >
+        <path
+          d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z"
+          opacity=".25"
+        />
+        <path
+          d="M0 0v15.81c13 21.11 27.64 41.05 47.69 56.24C99.41 111.27 165 111 224.58 91.58c31.15-10.15 60.09-26.07 89.67-39.8 40.92-19 84.73-46 130.83-49.67 36.26-2.85 70.9 9.42 98.6 31.56 31.77 25.39 62.32 62 103.63 73 40.44 10.79 81.35-6.69 119.13-24.28s75.16-39 116.92-43.05c59.73-5.85 113.28 22.88 168.9 38.84 30.2 8.66 59 6.17 87.09-7.5 22.43-10.89 48-26.93 60.65-49.24V0z"
+          opacity=".5"
+        />
+        <path
+          d="M0 0v5.63C149.93 59 314.09 71.32 475.83 42.57c43-7.64 84.23-20.12 127.61-26.46 59-8.63 112.48 12.24 165.56 35.4C827.93 77.22 886 95.24 951.2 90c86.53-7 172.46-45.71 248.8-84.81V0z"
+        />
+      </svg>
+    </div>
+
+    <!-- Menu Section -->
+    <section id="menu">
+      <div class="container text-center">
+        <div class="row my-5 align-items-center justify-content-around">
+          <div class="col-12 col-md-6">
+            <img src="/images/farfalle.jpg" alt="" />
+          </div>
+          <div class="col-12 col-md-6">
+            <h1>- Starter -</h1>
+            <p>
+              Prawn ravioli Rs250, Mozzarella sticks Rs200, Salad Rs180, Seafood
+              gratin Rs300, Soup Rs230
+            </p>
+            <a href="/pages/menu.html">See more</a>
+          </div>
+        </div>
+
+        <div class="row my-5 align-items-center">
+          <div class="col-12 col-md-6">
+            <img src="/images/spaghetti.jpg" alt="" />
+          </div>
+          <div class="col-12 col-md-6">
+            <h1>- Pasta -</h1>
+            <p>
+              Spaghetti rs280, Penne rs200, Tagiatelle rs250, Pesto rs280,
+              Bolognese rs300, Ravioli rs380, Carbonara rs300, Lasagna rs320,
+              Ricotta rs400, Gnocchi rs300, Linguine rs200
+            </p>
+            <a href="/pages/menu.html">See More</a>
+          </div>
+        </div>
+
+        <div class="row my-5 align-items-center">
+          <div class="col-12 col-md-6">
+            <img src="/images/pizza.jpg" alt="" />
+          </div>
+          <div class="col-12 col-md-6">
+            <h1>- Pizza -</h1>
+            <p>
+              Margherita Rs280, Calzone Rs350, Hawaiian Rs300, Quatro Fromaggi
+              Rs400
+            </p>
+            <a href="/pages/menu.html">See More</a>
+          </div>
+        </div>
+
+        <div class="row my-5 align-items-center">
+          <div class="col-12 col-md-6">
+            <img src="/images/chestnut.jpg" alt="" />
+          </div>
+          <div class="col-12 col-md-6">
+            <h1>- Dessert -</h1>
+            <p>
+              Gelato, Biscotti, Tiramisu, Tart, Cookies, Triffle, Zabaglione
+            </p>
+            <a href="/pages/menu.html">Show All</a>
+          </div>
+        </div>
+
+        <div class="row my-5 align-items-center">
+          <div class="col-12 col-md-6">
+            <img src="/images/greentea.jpg" alt="" />
+          </div>
+          <div class="col-12 col-md-6">
+            <h1>- Drinks -</h1>
+            <p>Water, Wine, Tea, Juice, Cocktail</p>
+            <a href="/pages/menu.html">See More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section id="reservation">Reservation</section>
+
+    <!-- Order online -->
+    <section id="online-order">
+      <div class="container text-center">
+        <div class="row w-100 align-items-center g-5">
+          <div class="col-md-12 col-lg-6">
+            <h6 class="gold">We make your life easier !</h6>
+            <h1>Order Online</h1>
+            <p class="mb-5">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+              officia ab natus aperiam. Facilis, quam quod? Molestiae hic
+              tempore deleniti fugit, delectus.
+            </p>
+            <a
+              href="/pages/online_order.html"
+              class="btn btn-outline-primary px-5"
+              >Order now</a
+            >
+          </div>
+          <div class="col-md-12 col-lg-6">
+            <img src="/images/mockup.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container">
+        <div class="row justify-content-around align-items-center gy-5">
+          <div class="col-sm-12 col-lg-7 me-lg-5">
+            <h6 class="gold">Let's get in touch,</h6>
+            <h1>Contact Us</h1>
+            <form action="/config/send_mail.php" method="post">
+              <label for="name" class="form-label">Name</label>
+              <input
+                type="text"
+                name="name"
+                class="form-control mb-5"
+                id="name"
+                aria-describedby="name"
+                placeholder="e.g. Joe Crimson"
+              />
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control mb-5"
+                id="email"
+                name="email"
+                aria-describedby="email"
+                placeholder="e.g. email@example.com"
+              />
+              <label for="name" class="form-label">Message</label>
+              <textarea
+                class="form-control mb-5"
+                id="text-area"
+                rows="6"
+                name="message"
+                placeholder="Write your message here..."
+              ></textarea>
+              <button type="submit" class="btn btn-outline-primary px-5">
+                Send
+              </button>
+            </form>
+          </div>
+          <div class="col-sm-12 col-lg-2 h-100">
+            <div class="row gy-5">
+              <div class="col">
+                <h6 class="mb-4">Opening Hours</h6>
+                <h5 style="white-space: nowrap" class="mb-3">
+                  Monday - Saturday<br />7pm - 10pm
+                </h5>
+                <h5 class="mt-2">Sunday<br />5pm - 8pm</h5>
+              </div>
+
+              <div class="col">
+                <h6 class="mb-4">Location</h6>
+                <h5 style="white-space: nowrap">
+                  Beachcomber, <br />
+                  Le Morne, <br />
+                  Mauritius
+                </h5>
+              </div>
+
+              <div class="col">
+                <h6 class="mb-4">Support</h6>
+                <h5>dinas@restaurant.mu</h5>
+                <h5 style="white-space: nowrap">+230 407-9000</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section id="reviews">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-6 mx-auto">
+            <div
+              id="reviews-carousel"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <blockquote
+                    class="blockquote blockquote-custom p-5 m-5 shadow rounded"
+                  >
+                    <div class="blockquote-custom-icon bg-light shadow-sm">
+                      <i class="fa fa-quote-left text-dark"></i>
+                    </div>
+                    <p class="mb-0 mt-2 font-italic">
+                      "1Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea commodo
+                      <a href="#" class="text-info">@consequat</a>."
+                    </p>
+                    <hr />
+                    <footer class="blockquote-footer pt-4">
+                      Someone famous in
+                      <cite title="Source Title">Source Title</cite>
+                    </footer>
+                  </blockquote>
+                </div>
+                <div class="carousel-item">
+                  <blockquote
+                    class="
+                      blockquote blockquote-custom
+                      bg-dark
+                      p-5
+                      m-5
+                      shadow
+                      rounded
+                    "
+                  >
+                    <div class="blockquote-custom-icon bg-light shadow-sm">
+                      <i class="fa fa-quote-left text-dark"></i>
+                    </div>
+                    <p class="mb-0 mt-2 font-italic">
+                      "2Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea commodo
+                      <a href="#" class="text-info">@consequat</a>."
+                    </p>
+                    <hr />
+                    <footer class="blockquote-footer pt-4">
+                      Someone famous in
+                      <cite title="Source Title">Source Title</cite>
+                    </footer>
+                  </blockquote>
+                </div>
+                <div class="carousel-item">
+                  <blockquote
+                    class="
+                      blockquote blockquote-custom
+                      bg-dark
+                      p-5
+                      m-5
+                      shadow
+                      rounded
+                    "
+                  >
+                    <div class="blockquote-custom-icon bg-light shadow-sm">
+                      <i class="fa fa-quote-left text-dark"></i>
+                    </div>
+                    <p class="mb-0 mt-2 font-italic">
+                      "3Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea commodo
+                      <a href="#" class="text-info">@consequat</a>."
+                    </p>
+                    <hr />
+                    <footer class="blockquote-footer pt-4">
+                      Someone famous in
+                      <cite title="Source Title">Source Title</cite>
+                    </footer>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 align-self-center text-center">
+            <h6 class="gold">What people say about us,</h6>
+            <h1>Reviews</h1>
+            <p class="mb-5">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Necessitatibus dolore atque rerum vel! Explicabo molestias ipsam
+              tenetur, impedit quae iure.
+            </p>
+            <a href="/pages/reviews.html" class="btn btn-outline-primary px-5"
+              >Share your experience</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer></footer>
+
+    <!-- JQuery -->
+    <script src="/js/import/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap -->
+    <script
+      src="/js/import/bootstrap.bundle.min.js"
+      type="text/javascript"
+    ></script>
+    <!-- My script -->
+    <script src="/js/script.js"></script>
+  </body>
+</html>

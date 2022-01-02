@@ -1,0 +1,12 @@
+#story {
+  padding-bottom: 7.5vh;
+  background-image: url(/images/wine1.jpg);
+  background-position: top;
+}
+
+#chefs {
+  padding-bottom: 0;
+}
+#chefs img {
+  width: 80%;
+}

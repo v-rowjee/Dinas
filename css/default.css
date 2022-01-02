@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Italiana&family=Italianno&family=Prompt:wght@300;400&display=swap");
+
+/* VARIABLES */
+:root {
+  --bg: #222;
+  --bg-light: #2d2d2d;
+
+  --secondary-light: rgb(133, 146, 158);
+  --secondary-dark: rgba(27, 38, 49, 0.4);
+
+  --primary-dark: rgba(161, 142, 76, 0.5);
+  --primary-light: rgb(161, 142, 76);
+
+  --text: #f5f5f5;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* BODY */
+body {
+  background-color: var(--bg);
+  font-family: "prompt", sans-serif;
+  color: var(--text);
+}
+
+/* Anchor */
+a {
+  text-decoration: none;
+  color: var(--primary-light);
+}
+a:hover {
+  opacity: 0.75;
+  color: var(--primary-light);
+}
+
+/* Headings */
+h1 {
+  font-family: "Italianno", cursive;
+  font-size: calc(1.8rem + 5vw);
+  white-space: nowrap;
+}
+h2 {
+  opacity: 0.85;
+}
+h4 {
+  opacity: 0.7;
+}
+h5,
+label {
+  opacity: 0.6;
+}
+h6 {
+  opacity: 0.4;
+}
+p {
+  opacity: 0.34;
+}
+.gold {
+  color: var(--primary-light);
+  opacity: 0.7;
+}
+
+/* SECTION */
+section {
+  width: 100%;
+  padding: 15vh 0;
+}
+
+section:nth-of-type(odd) {
+  background-color: var(--bg-light);
+}
+
+/* NAVBAR */
+.nav-item {
+  margin: 0 12px;
+}
+.nav-link {
+  position: relative;
+  white-space: nowrap;
+}
+.nav-link:hover {
+  opacity: 1;
+}
+.nav-link:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--primary-light);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+.nav-link:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Auth */
+.offcanvas {
+  background-color: var(--bg);
+  color: var(--text);
+  width: 450px;
+}
+.sign-in-with {
+  padding: 5px 10px;
+  opacity: 0.8;
+  background-color: var(--primary-light);
+}
+
+/* Icons */
+.social-media a {
+  color: var(--text);
+  opacity: 0.5;
+}
+.social-media a:hover {
+  opacity: 1;
+}
+.social-media i {
+  font-size: 1.1rem;
+  margin-right: 1rem;
+  margin-left: 0.5rem;
+}
+.social-media .phone {
+  white-space: nowrap;
+  font-size: 0.9rem;
+}
+
+/* divider */
+.divider {
+  overflow: hidden;
+}
+
+/* Form control */
+.form-control {
+  background-color: transparent;
+  color: var(--text);
+  border-color: var(--text);
+}
+.form-control:focus {
+  background-color: transparent;
+  color: var(--text);
+  box-shadow: none;
+  border-color: grey;
+}
+
+/* everything below lg */
+@media (max-width: 992px) {
+  .bg-blur {
+    background-color: rgba(34, 34, 34, 0.6);
+    padding: 0 20px;
+    border-radius: 1rem;
+  }
+  .social-media {
+    background-color: rgba(34, 34, 34, 0.6);
+    padding: 0 20px;
+    border-radius: 1rem;
+  }
+}
