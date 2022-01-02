@@ -59,6 +59,9 @@ p {
   color: var(--primary-light);
   opacity: 0.7;
 }
+.nowrap {
+  white-space: nowrap;
+}
 
 /* SECTION */
 section {
@@ -122,10 +125,6 @@ section:nth-of-type(odd) {
   font-size: 1.1rem;
   margin-right: 1rem;
   margin-left: 0.5rem;
-}
-.social-media .phone {
-  white-space: nowrap;
-  font-size: 0.9rem;
 }
 
 /* divider */

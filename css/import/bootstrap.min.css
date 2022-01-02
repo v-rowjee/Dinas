@@ -5,8 +5,9 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :root {
-  --primary-dark: rgba(86, 8, 23, 0.5);
-  --primary-light: #dc143c;
+  --primary-dark: rgba(161, 142, 76, 0.5);
+  --primary-light: rgb(161, 142, 76);
+  --bg: #222;
 
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -2691,17 +2692,17 @@ fieldset:disabled .btn {
   opacity: 0.65;
 }
 .btn-primary {
-  color: #fff;
+  color: var(--bg);
   background-color: var(--primary-light);
 }
 .btn-primary:hover {
-  color: #fff;
+  color: var(--bg);
   background-color: var(--primary-light);
   opacity: 0.9;
 }
 .btn-check:focus + .btn-primary,
 .btn-primary:focus {
-  color: #fff;
+  color: var(--bg);
   background-color: var(--primary-light);
 }
 .btn-check:active + .btn-primary,
@@ -2997,7 +2998,7 @@ fieldset:disabled .btn {
   border-color: var(--primary-light);
 }
 .btn-outline-primary:hover {
-  color: #fff;
+  color: var(--bg);
   background-color: var(--primary-light);
   opacity: 0.9;
 }
