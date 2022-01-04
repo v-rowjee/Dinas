@@ -72,6 +72,8 @@
   background: url(/images/bg-table.jpg) bottom fixed;
   background-size: cover;
   height: 60vh;
+  border-top: 1rem solid var(--primary-light);
+  border-bottom: 1rem solid var(--primary-light);
 }
 
 /* RESERVATION */
@@ -85,7 +87,7 @@
   display: none;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 902px) {
   #reservation .ot-wide {
     display: none;
   }
@@ -95,5 +97,19 @@
 }
 
 /* review */
-#reviews blockquote {
+#reviews blockquote p {
+  font-size: 1rem;
+}
+.show-reviews-text a {
+  display: none;
+  color: var(--secondary-light);
+}
+
+@media (max-width: 468px) {
+  .blockquote-custom {
+    display: none;
+  }
+  .show-reviews-text a {
+    display: initial;
+  }
 }
