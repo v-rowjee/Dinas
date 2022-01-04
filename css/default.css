@@ -6,7 +6,7 @@
   --bg-light: #2d2d2d;
 
   --secondary-light: rgb(133, 146, 158);
-  --secondary-dark: rgba(27, 38, 49, 0.4);
+  --secondary-dark: rgba(27, 38, 49, 0.7);
 
   --primary-dark: rgba(161, 142, 76, 0.5);
   --primary-light: rgb(161, 142, 76);
@@ -29,7 +29,7 @@ a {
   color: var(--primary-light);
 }
 a:hover {
-  opacity: 0.75;
+  opacity: 0.9;
   color: var(--primary-light);
 }
 
@@ -67,6 +67,7 @@ p {
 section {
   width: 100%;
   padding: 15vh 0;
+  overflow-x: hidden;
 }
 
 section:nth-of-type(odd) {

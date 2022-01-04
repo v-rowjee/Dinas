@@ -43,12 +43,6 @@
   box-shadow: -20vh 0px 0px 30px var(--secondary-dark);
 }
 
-@media (max-width: 420px) {
-  #menu img {
-    display: none;
-  }
-}
-
 /* ONLINE ORDER */
 #online-order img {
   width: 100%;
@@ -59,7 +53,7 @@
 /* REVIEW */
 .blockquote-custom {
   position: relative;
-  background-color: var(--secondary-dark);
+  background-color: var(--bg-light);
 }
 
 .blockquote-custom-icon {
@@ -74,7 +68,32 @@
   left: 50px;
 }
 
+.restaurant-divider {
+  background: url(/images/bg-table.jpg) bottom fixed;
+  background-size: cover;
+  height: 60vh;
+}
+
 /* RESERVATION */
 #reservation {
-  padding-bottom: 9vh;
+  padding-bottom: 0;
+}
+#reservation img {
+  width: 100%;
+}
+#reservation .ot-button {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  #reservation .ot-wide {
+    display: none;
+  }
+  #reservation .ot-button {
+    display: initial;
+  }
+}
+
+/* review */
+#reviews blockquote {
 }

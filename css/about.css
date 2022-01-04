@@ -3,10 +3,28 @@
   background-image: url(/images/wine1.jpg);
   background-position: top;
 }
+#story h1 {
+  font-size: 25vh;
+}
 
 #chefs {
   padding-bottom: 0;
 }
 #chefs img {
   width: 80%;
+}
+
+#location iframe {
+  height: 50vh;
+  width: 100%;
+}
+
+#interior img {
+  height: 50vh;
+  object-fit: contain;
+}
+
+#interior span {
+  margin-right: -10vw;
+  background-color: var(--bg);
 }
