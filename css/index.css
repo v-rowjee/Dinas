@@ -69,11 +69,17 @@
 }
 
 .restaurant-divider {
-  background: url(/images/bg-table.jpg) bottom fixed;
+  background: url(/images/bg-table.jpg) center fixed;
   background-size: cover;
   height: 60vh;
-  border-top: 1rem solid var(--primary-light);
-  border-bottom: 1rem solid var(--primary-light);
+}
+video {
+  height: 70vh;
+  width: 100%;
+  object-fit: cover;
+  object-position: bottom;
+  margin-bottom: -10px;
+  z-index: 1;
 }
 
 /* RESERVATION */

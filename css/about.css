@@ -1,7 +1,8 @@
 #story {
-  padding-bottom: 7.5vh;
   background-image: url(/images/wine1.jpg);
   background-position: top;
+
+  padding-top: 125px;
 }
 #story h1 {
   font-size: 25vh;
