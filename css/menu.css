@@ -8,8 +8,13 @@ section:nth-of-type(odd) {
 }
 
 #menu {
-  padding-top: 120px;
-  background-color: var(--bg-light);
+  background-image: url(/images/wine1.jpg);
+  background-position: top;
+
+  padding-top: 125px;
+}
+#menu h1 {
+  font-size: 25vh;
 }
 
 #menu button {
