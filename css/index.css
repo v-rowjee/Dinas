@@ -73,14 +73,14 @@
   background-size: cover;
   height: 60vh;
 }
-video {
+/* video {
   height: 70vh;
   width: 100%;
   object-fit: cover;
   object-position: bottom;
   margin-bottom: -10px;
   z-index: 1;
-}
+} */
 
 /* RESERVATION */
 #reservation {
