@@ -1,6 +1,6 @@
 /* HOME */
 #home {
-  background: url(/images/bg-fork.jpg) no-repeat;
+  background: url(../images/bg-fork.jpg) no-repeat;
   background-size: cover;
   background-position: 85%;
   height: 100vh;
@@ -69,7 +69,7 @@
 }
 
 .restaurant-divider {
-  background: url(/images/bg-table.jpg) center fixed;
+  background: url(../images/bg-table.jpg) center fixed;
   background-size: cover;
   height: 60vh;
 }
