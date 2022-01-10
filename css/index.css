@@ -66,6 +66,7 @@
   position: absolute;
   top: -25px;
   left: 50px;
+  background-color: var(--text);
 }
 
 .restaurant-divider {
