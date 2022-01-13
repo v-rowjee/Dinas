@@ -8,7 +8,7 @@ section:nth-of-type(odd) {
 }
 
 #menu {
-  background-image: url(/images/wine1.jpg);
+  background-image: url(../images/wine1.jpg);
   background-position: top;
 
   padding-top: 125px;
