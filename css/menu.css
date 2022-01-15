@@ -13,9 +13,6 @@ section:nth-of-type(odd) {
 
   padding-top: 125px;
 }
-#menu h1 {
-  font-size: 25vh;
-}
 
 #menu button {
   padding: 0.5rem 3rem;

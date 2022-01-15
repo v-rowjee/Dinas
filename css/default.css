@@ -115,7 +115,7 @@ a:hover {
 /* Headings */
 h1 {
   font-family: "Italianno", cursive;
-  font-size: calc(1.8rem + 5vw);
+  font-size: calc(1.8rem + 6vw);
   white-space: nowrap;
 }
 h2 {
