@@ -1,4 +1,4 @@
-// Authentication
+// AUTHENTICATION
 $(document).ready(function () {
   // open register
   $("#join-us").click(function () {

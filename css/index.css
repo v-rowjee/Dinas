@@ -33,6 +33,7 @@
   object-position: center;
 
   transition: ease-out 500ms;
+  transition-delay: 0ms;
 }
 #menu a {
   padding-bottom: 10vh;
@@ -52,6 +53,7 @@
 #menu .row:hover img {
   transform: scale(1.1);
   transition: ease-in 500ms;
+  transition-delay: 0ms;
 }
 
 /* ONLINE ORDER */
