@@ -14,16 +14,17 @@
 }
 
 /* MENU */
+#menu .row {
+  padding: 5vh 0;
+}
 #menu .row:nth-child(even) {
   flex-direction: row-reverse !important;
 }
-#menu .row:nth-child(even) a {
-  color: var(--primary-light);
-  margin-bottom: 5vh;
-}
-#menu .row:nth-child(odd) a {
+#menu .row a {
   color: var(--secondary-light);
-  margin-bottom: 5vh;
+}
+#menu .row:hover a {
+  color: var(--primary-light);
 }
 #menu img {
   width: 72%;
@@ -31,16 +32,26 @@
   object-fit: cover;
   object-position: center;
 
-  margin: 2vh auto;
+  transition: ease-out 500ms;
 }
 #menu a {
   padding-bottom: 10vh;
 }
 #menu .row:nth-child(even) img {
-  box-shadow: 20vh 0px 0px 30px var(--primary-dark);
+  box-shadow: -20vh 0px 0px 30px var(--secondary-dark);
 }
 #menu .row:nth-child(odd) img {
-  box-shadow: -20vh 0px 0px 30px var(--secondary-dark);
+  box-shadow: 20vh 0px 0px 30px var(--secondary-dark);
+}
+#menu .row:nth-child(even):hover img {
+  box-shadow: 20vh 0px 0px 30px var(--primary-dark);
+}
+#menu .row:nth-child(odd):hover img {
+  box-shadow: -20vh 0px 0px 30px var(--primary-dark);
+}
+#menu .row:hover img {
+  transform: scale(1.1);
+  transition: ease-in 500ms;
 }
 
 /* ONLINE ORDER */
