@@ -117,6 +117,22 @@
   }
 }
 
+/* Contact */
+#contact {
+  padding-bottom: 20vh;
+}
+
+/* About us divider */
+#about-us-divider img {
+  height: 75vh;
+  object-fit: cover;
+}
+
+/* About Us */
+#about-us {
+  padding-bottom: 0;
+}
+
 /* review */
 #reviews blockquote p {
   font-size: 1rem;
