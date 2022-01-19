@@ -81,6 +81,8 @@ a:hover {
 .btn-outline-primary {
   color: var(--primary-light);
   border-color: var(--primary-light);
+  padding-right: 3rem;
+  padding-left: 3rem;
 }
 .btn-outline-primary:hover {
   color: var(--bg);

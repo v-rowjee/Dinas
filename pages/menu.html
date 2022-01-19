@@ -187,13 +187,23 @@
     <section id="menu">
       <div class="container">
         <h1 class="text-center pb-5">MENU</h1>
-        <ul
-          class="nav nav-pills row row-cols-auto justify-content-around mx-auto g-3"
-          role="tablist"
-        >
+        <ul class="nav nav-pills justify-content-around g-3" role="tablist">
           <li class="nav-item" role="presentation">
             <button
               class="nav-link active"
+              data-bs-toggle="pill"
+              data-bs-target="#all"
+              type="button"
+              role="tab"
+              aria-controls="all"
+              aria-selected="true"
+            >
+              View All
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
               data-bs-toggle="pill"
               data-bs-target="#starter"
               type="button"
@@ -283,7 +293,104 @@
     </div>
 
     <main class="tab-content">
-      <section id="starter" class="tab-pane fade show active" role="tabpanel">
+
+      <section id="all" class="tab-pane fade show active" role="tabpanel">
+        <div class="container">
+          <div class="row g-5">
+            <div class="col-sm-6 col-lg-4">
+              <div class="card">
+                <img
+                  src="../images/macaroni.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Special title treatment</h5>
+                  <p class="card-text">
+                    With supporting text below as a natural lead-in to
+                    additional content.
+                  </p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-6 col-lg-4">
+              <div class="card">
+                <img
+                  src="../images/lasagna.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Special title treatment</h5>
+                  <p class="card-text">
+                    With supporting text below as a natural lead-in to
+                    additional content.
+                  </p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-6 col-lg-4">
+              <div class="card">
+                <img
+                  src="../images/ribollita.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Special title treatment</h5>
+                  <p class="card-text">
+                    With supporting text below as a natural lead-in to
+                    additional content.
+                  </p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-6 col-lg-4">
+              <div class="card">
+                <img
+                  src="../images/ravioli.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Special title treatment</h5>
+                  <p class="card-text">
+                    With supporting text below as a natural lead-in to
+                    additional content.
+                  </p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-6 col-lg-4">
+              <div class="card">
+                <img
+                  src="../images/spaghetti.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Special title treatment</h5>
+                  <p class="card-text">
+                    With supporting text below as a natural lead-in to
+                    additional content.
+                  </p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="starter" class="tab-pane fade" role="tabpanel">
         <div class="container">
           <div class="row g-5">
             <div class="col-sm-6 col-lg-4">
