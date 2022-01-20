@@ -16,6 +16,31 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* Scroll bar */
+*::-webkit-scrollbar {
+  width: 5px; /* width of the entire scrollbar */
+}
+*::-webkit-scrollbar-track {
+  background: #000; /* color of the tracking area */
+}
+*::-webkit-scrollbar-thumb {
+  background-color: var(--text); /* color of the scroll thumb */
+  opacity: 0.5;
+}
+
+/* Input number arrows */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 /* BODY */
 body {
   background-color: var(--bg);
@@ -114,6 +139,26 @@ a:hover {
   color: var(--primary-light);
   background-color: transparent;
   opacity: 0.5;
+}
+
+/* Checkbox */
+.form-check-input:focus {
+  border-color: var(--primary-light);
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem transparent;
+}
+.form-check-input:checked {
+  background-color: var(--primary-light);
+  border-color: var(--primary-dark);
+}
+.form-check-input:checked {
+  background-color: var(--primary-light);
+  border-color: var(--primary-dark);
+}
+.form-check-input[type="checkbox"]:indeterminate {
+  background-color: var(--primary-light);
+  border-color: var(--primary-dark);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e");
 }
 
 /* Headings */

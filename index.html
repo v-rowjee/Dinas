@@ -118,7 +118,7 @@
           Sign in with google
         </a>
         <!-- LOGIN -->
-        <form id="login-form" action="./includes/login.php" method="$_POST">
+        <form id="login-form" action="./includes/login.php" method="POST">
           <div class="mb-5">
             <label for="username" class="form-label">Username</label>
             <input
@@ -153,9 +153,9 @@
         </form>
 
         <!-- REGISTER -->
-        <form id="register-form" action="register.php" method="$_POST">
+        <form id="register-form" action="register.php" method="POST">
           <div class="mb-5">
-            <label for="username_" class="form-label">New Username</label>
+            <label for="username_" class="form-label">Username</label>
             <input
               type="text"
               class="form-control"
@@ -165,7 +165,7 @@
             />
           </div>
           <div class="mb-3">
-            <label for="password_" class="form-label">New Password</label>
+            <label for="password_" class="form-label">Password</label>
             <input
               type="password"
               class="form-control password"
@@ -180,6 +180,40 @@
               >Show password</label
             >
           </div>
+
+          <div class="mb-5">
+            <label for="name_" class="form-label">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name_"
+              name="name_"
+              required
+            />
+          </div>
+
+          <div class="mb-5">
+            <label for="email_" class="form-label">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email_"
+              name="email_"
+              required
+            />
+          </div>
+
+          <div class="mb-5">
+            <label for="phone_" class="form-label">Mobile Phone</label>
+            <input
+              type="number"
+              class="form-control"
+              id="phone_"
+              name="phone_"
+              
+            />
+          </div>
+          
           <button
             type="submit"
             name="submit"
@@ -204,8 +238,8 @@
               discovery menu designed and regularly updated by the chef.
             </h5>
 
-            <a href="pages/about.html" class="btn btn-outline-primary px-5"
-              >Read More</a
+            <a href="#reservation" class="btn btn-outline-primary"
+              >Reserve A Table</a
             >
           </div>
         </div>

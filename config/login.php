@@ -1,7 +1,7 @@
 <?php
 $conn = mysqli_connect("localhost", "root", "", "web_login") or die("Failed to connect to db");
 
-if (isset($_POST['submit'])) {
+if ($_SERVER['REQUEST_METHOD']=='POST' {
     $username = $_POST['username'];
     $password = $_POST['password'];
 

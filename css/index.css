@@ -3,10 +3,10 @@
   background: url(../images/bg-fork.jpg) no-repeat;
   background-size: cover;
   background-position: 85%;
-  height: 100vh;
+  height: 95vh;
 }
 #home .row:nth-of-type(1) {
-  height: 80vh;
+  height: 75vh;
 }
 #home h6 {
   color: var(--primary-light);
