@@ -205,7 +205,7 @@ section:nth-of-type(odd) {
 
 /* NAVBAR */
 .nav-item {
-  margin: 0 12px;
+  margin: 0 1vh;
 }
 .nav-link {
   position: relative;
@@ -231,7 +231,7 @@ section:nth-of-type(odd) {
   transform-origin: bottom left;
 }
 .navbar-brand img {
-  height: 2.5rem;
+  height: 2rem;
   filter: invert(1);
 }
 
@@ -277,18 +277,4 @@ section:nth-of-type(odd) {
   color: var(--text);
   box-shadow: none;
   border-color: grey;
-}
-
-/* everything below lg */
-@media (max-width: 992px) {
-  .bg-blur {
-    background-color: rgba(34, 34, 34, 0.6);
-    padding: 0 20px;
-    border-radius: 1rem;
-  }
-  .social-media {
-    background-color: rgba(34, 34, 34, 0.6);
-    padding: 0 20px;
-    border-radius: 1rem;
-  }
 }
