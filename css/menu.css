@@ -37,6 +37,13 @@ section:nth-of-type(odd) {
 .card-title {
   opacity: 1;
 }
+.card-body .btn {
+  float: right;
+}
+.card-body .price {
+  display: inline-flex;
+  margin-top: 0.5rem;
+}
 
 /* PILLS */
 #menu .nav-link {
