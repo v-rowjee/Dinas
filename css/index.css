@@ -121,9 +121,10 @@ video {
 #reservation {
   overflow: visible;
 }
-#reservation input,
+#reservation input:not(.btn),
 .form-select {
   border: 1px solid var(--primary-dark);
+  background-color: var(--bg);
 }
 #reservation .form-select {
   background-color: var(--bg);

@@ -15,6 +15,9 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
 
+    <!-- JQueries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <!-- My Styles -->
     <link rel="stylesheet" href="css/default.css" />
     <link rel="stylesheet" href="css/index.css" />
@@ -438,22 +441,30 @@
         <form action="" method="post">
           <div class="row justify-content-center g-3 mx-5">
             <div class="col-12 col-md-3">
-              <input type="number" class="form-control" placeholder="People" />
+              <input
+                type="number"
+                class="form-control"
+                placeholder="People"
+                required
+              />
             </div>
             <div class="col-12 col-md-3">
               <input
                 type="date"
                 id="datepicker"
                 class="form-control datepicker"
+                required
               />
             </div>
             <div class="col-12 col-md-3">
               <select class="form-select">
                 <option selected>Time Available</option>
-                <option value="1" disabled>7pm</option>
-                <option value="2">8pm</option>
-                <option value="3">9pm</option>
-                <option value="4">10pm</option>
+                <option value="1">5pm</option>
+                <option value="2">6pm</option>
+                <option value="3" disabled>7pm</option>
+                <option value="4">8pm</option>
+                <option value="5">9pm</option>
+                <option value="6">10pm</option>
               </select>
             </div>
             <div class="col-12 col-md-3">
@@ -463,6 +474,9 @@
                 value="Reserve Now"
               />
             </div>
+          </div>
+          <div class="row">
+            <p class="error">*Fill the required input</p>
           </div>
         </form>
 
@@ -541,6 +555,7 @@
                 name="email"
                 aria-describedby="email"
                 placeholder="e.g. email@example.com"
+                required
               />
               <label for="name" class="form-label">Message</label>
               <textarea
@@ -549,6 +564,7 @@
                 rows="6"
                 name="message"
                 placeholder="Write your message here..."
+                required
               ></textarea>
               <button type="submit" class="btn btn-outline-primary px-5">
                 Send
@@ -559,9 +575,7 @@
             <div class="row gy-5">
               <div class="col">
                 <h6 class="mb-4">Opening Hours</h6>
-                <h5 style="white-space: nowrap" class="mb-3">
-                  Monday - Saturday<br />7pm - 10pm
-                </h5>
+                <h5 class="mb-3 nowrap">Monday - Saturday<br />5pm - 10pm</h5>
                 <h5 class="mt-2">Sunday<br />5pm - 8pm</h5>
               </div>
 
@@ -853,7 +867,7 @@
     <footer></footer>
 
     <!-- JQuery -->
-    <script src="js/jquery-3.6.0.min.js"></script>
+    <!-- <script src="js/jquery-3.6.0.min.js"></script> -->
     <!-- Bootstrap -->
     <script
       src="bootstrap/bootstrap.bundle.min.js"

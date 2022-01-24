@@ -34,9 +34,5 @@ $(document).ready(function () {
 });
 
 // Date picker
-$(document).ready(function(){
-  $('.datepicker').datepicker({
-    minDate: new Date(),
-    format: 'dd/mm/yyyy',
-  });
-});
+let today = new Date().toISOString().substr(0, 10);
+document.querySelector("#datepicker").value = today;
