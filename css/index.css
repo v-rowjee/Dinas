@@ -115,14 +115,29 @@ video {
 }
 
 /* RESERVATION */
-#reservation {
-  padding-bottom: 0;
-}
-#reservation img {
-  width: 100%;
-}
-#reservation .ot-button {
+/* #reservation .ot-button {
   display: none;
+} */
+#reservation {
+  overflow: visible;
+}
+#reservation input,
+.form-select {
+  border: 1px solid var(--primary-dark);
+}
+#reservation .form-select {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* Input number arrows */
+/* Chrome, Safari, Edge, Opera */
+#reservation input::-webkit-calendar-picker-indicator {
+  filter: invert(0.3);
+}
+#reservation input::-webkit-outer-spin-button,
+#reservation input::-webkit-inner-spin-button {
+  opacity: 0.2;
 }
 
 @media (max-width: 902px) {

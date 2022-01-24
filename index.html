@@ -97,7 +97,7 @@
     <!-- Offcanvas for Authentication -->
     <div
       class="offcanvas offcanvas-end p-2"
-      data-bs-scroll="true"
+      data-bs-scroll="false"
       id="offcanvasRight"
       aria-labelledby="offcanvasRightLabel"
     >
@@ -359,7 +359,7 @@
     </section>
 
     <!-- <div class="restaurant-divider"></div> -->
-    <section class="video">
+    <div class="video">
       <div class="divider">
         <div style="overflow: hidden">
           <svg
@@ -371,6 +371,7 @@
               width: 139%;
               height: 60px;
               transform: rotate(180deg);
+              background-color: rgb(34, 34, 34);
             "
           >
             <path
@@ -395,7 +396,12 @@
           preserveAspectRatio="none"
           viewBox="0 0 1200 120"
           xmlns="http://www.w3.org/2000/svg"
-          style="fill: #4b443b; width: 145%; height: 60px"
+          style="
+            fill: #4b443b;
+            width: 145%;
+            height: 60px;
+            background-color: rgba(50, 51, 51, 0.4);
+          "
         >
           <path
             d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z"
@@ -410,11 +416,11 @@
           />
         </svg>
       </div>
-    </section>
+    </div>
 
     <!-- Reservation Section -->
     <section id="reservation">
-      <div class="container-fluid text-center">
+      <div class="container text-center">
         <div class="row justify-content-center align-items-center mb-5">
           <div class="col-8">
             <h6 class="gold">Book a table now.</h6>
@@ -428,7 +434,40 @@
           </div>
         </div>
 
-        <div class="row justify-content-center">
+        <!-- custom reservation -->
+        <form action="" method="post">
+          <div class="row justify-content-center g-3 mx-5">
+            <div class="col-12 col-md-3">
+              <input type="number" class="form-control" placeholder="People" />
+            </div>
+            <div class="col-12 col-md-3">
+              <input
+                type="date"
+                id="datepicker"
+                class="form-control datepicker"
+              />
+            </div>
+            <div class="col-12 col-md-3">
+              <select class="form-select">
+                <option selected>Time Available</option>
+                <option value="1" disabled>7pm</option>
+                <option value="2">8pm</option>
+                <option value="3">9pm</option>
+                <option value="4">10pm</option>
+              </select>
+            </div>
+            <div class="col-12 col-md-3">
+              <input
+                type="submit"
+                class="btn btn-primary w-100"
+                value="Reserve Now"
+              />
+            </div>
+          </div>
+        </form>
+
+        <!-- OpenTable API -->
+        <!-- <div class="row justify-content-center">
           <div
             class="ot-wide"
             style="filter: hue-rotate(240deg) invert(0.9) saturate(0.8)"
@@ -448,7 +487,7 @@
               src="//www.opentable.com/widget/reservation/loader?rid=205668&type=button&theme=wide&iframe=true&domain=com&lang=en-US&newtab=false&ot_source=Restaurant%20website"
             ></script>
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
 
@@ -559,6 +598,7 @@
               width: 139%;
               height: 60px;
               transform: rotate(180deg);
+              background-color: rgba(50, 51, 51, 0.4);
             "
           >
             <path
@@ -658,7 +698,7 @@
             fill: #4b443b;
             width: 145%;
             height: 60px;
-            background-color: #282828;
+            background-color: transparent;
           "
         >
           <path
@@ -704,7 +744,7 @@
     <!-- Reviews -->
     <section id="reviews">
       <div class="container text-center">
-        <div class="row g-4">
+        <div class="row flex-row-reverse g-4">
           <div class="col-lg-6 mx-auto order-2 order-lg-1">
             <!-- <div
               id="reviews-carousel"
@@ -813,7 +853,7 @@
     <footer></footer>
 
     <!-- JQuery -->
-    <script src="js/import/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
     <!-- Bootstrap -->
     <script
       src="bootstrap/bootstrap.bundle.min.js"

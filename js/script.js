@@ -32,3 +32,11 @@ $(document).ready(function () {
     }
   });
 });
+
+// Date picker
+$(document).ready(function(){
+  $('.datepicker').datepicker({
+    minDate: new Date(),
+    format: 'dd/mm/yyyy',
+  });
+});

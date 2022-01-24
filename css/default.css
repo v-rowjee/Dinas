@@ -31,14 +31,15 @@ html {
 
 /* Input number arrows */
 /* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+#authentication input::-webkit-outer-spin-button,
+#authentication input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 /* Firefox */
-input[type="number"] {
+#authentication input[type="number"] {
   -moz-appearance: textfield;
+  margin: 0;
 }
 
 /* BODY */
@@ -277,4 +278,19 @@ section:nth-of-type(odd) {
   color: var(--text);
   box-shadow: none;
   border-color: grey;
+}
+
+.error {
+  color: #ffa07a;
+  margin-top: 3rem;
+}
+
+/* Select option */
+.form-select:focus {
+  border-color: var(--primary-dark);
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem var(--primary-dark);
+}
+select.decorated option:hover {
+  box-shadow: 0 0 10px 100px var(--primary-dark) inset;
 }
