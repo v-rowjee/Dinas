@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -23,11 +26,15 @@
     <link rel="stylesheet" href="css/index.css" />
   </head>
 
+  <?php 
+      if(isset($_SESSION['username']))
+        echo "Already logged in.";
+      else{
+    ?>
+
   <body data-bs-spy="scroll" data-bs-target="#spy-target" data-bs-offset="100">
     <!-- Nav Bar -->
-    <nav
-      class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top my-md-3 mx-md-5 rounded"
-    >
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top my-md-3 mx-md-5 rounded">
       <div class="container">
         <a
           class="navbar-brand"
@@ -116,12 +123,18 @@
       <div class="offcanvas-body mx-2">
         <a
           class="btn btn-outline-secondary mb-4"
-          href="<?php echo $client->createAuthUrl() ?>"
+          href="&lt;?php echo $client->createAuthUrl() ?>"
         >
           Sign in with google
         </a>
         <!-- LOGIN -->
-        <form id="login-form" action="./includes/login.php" method="POST">
+        <form
+          id="login-form"
+          class="needs-validation"
+          novalidate
+          action="includes/login.php"
+          method="POST"
+        >
           <div class="mb-5">
             <label for="username" class="form-label">Username</label>
             <input
@@ -131,7 +144,10 @@
               name="username"
               required
             />
+            <!-- <div class="errMsg">Please choose a username.</div> -->
           </div>
+          
+
           <div class="mb-3">
             <label for="password" class="form-label">Password</label>
             <input
@@ -156,7 +172,7 @@
         </form>
 
         <!-- REGISTER -->
-        <form id="register-form" action="register.php" method="POST">
+        <form id="register-form" action="includes/register.php" method="POST">
           <div class="mb-5">
             <label for="username_" class="form-label">Username</label>
             <input
@@ -191,7 +207,7 @@
               class="form-control"
               id="name_"
               name="name_"
-              required
+              
             />
           </div>
 
@@ -202,7 +218,7 @@
               class="form-control"
               id="email_"
               name="email_"
-              required
+              
             />
           </div>
 
@@ -458,7 +474,7 @@
             </div>
             <div class="col-12 col-md-3">
               <select class="form-select">
-                <option selected>Time Available</option>
+                <option selected disabled>Time Available</option>
                 <option value="1">5pm</option>
                 <option value="2">6pm</option>
                 <option value="3" disabled>7pm</option>
@@ -476,7 +492,7 @@
             </div>
           </div>
           <div class="row">
-            <p class="error">*Fill the required input</p>
+            <p class="errMsg">*Fill the required input</p>
           </div>
         </form>
 
@@ -876,4 +892,9 @@
     <!-- My script -->
     <script src="js/script.js"></script>
   </body>
+
+
+<?php } ?>
+
+
 </html>

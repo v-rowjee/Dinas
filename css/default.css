@@ -280,7 +280,7 @@ section:nth-of-type(odd) {
   border-color: grey;
 }
 
-.error {
+.errMsg {
   color: #ffa07a;
   margin-top: 3rem;
 }
