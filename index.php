@@ -30,14 +30,8 @@ session_start();
 
     
   </head>
-
-  <?php 
-      if(isset($_SESSION['username']))
-        echo "Already logged in.";
-      else{
-    ?>
-
   <body data-bs-spy="scroll" data-bs-target="#spy-target" data-bs-offset="100">
+
     <!-- Nav Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top my-md-3 mx-md-5 rounded">
       <div class="container">
@@ -81,7 +75,24 @@ session_start();
             </li>
           </ul>
           <ul class="navbar-nav">
+            
+            <?php 
+            if(isset($_SESSION['username'])){
+            ?>
+
             <li class="nav-item">
+              <a
+                class="nav-link"
+                href="includes/logout.php"
+                >Sign Out</a
+              >
+            </li>
+
+            <?php
+            }else{  // else
+            ?>
+
+              <li class="nav-item">
               <a
                 class="nav-link"
                 id="sign-in"
@@ -104,6 +115,11 @@ session_start();
                 Join Us
               </button>
             </li>
+
+            <?php
+            } // end else
+            ?>
+ 
           </ul>
         </div>
       </div>
@@ -891,9 +907,9 @@ session_start();
     <!-- My script -->
     <script src="js/script.js"></script>
   </body>
-
-
-<?php } ?>
-
-
 </html>
+
+
+
+
+

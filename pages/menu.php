@@ -1,22 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dina's</title>
-
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="../bootstrap/bootstrap.min.css" />
-
-    <!-- My Styles -->
-    <link rel="stylesheet" href="../css/default.css" />
-    <link rel="stylesheet" href="../css/menu.css" />
-  </head>
-
+<?php $active = "menu"; include '../includes/header.php'?>
   <body>
-    
-    <?php $active = "menu"; include_once '../includes/navbar.php'?>
+    <?php include '../includes/navbar.php'?>
 
     <section id="menu">
       <div class="container">
@@ -730,14 +714,4 @@
       </section>
     </main>
 
-    <!-- JQuery -->
-    <script src="../js/import/jquery-3.6.0.min.js"></script>
-    <!-- Bootstrap -->
-    <script
-      src="../bootstrap/bootstrap.bundle.min.js"
-      type="text/javascript"
-    ></script>
-    <!-- My script -->
-    <script src="../js/script.js"></script>
-  </body>
-</html>
+<?php include '../includes/footer.php'; ?>

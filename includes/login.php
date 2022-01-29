@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once "db_connect.php";
 
 $username = $password = "";
@@ -33,6 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             
             $_SESSION['username']=$username;
             header("location: ../index.php");
+
         } else
             echo "Login Failed (p)";
     } else

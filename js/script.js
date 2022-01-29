@@ -82,3 +82,9 @@ $(document).ready(function () {
 // Date picker
 let today = new Date().toISOString().substr(0, 10);
 document.querySelector("#datepicker").value = today;
+
+// add autocomplete for all form / input
+let tagArr = document.getElementsByTagName("form");
+for (let i = 0; i < tagArr.length; i++) {
+  tagArr[i].autocomplete = "off";
+}
