@@ -10,7 +10,7 @@ session_start();
     <title>Dina's</title>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="../bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css" />
 
     <!-- Font Awesome icon -->
     <link
@@ -25,14 +25,23 @@ session_start();
     <script src="https://www.google.com/recaptcha/api.js"></script>
 
     <!-- My Styles -->
-    <link rel="stylesheet" href="../css/default.css" />
+    <link rel="stylesheet" href="css/default.css" />
     
-    
-    <?php if($active == "menu"){ echo'<link rel="stylesheet" href="../css/menu.css" />';} ?>
-    <?php if($active == "about-us"){ echo'<link rel="stylesheet" href="../css/about.css" />';} ?>
-    <?php if($active == "online-order"){ echo'<link rel="stylesheet" href="../css/online_order.css" />';} ?>
-    <?php if($active == "reviews"){ echo'<link rel="stylesheet" href="../css/reviews.css" />';} ?>
-    <?php if($active == "account"){ echo'<link rel="stylesheet" href="../css/account.css" />';} ?>
+    <?php 
+      if($active == "index") echo'<link rel="stylesheet" href="css/index.css" />';
+      if($active == "menu") echo'<link rel="stylesheet" href="css/menu.css" />';
+      if($active == "about-us") echo'<link rel="stylesheet" href="css/about.css" />';
+      if($active == "online-order")  echo'<link rel="stylesheet" href="css/online_order.css" />';
+      if($active == "reviews") echo'<link rel="stylesheet" href="css/reviews.css" />';
+      if($active == "account") echo'<link rel="stylesheet" href="css/account.css" />'; 
+    ?>
     
   </head>
+  <?php 
+    if($active == "index")
+      echo '<body data-bs-spy="scroll" data-bs-target="#spy-target" data-bs-offset="100">';
+    else
+      echo '<body>';
+   ?>
+
 

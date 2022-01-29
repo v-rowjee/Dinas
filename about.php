@@ -1,6 +1,8 @@
-<?php $active = "about-us"; include '../includes/header.php'?>
-  <body>
-    <?php include '../includes/navbar.php'?>
+<?php 
+  $active = "about-us";
+  include 'includes/header.php';
+  include 'includes/navbar.php'
+?>
 
     <section id="story">
       <div class="container">

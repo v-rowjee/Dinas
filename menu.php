@@ -1,7 +1,8 @@
-<?php $active = "menu"; include '../includes/header.php'?>
-  <body>
-    <?php include '../includes/navbar.php'?>
-
+<?php 
+  $active = "menu"; 
+  include 'includes/header.php';
+  include 'includes/navbar.php';
+?>
     <section id="menu">
       <div class="container">
         <h1 class="text-center pb-5">MENU</h1>
@@ -122,7 +123,7 @@
               <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
                 <div class="card">
                   <img
-                    src="../images/macaroni.jpg"
+                    src="images/macaroni.jpg"
                     class="card-img-top"
                     alt="..."
                   />
@@ -141,7 +142,7 @@
               <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
                 <div class="card">
                   <img
-                    src="../images/lasagna.jpg"
+                    src="images/lasagna.jpg"
                     class="card-img-top"
                     alt="..."
                   />
@@ -160,7 +161,7 @@
               <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
                 <div class="card">
                   <img
-                    src="../images/ribollita.jpg"
+                    src="images/ribollita.jpg"
                     class="card-img-top"
                     alt="..."
                   />
@@ -179,7 +180,7 @@
               <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
                 <div class="card">
                   <img
-                    src="../images/ravioli.jpg"
+                    src="images/ravioli.jpg"
                     class="card-img-top"
                     alt="..."
                   />
@@ -198,7 +199,7 @@
               <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
                 <div class="card">
                   <img
-                    src="../images/spaghetti.jpg"
+                    src="images/spaghetti.jpg"
                     class="card-img-top"
                     alt="..."
                   />
@@ -225,7 +226,7 @@
               <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
                 <div class="card">
                   <img
-                    src="../images/macaroni.jpg"
+                    src="images/macaroni.jpg"
                     class="card-img-top"
                     alt="..."
                   />
@@ -244,7 +245,7 @@
               <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
                 <div class="card">
                   <img
-                    src="../images//tagliatelle.jpg"
+                    src="images//tagliatelle.jpg"
                     class="card-img-top"
                     alt="..."
                   />
@@ -263,7 +264,7 @@
               <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
                 <div class="card">
                   <img
-                    src="../images/gnocchi.jpg"
+                    src="images/gnocchi.jpg"
                     class="card-img-top"
                     alt="..."
                   />
@@ -282,7 +283,7 @@
               <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
                 <div class="card">
                   <img
-                    src="../images/ravioli.jpg"
+                    src="images/ravioli.jpg"
                     class="card-img-top"
                     alt="..."
                   />
@@ -301,7 +302,7 @@
               <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
                 <div class="card">
                   <img
-                    src="../images/spaghetti.jpg"
+                    src="images/spaghetti.jpg"
                     class="card-img-top"
                     alt="..."
                   />
@@ -328,7 +329,7 @@
               <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
                 <div class="card">
                   <img
-                    src="../images/pizza.jpg"
+                    src="images/pizza.jpg"
                     class="card-img-top"
                     alt="..."
                   />
@@ -355,7 +356,7 @@
               <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
                 <div class="card">
                   <img
-                    src="../images/gelato.jpg"
+                    src="images/gelato.jpg"
                     class="card-img-top"
                     alt="..."
                   />
@@ -382,7 +383,7 @@
               <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
                 <div class="card">
                   <img
-                    src="../images/greentea.jpg"
+                    src="images/greentea.jpg"
                     class="card-img-top"
                     alt="..."
                   />
@@ -401,7 +402,7 @@
               <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
                 <div class="card">
                   <img
-                    src="../images/aperitivo.jpg"
+                    src="images/aperitivo.jpg"
                     class="card-img-top"
                     alt="..."
                   />
@@ -427,7 +428,7 @@
             <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
               <div class="card">
                 <img
-                  src="../images/macaroni.jpg"
+                  src="images/macaroni.jpg"
                   class="card-img-top"
                   alt="..."
                 />
@@ -446,7 +447,7 @@
             <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
               <div class="card">
                 <img
-                  src="../images/lasagna.jpg"
+                  src="images/lasagna.jpg"
                   class="card-img-top"
                   alt="..."
                 />
@@ -465,7 +466,7 @@
             <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
               <div class="card">
                 <img
-                  src="../images/ribollita.jpg"
+                  src="images/ribollita.jpg"
                   class="card-img-top"
                   alt="..."
                 />
@@ -484,7 +485,7 @@
             <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
               <div class="card">
                 <img
-                  src="../images/ravioli.jpg"
+                  src="images/ravioli.jpg"
                   class="card-img-top"
                   alt="..."
                 />
@@ -503,7 +504,7 @@
             <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
               <div class="card">
                 <img
-                  src="../images/spaghetti.jpg"
+                  src="images/spaghetti.jpg"
                   class="card-img-top"
                   alt="..."
                 />
@@ -528,7 +529,7 @@
             <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
               <div class="card">
                 <img
-                  src="../images/macaroni.jpg"
+                  src="images/macaroni.jpg"
                   class="card-img-top"
                   alt="..."
                 />
@@ -547,7 +548,7 @@
             <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
               <div class="card">
                 <img
-                  src="../images//tagliatelle.jpg"
+                  src="images//tagliatelle.jpg"
                   class="card-img-top"
                   alt="..."
                 />
@@ -566,7 +567,7 @@
             <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
               <div class="card">
                 <img
-                  src="../images/gnocchi.jpg"
+                  src="images/gnocchi.jpg"
                   class="card-img-top"
                   alt="..."
                 />
@@ -585,7 +586,7 @@
             <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
               <div class="card">
                 <img
-                  src="../images/ravioli.jpg"
+                  src="images/ravioli.jpg"
                   class="card-img-top"
                   alt="..."
                 />
@@ -604,7 +605,7 @@
             <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
               <div class="card">
                 <img
-                  src="../images/spaghetti.jpg"
+                  src="images/spaghetti.jpg"
                   class="card-img-top"
                   alt="..."
                 />
@@ -628,7 +629,7 @@
           <div class="row g-5">
             <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
               <div class="card">
-                <img src="../images/pizza.jpg" class="card-img-top" alt="..." />
+                <img src="images/pizza.jpg" class="card-img-top" alt="..." />
                 <div class="card-body">
                   <h5 class="card-title">Special title treatment</h5>
                   <p class="card-text">
@@ -650,7 +651,7 @@
             <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
               <div class="card">
                 <img
-                  src="../images/gelato.jpg"
+                  src="images/gelato.jpg"
                   class="card-img-top"
                   alt="..."
                 />
@@ -675,7 +676,7 @@
             <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
               <div class="card">
                 <img
-                  src="../images/greentea.jpg"
+                  src="images/greentea.jpg"
                   class="card-img-top"
                   alt="..."
                 />
@@ -694,7 +695,7 @@
             <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
               <div class="card">
                 <img
-                  src="../images/aperitivo.jpg"
+                  src="images/aperitivo.jpg"
                   class="card-img-top"
                   alt="..."
                 />
@@ -714,4 +715,4 @@
       </section>
     </main>
 
-<?php include '../includes/footer.php'; ?>
+<?php include 'includes/footer.php'; ?>

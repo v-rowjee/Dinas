@@ -1,5 +1,5 @@
 <?php
-require_once 'google_auth/vendor/autoload.php';
+require_once 'composer/autoload.php';
 
 $clientID = '66337706486-a7dh1uhviacp9ujqumtcjm9eq25aaagf.apps.googleusercontent.com';
 $clientSecret = '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';
