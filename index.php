@@ -21,9 +21,14 @@ session_start();
     <!-- JQueries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+    <!-- reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+
     <!-- My Styles -->
     <link rel="stylesheet" href="css/default.css" />
     <link rel="stylesheet" href="css/index.css" />
+
+    
   </head>
 
   <?php 
@@ -109,8 +114,7 @@ session_start();
       class="offcanvas offcanvas-end p-2"
       data-bs-scroll="false"
       id="offcanvasRight"
-      aria-labelledby="offcanvasRightLabel"
-    >
+      aria-labelledby="offcanvasRightLabel">
       <div class="offcanvas-header mx-2">
         <h2 id="auth-title">Login</h2>
         <button
@@ -140,11 +144,10 @@ session_start();
             <input
               type="text"
               class="form-control"
-              id="username"
               name="username"
               required
             />
-            <!-- <div class="errMsg">Please choose a username.</div> -->
+            <div class="errMsg"><php $usernameErr ?></div>
           </div>
           
 
@@ -159,7 +162,7 @@ session_start();
             />
           </div>
           <div class="mb-5 form-check">
-            <input type="checkbox" class="form-check-input" id="checkbox" />
+            <input type="checkbox" class="form-check-input" id="checkbox"/>
             <label class="form-check-label" for="checkbox">Show password</label>
           </div>
           <button
@@ -172,70 +175,66 @@ session_start();
         </form>
 
         <!-- REGISTER -->
-        <form id="register-form" action="includes/register.php" method="POST">
+        <form id="register-form" autocomplete="off" action="includes/register.php" method="POST">
           <div class="mb-5">
-            <label for="username_" class="form-label">Username</label>
+            <label for="username" class="form-label">Username</label>
             <input
               type="text"
               class="form-control"
-              id="username_"
-              name="username_"
+              name="username"
               required
             />
           </div>
           <div class="mb-3">
-            <label for="password_" class="form-label">Password</label>
+            <label for="password" class="form-label">Password</label>
             <input
               type="password"
               class="form-control password"
               id="password_"
-              name="password_"
+              name="password"
               required
             />
           </div>
           <div class="mb-5 form-check">
-            <input type="checkbox" class="form-check-input" id="checkbox_" />
-            <label class="form-check-label" for="checkbox_"
+            <input type="checkbox" class="form-check-input" id="checkbox_"/>
+            <label class="form-check-label" for="checkbox"
               >Show password</label
             >
           </div>
 
           <div class="mb-5">
-            <label for="name_" class="form-label">Name</label>
+            <label for="name" class="form-label">Name</label>
             <input
               type="text"
               class="form-control"
-              id="name_"
-              name="name_"
+              name="name"
               
             />
           </div>
 
           <div class="mb-5">
-            <label for="email_" class="form-label">Email</label>
+            <label for="email" class="form-label">Email</label>
             <input
               type="email"
               class="form-control"
-              id="email_"
-              name="email_"
+              name="email"
               
             />
           </div>
 
           <div class="mb-5">
-            <label for="phone_" class="form-label">Mobile Phone</label>
+            <label for="phone" class="form-label">Mobile Phone</label>
             <input
               type="number"
               class="form-control"
-              id="phone_"
-              name="phone_"
+              name="phone"
             />
           </div>
 
           <button
             type="submit"
             name="submit"
-            class="btn btn-primary text-dark px-5"
+            class="g-recaptcha btn btn-primary text-dark px-5"
           >
             Register
           </button>
@@ -321,7 +320,7 @@ session_start();
             <p>
               Prawn ravioli - Mozzarella sticks - Salad - Seafood gratin - Soup
             </p>
-            <a href="pages/menu.html">View Menu</a>
+            <a href="pages/menu.php">View Menu</a>
           </div>
         </div>
 
@@ -335,7 +334,7 @@ session_start();
               Spaghetti - Penne - Tagiatelle - Pesto - Bolognese - Ravioli -
               Carbonara - Lasagna - Ricotta - Gnocchi - Linguine
             </p>
-            <a href="pages/menu.html">View Menu</a>
+            <a href="pages/menu.php">View Menu</a>
           </div>
         </div>
 
@@ -346,7 +345,7 @@ session_start();
           <div class="col-12 col-md-5">
             <h1>- Pizza -</h1>
             <p>Margherita - Calzone - Hawaiian - Quatro Fromaggi</p>
-            <a href="pages/menu.html">View Menu</a>
+            <a href="pages/menu.php">View Menu</a>
           </div>
         </div>
 
@@ -360,7 +359,7 @@ session_start();
               Gelato - Biscotti - Tiramisu - Tart - Cookies - Triffle -
               Zabaglione
             </p>
-            <a href="pages/menu.html">View Menu</a>
+            <a href="pages/menu.php">View Menu</a>
           </div>
         </div>
 
@@ -371,7 +370,7 @@ session_start();
           <div class="col-12 col-md-5">
             <h1>- Drinks -</h1>
             <p>Water - Wine - Tea - Juice - Cocktail</p>
-            <a href="pages/menu.html">View Menu</a>
+            <a href="pages/menu.php">View Menu</a>
           </div>
         </div>
       </div>
@@ -537,7 +536,7 @@ session_start();
               tempore deleniti fugit, delectus.
             </p>
             <a
-              href="pages/online_order.html"
+              href="pages/online_order.php"
               class="btn btn-outline-primary px-5"
               >Order now</a
             >
@@ -759,7 +758,7 @@ session_start();
               voluptatibus sapiente deserunt.
             </p>
             <a
-              href="/pages/about.html"
+              href="pages/about.php"
               class="btn btn-outline-primary px-5 my-4"
               >Explore</a
             >
@@ -867,13 +866,13 @@ session_start();
               Necessitatibus dolore atque rerum vel! Explicabo molestias ipsam
               tenetur, impedit quae iure.
             </p>
-            <a href="pages/reviews.html" class="btn btn-outline-primary px-5"
+            <a href="pages/reviews.php" class="btn btn-outline-primary px-5"
               >Share your experience</a
             >
           </div>
 
           <div class="show-reviews-text order-3">
-            <a href="pages/reviews.html" class="">Show all reviews</a>
+            <a href="pages/reviews.php" class="">Show all reviews</a>
           </div>
         </div>
       </div>
