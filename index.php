@@ -323,6 +323,7 @@ include 'includes/navbar.php';
             placeholder="Ex. Joe Crimson"
             maxlength="16"
             pattern="[a-zA-Z\s]+"
+            title="Letters and white space only"
             value="<?php if(isset($_SESSION['name'])) echo $_SESSION['name'] ?>"
             required
           />

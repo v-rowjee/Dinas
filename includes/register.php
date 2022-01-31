@@ -1,11 +1,12 @@
 <?php
 require_once "db_connect.php";
 
-$username = $password = "";
-$usernameErr = $passwordErr = "";
+$username = $password = $name = $email = $phone = "";
+$usernameErr = $passwordErr = $nmaeErr = $emailErr = $phoneErr = "";
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
+    //validating username
     if(empty($_POST['username']))
         $usernameErr = "* Username is required";
     else{
@@ -15,6 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     }
         
 
+    // validating password
     if(empty($_POST['password']))
         $passwordErr = "* Password is required";
     else{
@@ -22,6 +24,31 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $password = filter($password);
 
         $password = password_hash($password,PASSWORD_DEFAULT);
+    }
+
+
+    // validating name
+    if(empty($_POST['name']))
+        $nameErr = "* Required field";
+    else{
+        $name = filter($_POST['name']);
+        if(!preg_match("/[a-zA-Z\s]/",$name))
+            $nameErr = "* Only letters and white space allowed";
+    }
+
+    // validating email
+    if(empty($_POST['email']))
+        $emailErr = "* Required field";
+    else{
+        $email = filter_var($_POST['email'],FILTER_VALIDATE_EMAIL);
+    }
+    // validating phone
+    if(empty($_POST['phone']))
+        $phoneErr = "* Required field";
+    else{
+        $phone = filter($_POST['phone']);
+        if(!preg_match("/[\+\s0-9]{7,}/",$phone))
+            $phoneErr = "* Invalid format";
     }
         
     // Checking if username available
@@ -40,12 +67,15 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
         if($usernameErr=="" && $passwordErr==""){ // if no error
 
-            $sql = "INSERT INTO users (username,password) VALUES (:username,:password)";
+            $sql = "INSERT INTO users (username,password,name,email,phone) VALUES (:username,:password,:name,:email,:phone)";
             $statement = $conn->prepare($sql);
 
             $statement->execute([
                 ':username' => $username,
-                ':password' => $password
+                ':password' => $password,
+                ':name' => $name,
+                ':email' => $email,
+                ':phone' => $phone
             ]);
 
             echo "Thank you for registering";

@@ -193,7 +193,7 @@
               class="form-control"
               name="name"
               pattern="[a-zA-Z\s]+"
-              title="Letters,numbers and spaces only"
+              title="Letters and white space only"
               style="text-transform: capitalize;"
               required
             />
@@ -214,9 +214,10 @@
           <div class="mb-5">
             <label for="phone" class="form-label">Mobile Phone</label>
             <input
-              type="number"
+              type="tel"
               class="form-control"
               name="phone"
+              pattern="[\+\s0-9]{7,}"
               required
             />
             <div class="invalid-feedback">* Invalid input</div>
