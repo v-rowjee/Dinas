@@ -280,9 +280,13 @@ section:nth-of-type(odd) {
   border-color: grey;
 }
 
+input[name="name"] {
+  text-transform: capitalize;
+}
+
 .errMsg {
-  color: #ffa07a;
-  margin-top: 3rem;
+  color: #ae303c;
+  margin: 1rem;
 }
 
 /* Select option */

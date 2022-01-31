@@ -236,12 +236,12 @@ include 'includes/navbar.php';
         <div class="col-12 col-md-3">
           <select class="form-select">
             <option selected disabled>Time Available</option>
-            <option value="1">5pm</option>
-            <option value="2">6pm</option>
-            <option value="3" disabled>7pm</option>
-            <option value="4">8pm</option>
-            <option value="5">9pm</option>
-            <option value="6">10pm</option>
+            <option value="5">5pm</option>
+            <option value="6">6pm</option>
+            <option value="7" disabled>7pm</option>
+            <option value="8">8pm</option>
+            <option value="9">9pm</option>
+            <option value="10">10pm</option>
           </select>
         </div>
         <div class="col-12 col-md-3">
@@ -314,36 +314,42 @@ include 'includes/navbar.php';
       <div class="col-sm-12 col-lg-7 me-lg-5">
         <h6 class="gold">Let's get in touch,</h6>
         <h1>Contact Us</h1>
-        <form action="/config/send_mail.php" method="post">
+        <form action="includes/contact.php" method="post" class="needs-validation" novalidate>
           <label for="name" class="form-label">Name</label>
           <input
             type="text"
             name="name"
-            class="form-control mb-5"
-            id="name"
-            aria-describedby="name"
-            placeholder="e.g. Joe Crimson"
-          />
-          <label for="email" class="form-label">Email</label>
-          <input
-            type="email"
-            class="form-control mb-5"
-            id="email"
-            name="email"
-            aria-describedby="email"
-            placeholder="e.g. email@example.com"
+            class="form-control"
+            placeholder="Ex. Joe Crimson"
+            maxlength="16"
+            pattern="[a-zA-Z\s]+"
+            value="<?php if(isset($_SESSION['name'])) echo $_SESSION['name'] ?>"
             required
           />
-          <label for="name" class="form-label">Message</label>
+          <div class="invalid-feedback">* Invalid input</div>
+
+          <label for="email" class="form-label mt-5">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            name="email"
+            placeholder="Ex. email@example.com"
+            value="<?php if(isset($_SESSION['email'])) echo $_SESSION['email'] ?>"
+            required
+          />
+          <div class="invalid-feedback">* Invalid input</div>
+
+          <label for="name" class="form-label mt-5">Message</label>
           <textarea
-            class="form-control mb-5"
-            id="text-area"
+            class="form-control"
             rows="6"
             name="message"
             placeholder="Write your message here..."
             required
           ></textarea>
-          <button type="submit" class="btn btn-outline-primary px-5">
+          <div class="invalid-feedback">* Required</div>
+
+          <button type="submit" class="btn btn-outline-primary mt-5">
             Send
           </button>
         </form>
@@ -536,12 +542,11 @@ include 'includes/navbar.php';
 <section id="reviews">
   <div class="container text-center">
     <div class="row flex-row-reverse g-4">
-      <div class="col-lg-6 mx-auto order-2 order-lg-1">
-        <!-- <div
+      <div class="col-12 col-lg-6 order-2 order-lg-1">
+        <div
           id="reviews-carousel"
           class="carousel slide"
-          data-bs-ride="carousel"
-        >
+          data-bs-ride="carousel" >
           <div class="carousel-inner">
             <div class="carousel-item active">
               <blockquote
@@ -607,8 +612,9 @@ include 'includes/navbar.php';
               </blockquote>
             </div>
           </div>
-        </div> -->
-        <div data-rw-slider="27672"></div>
+        </div>
+
+        <!-- <div data-rw-slider="27672"></div>
         <script>
           var script = document.createElement("script");
           script.type = "module";
@@ -616,11 +622,12 @@ include 'includes/navbar.php';
             "https://widgets.thereviewsplace.com/2.0/rw-widget-slider.js";
           document.getElementsByTagName("head")[0].appendChild(script);
         </script>
-      </div>
+      </div> -->
+
       <!-- <script src="https://apps.elfsight.com/p/platform.js" defer></script>
       <div class="elfsight-app-9e526d95-464e-4fdc-ba0b-5b494aaf413c"></div> -->
-
-      <div class="col-lg-6 align-self-center order-1 order-lg-2">
+    </div>
+    <div class="col-12 col-lg-6 align-self-center order-1 order-lg-2">
         <h6 class="gold">What people say about us,</h6>
         <h1>Reviews</h1>
         <p class="mb-5">
@@ -636,7 +643,6 @@ include 'includes/navbar.php';
       <div class="show-reviews-text order-3">
         <a href="reviews.php" class="">Show all reviews</a>
       </div>
-    </div>
   </div>
 </section>
 

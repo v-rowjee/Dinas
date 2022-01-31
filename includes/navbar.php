@@ -89,7 +89,7 @@
       class="offcanvas offcanvas-end p-2"
       data-bs-scroll="false"
       id="offcanvasRight"
-      aria-labelledby="offcanvasRightLabel">
+      >
       <div class="offcanvas-header mx-2">
         <h2 id="auth-title">Login</h2>
         <button
@@ -120,9 +120,12 @@
               type="text"
               class="form-control"
               name="username"
+              pattern="[a-zA-Z0-9-]+"
+              title="Letters and numbers only"
+              maxlength="16"
               required
             />
-            <div class="errMsg"><php $usernameErr ?></div>
+            <div class="invalid-feedback">* Invalid input</div>
           </div>
           
 
@@ -135,6 +138,7 @@
               name="password"
               required
             />
+            <div class="invalid-feedback">* Required field</div>
           </div>
           <div class="mb-5 form-check">
             <input type="checkbox" class="form-check-input" id="checkbox"/>
@@ -150,15 +154,19 @@
         </form>
 
         <!-- REGISTER -->
-        <form id="register-form" autocomplete="off" action="includes/register.php" method="POST">
+        <form id="register-form" class="needs-validation" novalidate action="includes/register.php" method="POST">
           <div class="mb-5">
             <label for="username" class="form-label">Username</label>
             <input
               type="text"
               class="form-control"
               name="username"
-              required
+              pattern="[a-zA-Z0-9-]+"
+              title="Letters and numbers only"
+              maxlength="16"
+              required              
             />
+            <div class="invalid-feedback">* Invalid input</div>
           </div>
           <div class="mb-3">
             <label for="password" class="form-label">Password</label>
@@ -169,6 +177,7 @@
               name="password"
               required
             />
+            <div class="invalid-feedback">* Required field</div>
           </div>
           <div class="mb-5 form-check">
             <input type="checkbox" class="form-check-input" id="checkbox_"/>
@@ -183,8 +192,12 @@
               type="text"
               class="form-control"
               name="name"
-              
+              pattern="[a-zA-Z\s]+"
+              title="Letters,numbers and spaces only"
+              style="text-transform: capitalize;"
+              required
             />
+            <div class="invalid-feedback">* Invalid input</div>
           </div>
 
           <div class="mb-5">
@@ -193,8 +206,9 @@
               type="email"
               class="form-control"
               name="email"
-              
+              required
             />
+            <div class="invalid-feedback">* Invalid input</div>
           </div>
 
           <div class="mb-5">
@@ -203,7 +217,9 @@
               type="number"
               class="form-control"
               name="phone"
+              required
             />
+            <div class="invalid-feedback">* Invalid input</div>
           </div>
 
           <button

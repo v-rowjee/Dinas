@@ -7,38 +7,51 @@ $usernameErr = $passwordErr = "";
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
+    // validating username
     if(empty($_POST['username']))
-        $usernameErr = "Username is required";
-    else
+        $usernameErr = "* Username is required";
+    else{
         $username = filter($_POST['username']);
+        if(!preg_match("/[a-zA-Z0-9]/",$username))
+            $usernameErr = "* Only letters and numbers allowed";
+    }
+        
 
+    // validating password
     if(empty($_POST['password']))
-        $passwordErr = "Password is required";
+        $passwordErr = "* Password is required";
     else
         $password = filter($_POST['password']);
 
 
-    $sql = "SELECT * FROM users WHERE username = :username";
-    $statement = $conn->prepare($sql);
+    if($usernamedErr=="" && $passwordErr==""){ // if no error...
 
-    $statement->bindParam(':username',$username);
-    $statement->execute();
+        $sql = "SELECT * FROM users WHERE username = :username";
+        $statement = $conn->prepare($sql);
 
-    $user = $statement->fetch(PDO::FETCH_ASSOC);
+        $statement->bindParam(':username',$username);
+        $statement->execute();
 
-    if ($user['username']) {
+        $user = $statement->fetch(PDO::FETCH_ASSOC);
 
-        $hashed_password = $user['password'];
+        if ($user['username']) {    // if username exist
 
-        if (password_verify($password,$hashed_password)) {
-            
-            $_SESSION['username']=$username;
-            header("location: ../index.php");
+            $hashed_password = $user['password'];
 
+            if (password_verify($password,$hashed_password)) { // if password correct
+                
+                $_SESSION['username'] = $username;
+                $_SESSION['name'] = $user['name'];
+                $_SESSION['email'] = $user['email'];
+                $_SESSION['phone'] = $user['phone'];
+
+                header("location: ../index.php");
+
+            } else
+                echo "Login Failed (p)";
         } else
-            echo "Login Failed (p)";
-    } else
-        echo "Login Failed (u)";
+            echo "Login Failed (u)";
+    }
 }
 
 function filter($data){

@@ -1,13 +1,29 @@
 <?php
 require_once "db_connect.php";
 
+$username = $password = "";
+$usernameErr = $passwordErr = "";
+
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
-    $username = $_POST['username'];
+    if(empty($_POST['username']))
+        $usernameErr = "* Username is required";
+    else{
+        $username = filter($_POST['username']);
+        if(!preg_match("/[a-zA-Z0-9]/",$username))
+            $usernameErr = "* Only letters and numbers allowed";
+    }
+        
 
-    $hash_password = password_hash($_POST['password'],PASSWORD_DEFAULT);
-    $password = $hash_password;
+    if(empty($_POST['password']))
+        $passwordErr = "* Password is required";
+    else{
+        $password = $_POST['password'];
+        $password = filter($password);
 
+        $password = password_hash($password,PASSWORD_DEFAULT);
+    }
+        
     // Checking if username available
     $check_sql = "SELECT * FROM users WHERE username = :username";
     $handler = $conn->prepare($check_sql);
@@ -17,21 +33,33 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     
     if($handler->rowCount()>0){
 
-        echo "Username already exists";
+        $usernameErr = "* Username already exists";
+        echo $usernameErr;
 
     }else{
 
-        $sql = "INSERT INTO users (username,password) VALUES (:username,:password)";
-        $statement = $conn->prepare($sql);
+        if($usernameErr=="" && $passwordErr==""){ // if no error
 
-        $statement->execute([
-            ':username' => $username,
-            ':password' => $password
-        ]);
+            $sql = "INSERT INTO users (username,password) VALUES (:username,:password)";
+            $statement = $conn->prepare($sql);
 
-        echo "Thank you for registering";
+            $statement->execute([
+                ':username' => $username,
+                ':password' => $password
+            ]);
+
+            echo "Thank you for registering";
+            header('location: ../index.php');
+        }
     }
 
+}
+
+function filter($data){
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
 }
 
 $conn == null;
