@@ -80,8 +80,9 @@ $(document).ready(function () {
 // }
 
 // Date picker
-// let today = new Date().toISOString().substr(0, 10);
-// document.querySelector("#datepicker").value = today;
+let today = new Date().toISOString().substr(0, 10);
+document.querySelector("#datepicker").value = today;
+
 $("#datepicker").datepicker({
   format: "DD MM yy",
   startDate: 0,
@@ -91,7 +92,7 @@ $("#datepicker").datepicker({
 });
 
 // add autocomplete for all form / input
-let tagArr = document.getElementsByTagName("form");
+let tagArr = document.getElementsByTagName("input");
 for (let i = 0; i < tagArr.length; i++) {
   tagArr[i].autocomplete = "off";
 }

@@ -1,10 +1,10 @@
 /* MENU PAGE */
-section {
+section:nth-of-type(1) {
   width: 100%;
   padding: 11vh 0;
 }
-section:nth-of-type(odd) {
-  background-color: var(--bg-dark);
+main section {
+  padding: 100px 0 11vh 0;
 }
 
 #menu {
@@ -47,6 +47,7 @@ section:nth-of-type(odd) {
 
 .card p {
   font-size: 0.8rem;
+  height: 3rem;
 }
 
 /* PILLS */

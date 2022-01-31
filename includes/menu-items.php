@@ -19,7 +19,7 @@
             />
             <div class="card-body">
                 <h5 class="card-title">'.$menu['name'].'</h5>
-                <p style="font-size: 0.8rem" class="card-text readMore">'.$menu['caption'].'</p>
+                <p style="font-size: 0.8rem; height: 3rem" class="card-text readMore">'.$menu['caption'].'</p>
                 <h6 class="price">Rs '.$menu['price'].'</h6>
                 <a href="#" class="btn btn-primary">Buy now</a>
             </div>

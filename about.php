@@ -62,7 +62,7 @@
         <div class="row align-items-end my-5">
           <div class="col-md-6">
             <img
-              src="../images/interior.jpg"
+              src="images/interior.jpg"
               alt=""
               class="img-fluid float-end"
             />
@@ -81,7 +81,7 @@
         <div class="row align-items-end my-5">
           <div class="col-md-6 order-md-2">
             <img
-              src="../images/interior-vip.jpg"
+              src="images/interior-vip.jpg"
               alt=""
               class="img-fluid float-start"
             />
@@ -100,7 +100,7 @@
         <div class="row align-items-end my-5">
           <div class="col-md-6">
             <img
-              src="../images/interior-bar.jpg"
+              src="images/interior-bar.jpg"
               alt=""
               class="img-fluid float-end"
             />
@@ -119,7 +119,7 @@
         <div class="row align-items-end my-5">
           <div class="col-md-6 order-md-2">
             <img
-              src="../images/interior-outdoor.jpg"
+              src="images/interior-outdoor.jpg"
               alt=""
               class="img-fluid float-start"
             />
@@ -154,10 +154,10 @@
 
           <div class="row pt-5 text-center">
             <div class="col" id="chef-1">
-              <img src="../images/chef-1.png" alt="" />
+              <img src="images/chef-1.png" alt="" />
             </div>
             <div class="col" id="chef-2">
-              <img src="../images/chef-2.png" alt="" />
+              <img src="images/chef-2.png" alt="" />
             </div>
           </div>
         </div>
@@ -189,4 +189,4 @@
       </div>
     </section>
 
-<?php include '../includes/footer.php'; ?>
+<?php include 'includes/footer.php' ?>

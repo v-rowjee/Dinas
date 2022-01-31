@@ -311,7 +311,7 @@ include 'includes/navbar.php';
 <section id="contact">
   <div class="container">
     <div class="row justify-content-around align-items-center gy-5">
-      <div class="col-sm-12 col-lg-7 me-lg-5">
+      <div class="col-sm-12 col-lg-7">
         <h6 class="gold">Let's get in touch,</h6>
         <h1>Contact Us</h1>
         <form action="includes/contact.php" method="post" class="needs-validation" novalidate>
@@ -374,7 +374,7 @@ include 'includes/navbar.php';
 
           <div class="col">
             <h6 class="mb-4">Support</h6>
-            <h5>dinas@restaurant.mu</h5>
+            <h5 style="font-size: medium" class="mb-3">dinasrestaurant.test@gmail.com</h5>
             <h5 style="white-space: nowrap">+230 407-9000</h5>
           </div>
         </div>
