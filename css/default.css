@@ -298,3 +298,8 @@ input[name="name"] {
 select.decorated option:hover {
   box-shadow: 0 0 10px 100px var(--primary-dark) inset;
 }
+
+/* Read more */
+.readMore .addText {
+  display: none;
+}

@@ -21,6 +21,9 @@ session_start();
     <!-- JQueries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+    <!-- Date picker -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
     <!-- reCAPTCHA -->
     <script src="https://www.google.com/recaptcha/api.js"></script>
 

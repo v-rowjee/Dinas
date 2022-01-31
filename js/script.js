@@ -80,11 +80,39 @@ $(document).ready(function () {
 // }
 
 // Date picker
-let today = new Date().toISOString().substr(0, 10);
-document.querySelector("#datepicker").value = today;
+// let today = new Date().toISOString().substr(0, 10);
+// document.querySelector("#datepicker").value = today;
+$("#datepicker").datepicker({
+  format: "DD MM yy",
+  startDate: 0,
+  todayBtn: "linked",
+  clearBtn: true,
+  autoclose: true,
+});
 
 // add autocomplete for all form / input
 let tagArr = document.getElementsByTagName("form");
 for (let i = 0; i < tagArr.length; i++) {
   tagArr[i].autocomplete = "off";
 }
+
+// Read more
+$(document).ready(function () {
+  var max = 100;
+  $(".readMore").each(function () {
+    var str = $(this).text();
+    if ($.trim(str).length > max) {
+      var subStr = str.substring(0, max);
+      var hiddenStr = str.substring(max, $.trim(str).length);
+      $(this).empty().html(subStr);
+      $(this).append(
+        ' <a href="javascript:void(0);" class="link">Read more…</a>'
+      );
+      $(this).append('<span class="addText">' + hiddenStr + "</span>");
+    }
+  });
+  $(".link").click(function () {
+    $(this).siblings(".addText").contents().unwrap();
+    $(this).remove();
+  });
+});

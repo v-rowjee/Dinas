@@ -100,20 +100,19 @@
         ></button>
       </div>
       <div class="offcanvas-body mx-2">
-        <a
+        <!-- <a
           class="btn btn-outline-secondary mb-4"
           href="&lt;?php echo $client->createAuthUrl() ?>"
         >
           Sign in with google
-        </a>
+        </a> -->
         <!-- LOGIN -->
         <form
           id="login-form"
           class="needs-validation"
           novalidate
           action="includes/login.php"
-          method="POST"
-        >
+          method="POST">
           <div class="mb-5">
             <label for="username" class="form-label">Username</label>
             <input

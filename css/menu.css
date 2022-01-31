@@ -45,6 +45,10 @@ section:nth-of-type(odd) {
   margin-top: 0.5rem;
 }
 
+.card p {
+  font-size: 0.8rem;
+}
+
 /* PILLS */
 #menu .nav-link {
   color: var(--primary-light);

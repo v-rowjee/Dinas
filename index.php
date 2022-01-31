@@ -253,7 +253,7 @@ include 'includes/navbar.php';
         </div>
       </div>
       <div class="row">
-        <p class="errMsg">*Fill the required input</p>
+        <p class="invalid-feedback">* Fill the required input</p>
       </div>
     </form>
 

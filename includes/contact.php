@@ -42,8 +42,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         //     'Reply-To' => $email,
         //     'X-Mailer' => 'PHP/' . phpversion()
         // );
-        $header = "From: '$name' <'$email'>";
-        $header .= "Reply-To: '$email' \r\n";
+        $header = "From: $name <$email>";
+        $header .= "Reply-To: $email \r\n";
 
         mail($to,$subject,$message,$header);
 

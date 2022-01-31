@@ -115,602 +115,99 @@
       <section id="all" class="tab-pane fade show active" role="tabpanel">
         <div class="container mb-3">
           <!-- starter -->
-          <div>
             <div class="row">
               <h1>Starter</h1>
             </div>
             <div class="row g-5">
-              <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
-                <div class="card">
-                  <img
-                    src="images/macaroni.jpg"
-                    class="card-img-top"
-                    alt="..."
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">
-                      With supporting text below as a natural lead-in to
-                      additional content.
-                    </p>
-                    <h6 class="price">Rs 400</h6>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
-                <div class="card">
-                  <img
-                    src="images/lasagna.jpg"
-                    class="card-img-top"
-                    alt="..."
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">
-                      With supporting text below as a natural lead-in to
-                      additional content.
-                    </p>
-                    <h6 class="price">Rs 400</h6>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
-                <div class="card">
-                  <img
-                    src="images/ribollita.jpg"
-                    class="card-img-top"
-                    alt="..."
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">
-                      With supporting text below as a natural lead-in to
-                      additional content.
-                    </p>
-                    <h6 class="price">Rs 400</h6>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
-                <div class="card">
-                  <img
-                    src="images/ravioli.jpg"
-                    class="card-img-top"
-                    alt="..."
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">
-                      With supporting text below as a natural lead-in to
-                      additional content.
-                    </p>
-                    <h6 class="price">Rs 400</h6>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
-                <div class="card">
-                  <img
-                    src="images/spaghetti.jpg"
-                    class="card-img-top"
-                    alt="..."
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">
-                      With supporting text below as a natural lead-in to
-                      additional content.
-                    </p>
-                    <h6 class="price">Rs 400</h6>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
-              </div>
+              <?php $categorie = 'starter'; include 'includes/menu-items.php' ?>
             </div>
-          </div>
 
           <!-- pasta -->
-          <div>
             <div class="row mt-5">
               <h1>Pasta</h1>
             </div>
             <div class="row g-5">
-              <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
-                <div class="card">
-                  <img
-                    src="images/macaroni.jpg"
-                    class="card-img-top"
-                    alt="..."
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">
-                      With supporting text below as a natural lead-in to
-                      additional content.
-                    </p>
-                    <h6 class="price">Rs 400</h6>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
-                <div class="card">
-                  <img
-                    src="images//tagliatelle.jpg"
-                    class="card-img-top"
-                    alt="..."
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">
-                      With supporting text below as a natural lead-in to
-                      additional content.
-                    </p>
-                    <h6 class="price">Rs 400</h6>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
-                <div class="card">
-                  <img
-                    src="images/gnocchi.jpg"
-                    class="card-img-top"
-                    alt="..."
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">
-                      With supporting text below as a natural lead-in to
-                      additional content.
-                    </p>
-                    <h6 class="price">Rs 400</h6>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
-                <div class="card">
-                  <img
-                    src="images/ravioli.jpg"
-                    class="card-img-top"
-                    alt="..."
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">
-                      With supporting text below as a natural lead-in to
-                      additional content.
-                    </p>
-                    <h6 class="price">Rs 400</h6>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
-                <div class="card">
-                  <img
-                    src="images/spaghetti.jpg"
-                    class="card-img-top"
-                    alt="..."
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">
-                      With supporting text below as a natural lead-in to
-                      additional content.
-                    </p>
-                    <h6 class="price">Rs 400</h6>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
-              </div>
+              <?php $categorie = 'pasta'; include 'includes/menu-items.php' ?>
             </div>
-          </div>
 
           <!-- pizza -->
-          <div>
             <div class="row mt-5">
               <h1>Pizza</h1>
             </div>
             <div class="row g-5">
-              <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
-                <div class="card">
-                  <img
-                    src="images/pizza.jpg"
-                    class="card-img-top"
-                    alt="..."
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">
-                      With supporting text below as a natural lead-in to
-                      additional content.
-                    </p>
-                    <h6 class="price">Rs 400</h6>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
-              </div>
+              <?php $categorie = 'pizza'; include 'includes/menu-items.php' ?>
             </div>
-          </div>
 
           <!-- dessert -->
-          <div>
             <div class="row mt-5">
               <h1>Dessert</h1>
             </div>
             <div class="row g-5">
-              <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
-                <div class="card">
-                  <img
-                    src="images/gelato.jpg"
-                    class="card-img-top"
-                    alt="..."
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">
-                      With supporting text below as a natural lead-in to
-                      additional content.
-                    </p>
-                    <h6 class="price">Rs 400</h6>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
-              </div>
+              <?php $categorie = 'dessert'; include 'includes/menu-items.php' ?>
             </div>
-          </div>
 
           <!-- drinks -->
-          <div>
             <div class="row mt-5">
               <h1>Drinks</h1>
             </div>
             <div class="row g-5">
-              <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
-                <div class="card">
-                  <img
-                    src="images/greentea.jpg"
-                    class="card-img-top"
-                    alt="..."
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">
-                      With supporting text below as a natural lead-in to
-                      additional content.
-                    </p>
-                    <h6 class="price">Rs 400</h6>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
-                <div class="card">
-                  <img
-                    src="images/aperitivo.jpg"
-                    class="card-img-top"
-                    alt="..."
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">
-                      With supporting text below as a natural lead-in to
-                      additional content.
-                    </p>
-                    <h6 class="price">Rs 400</h6>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
-              </div>
+              <?php $categorie = 'drinks'; include 'includes/menu-items.php' ?>
             </div>
-          </div>
         </div>
       </section>
 
       <section id="starter" class="tab-pane fade" role="tabpanel">
         <div class="container">
-          <div class="row g-5">
-            <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
-              <div class="card">
-                <img
-                  src="images/macaroni.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">
-                    With supporting text below as a natural lead-in to
-                    additional content.
-                  </p>
-                  <h6 class="price">Rs 400</h6>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
+            <div class="row">
+              <h1>Starter</h1>
             </div>
-
-            <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
-              <div class="card">
-                <img
-                  src="images/lasagna.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">
-                    With supporting text below as a natural lead-in to
-                    additional content.
-                  </p>
-                  <h6 class="price">Rs 400</h6>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
+            <div class="row g-5">
+              <?php $categorie = 'starter'; include 'includes/menu-items.php' ?>
             </div>
-
-            <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
-              <div class="card">
-                <img
-                  src="images/ribollita.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">
-                    With supporting text below as a natural lead-in to
-                    additional content.
-                  </p>
-                  <h6 class="price">Rs 400</h6>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
-              <div class="card">
-                <img
-                  src="images/ravioli.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">
-                    With supporting text below as a natural lead-in to
-                    additional content.
-                  </p>
-                  <h6 class="price">Rs 400</h6>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
-              <div class="card">
-                <img
-                  src="images/spaghetti.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">
-                    With supporting text below as a natural lead-in to
-                    additional content.
-                  </p>
-                  <h6 class="price">Rs 400</h6>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
       <section id="pasta" class="tab-pane fade" role="tabpanel">
         <div class="container">
-          <div class="row g-5">
-            <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
-              <div class="card">
-                <img
-                  src="images/macaroni.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">
-                    With supporting text below as a natural lead-in to
-                    additional content.
-                  </p>
-                  <h6 class="price">Rs 400</h6>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
+            <div class="row">
+              <h1>Pasta</h1>
             </div>
-
-            <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
-              <div class="card">
-                <img
-                  src="images//tagliatelle.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">
-                    With supporting text below as a natural lead-in to
-                    additional content.
-                  </p>
-                  <h6 class="price">Rs 400</h6>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
+            <div class="row g-5">
+              <?php $categorie = 'pasta'; include 'includes/menu-items.php' ?>
             </div>
-
-            <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
-              <div class="card">
-                <img
-                  src="images/gnocchi.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">
-                    With supporting text below as a natural lead-in to
-                    additional content.
-                  </p>
-                  <h6 class="price">Rs 400</h6>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
-              <div class="card">
-                <img
-                  src="images/ravioli.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">
-                    With supporting text below as a natural lead-in to
-                    additional content.
-                  </p>
-                  <h6 class="price">Rs 400</h6>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
-              <div class="card">
-                <img
-                  src="images/spaghetti.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">
-                    With supporting text below as a natural lead-in to
-                    additional content.
-                  </p>
-                  <h6 class="price">Rs 400</h6>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
       <section id="pizza" class="tab-pane fade" role="tabpanel">
         <div class="container">
-          <div class="row g-5">
-            <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
-              <div class="card">
-                <img src="images/pizza.jpg" class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">
-                    With supporting text below as a natural lead-in to
-                    additional content.
-                  </p>
-                  <h6 class="price">Rs 400</h6>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
+            <div class="row">
+              <h1>Pizza</h1>
             </div>
-          </div>
+            <div class="row g-5">
+              <?php $categorie = 'pizza'; include 'includes/menu-items.php' ?>
+            </div>
         </div>
       </section>
 
       <section id="dessert" class="tab-pane fade" role="tabpanel">
         <div class="container">
-          <div class="row g-5">
-            <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
-              <div class="card">
-                <img
-                  src="images/gelato.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">
-                    With supporting text below as a natural lead-in to
-                    additional content.
-                  </p>
-                  <h6 class="price">Rs 400</h6>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
+            <div class="row">
+              <h1>Dessert</h1>
             </div>
-          </div>
+            <div class="row g-5">
+              <?php $categorie = 'dessert'; include 'includes/menu-items.php' ?>
+            </div>
         </div>
       </section>
 
       <section id="drinks" class="tab-pane fade" role="tabpanel">
         <div class="container">
-          <div class="row g-5">
-            <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
-              <div class="card">
-                <img
-                  src="images/greentea.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">
-                    With supporting text below as a natural lead-in to
-                    additional content.
-                  </p>
-                  <h6 class="price">Rs 400</h6>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
+            <div class="row">
+              <h1>Drinks</h1>
             </div>
-
-            <div class="col-sm-6 col-md-6 col-lg-4 col-xxl-3">
-              <div class="card">
-                <img
-                  src="images/aperitivo.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">
-                    With supporting text below as a natural lead-in to
-                    additional content.
-                  </p>
-                  <h6 class="price">Rs 400</h6>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
+            <div class="row g-5">
+              <?php $categorie = 'drinks'; include 'includes/menu-items.php' ?>
             </div>
-          </div>
         </div>
       </section>
     </main>
