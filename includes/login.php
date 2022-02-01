@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $password = filter($_POST['password']);
 
 
-    if($usernamedErr=="" && $passwordErr==""){ // if no error...
+    if($usernameErr=="" && $passwordErr==""){ // if no error...
 
         $sql = "SELECT * FROM users WHERE username = :username";
         $statement = $conn->prepare($sql);
@@ -40,12 +40,16 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
             if (password_verify($password,$hashed_password)) { // if password correct
                 
-                $_SESSION['username'] = $username;
+                $_SESSION['id'] = $user['id'];
+                $_SESSION['username'] = $user['username'];
                 $_SESSION['name'] = $user['name'];
                 $_SESSION['email'] = $user['email'];
                 $_SESSION['phone'] = $user['phone'];
 
-                header("location: ../index.php");
+                if($user['is_admin']=='yes') // admin
+                    header('location: ../admin/dashboard.html');
+                else // normal user
+                    header('location: ../index.php?id='.$user['id']);
 
             } else
                 echo "Login Failed (p)";

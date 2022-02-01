@@ -217,7 +217,7 @@ include 'includes/navbar.php';
     <!-- custom reservation -->
     <form action="" method="post">
       <div class="row justify-content-center g-3 mx-5">
-        <div class="col-12 col-md-3">
+        <div class="col-12 col-lg-3">
           <input
             type="number"
             class="form-control"
@@ -225,7 +225,7 @@ include 'includes/navbar.php';
             required
           />
         </div>
-        <div class="col-12 col-md-3">
+        <div class="col-12 col-lg-3">
           <input
             type="date"
             id="datepicker"
@@ -233,7 +233,7 @@ include 'includes/navbar.php';
             required
           />
         </div>
-        <div class="col-12 col-md-3">
+        <div class="col-12 col-lg-3">
           <select class="form-select">
             <option selected disabled>Time Available</option>
             <option value="5">5pm</option>
@@ -244,7 +244,7 @@ include 'includes/navbar.php';
             <option value="10">10pm</option>
           </select>
         </div>
-        <div class="col-12 col-md-3">
+        <div class="col-12 col-lg-3">
           <input
             type="submit"
             class="btn btn-primary w-100"

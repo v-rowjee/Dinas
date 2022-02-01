@@ -1,6 +1,4 @@
 <?php
-session_start();
-require_once "db_connect.php";
 
 $name = $email = $message = "";
 $nameErr = $emailErr = $messageErr = "";
@@ -58,6 +56,5 @@ function filter($data){
     return $data;
 }
 
-$conn == null;
 
 ?>

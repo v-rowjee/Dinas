@@ -1,7 +1,7 @@
 <!-- Nav Bar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top my-md-3 mx-md-5 rounded">
   <div class="container">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="index.php">
       <img src="images/logo.png" alt="" />
     </a>
     <button
@@ -36,7 +36,7 @@
       <ul class="navbar-nav">
         
         <?php 
-        if(isset($_SESSION['username'])){
+        if(isset($_SESSION['id'])){
         ?>
 
         <li class="nav-item nowrap">
@@ -193,7 +193,6 @@
               name="name"
               pattern="[a-zA-Z\s]+"
               title="Letters and white space only"
-              style="text-transform: capitalize;"
               required
             />
             <div class="invalid-feedback">* Invalid input</div>
