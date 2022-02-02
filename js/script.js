@@ -31,6 +31,42 @@ $(document).ready(function () {
       x.type = "password";
     }
   });
+
+  // add autocomplete for all form / input
+  let tagArr = document.getElementsByTagName("input");
+  for (let i = 0; i < tagArr.length; i++) {
+    tagArr[i].autocomplete = "off";
+  }
+
+  // date picker
+  $("#datepicker").datepicker({
+    format: "DD MM yy",
+    startDate: 0,
+    todayBtn: "linked",
+    clearBtn: true,
+    autoclose: true,
+  });
+
+  // Navbar
+  // add padding top to show content behind navbar
+  $("body").css("padding-top", $(".navbar").outerHeight() + "px");
+
+  // detect scroll top or down
+  if ($(".smart-scroll").length > 0) {
+    // check if element exists
+    var last_scroll_top = 0;
+    $(window).on("scroll", function () {
+      scroll_top = $(this).scrollTop();
+      if (scroll_top < last_scroll_top) {
+        $(".smart-scroll").removeClass("scrolled-down").addClass("scrolled-up");
+      } else {
+        $(".smart-scroll").removeClass("scrolled-up").addClass("scrolled-down");
+      }
+      last_scroll_top = scroll_top;
+    });
+  }
+
+  //end
 });
 
 // Example starter JavaScript for disabling form submissions if there are invalid fields
@@ -82,38 +118,3 @@ $(document).ready(function () {
 // Date picker
 let today = new Date().toISOString().substr(0, 10);
 document.querySelector("#datepicker").value = today;
-
-$("#datepicker").datepicker({
-  format: "DD MM yy",
-  startDate: 0,
-  todayBtn: "linked",
-  clearBtn: true,
-  autoclose: true,
-});
-
-// add autocomplete for all form / input
-let tagArr = document.getElementsByTagName("input");
-for (let i = 0; i < tagArr.length; i++) {
-  tagArr[i].autocomplete = "off";
-}
-
-// Read more
-$(document).ready(function () {
-  var max = 100;
-  $(".readMore").each(function () {
-    var str = $(this).text();
-    if ($.trim(str).length > max) {
-      var subStr = str.substring(0, max);
-      var hiddenStr = str.substring(max, $.trim(str).length);
-      $(this).empty().html(subStr);
-      $(this).append(
-        ' <a href="javascript:void(0);" class="link">Read more…</a>'
-      );
-      $(this).append('<span class="addText">' + hiddenStr + "</span>");
-    }
-  });
-  $(".link").click(function () {
-    $(this).siblings(".addText").contents().unwrap();
-    $(this).remove();
-  });
-});

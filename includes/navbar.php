@@ -1,5 +1,5 @@
 <!-- Nav Bar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top my-md-3 mx-md-5 rounded">
+<nav class="navbar navbar-expand-lg smart-scroll navbar-dark bg-dark fixed-top my-md-3 mx-md-5 rounded">
   <div class="container">
     <a class="navbar-brand" href="index.php">
       <img src="images/logo.png" alt="" />
@@ -83,6 +83,23 @@
     </div>
   </div>
   </nav>
+
+  <script>
+  // detect scroll top or down
+  if ($(".smart-scroll").length > 0) {
+    // check if element exists
+    var last_scroll_top = 0;
+    $(window).on("scroll", function () {
+      scroll_top = $(this).scrollTop();
+      if (scroll_top < last_scroll_top) {
+        $(".smart-scroll").removeClass("scrolled-down").addClass("scrolled-up");
+      } else {
+        $(".smart-scroll").removeClass("scrolled-up").addClass("scrolled-down");
+      }
+      last_scroll_top = scroll_top;
+    });
+  }
+  </script>
 
     <!-- Offcanvas for Authentication -->
     <div

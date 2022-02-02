@@ -14,7 +14,7 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
     <!-- My script -->
-    <script src="js/script.js"></script>
+    <script src="js/script.js" type="text/javascript"></script>
     
   </body>
 </html>
