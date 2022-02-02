@@ -315,7 +315,7 @@ include 'includes/navbar.php';
       <div class="col-sm-12 col-lg-7">
         <h6 class="gold">Let's get in touch,</h6>
         <h1>Contact Us</h1>
-        <form action="includes/contact.php" method="post" class="needs-validation" novalidate>
+        <form action="includes/send_mail.php" method="post" class="needs-validation" novalidate>
           <label for="name" class="form-label">Name</label>
           <input
             type="text"
