@@ -1,18 +1,18 @@
 // AUTHENTICATION
 $(document).ready(function () {
-  // open register
-  $("#join-us").click(function () {
-    $("#auth-title").html("Register");
-    $("#login-form").hide();
-    $("#register-form").show();
-  });
+  // // open register
+  // $("#join-us").click(function () {
+  //   $("#auth-title").html("Register");
+  //   $("#login-form").hide();
+  //   $("#register-form").show();
+  // });
 
-  // open login
-  $("#sign-in").click(function () {
-    $("#auth-title").html("Login");
-    $("#register-form").hide();
-    $("#login-form").show();
-  });
+  // // open login
+  // $("#sign-in").click(function () {
+  //   $("#auth-title").html("Login");
+  //   $("#register-form").hide();
+  //   $("#login-form").show();
+  // });
 
   // toggle passwod visibility
   $("#checkbox").click(function () {

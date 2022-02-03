@@ -55,10 +55,7 @@
           <a
             class="nav-link"
             id="sign-in"
-            role="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasRight"
-            aria-controls="offcanvasRight"
+            href="login.php"
             >Sign In</a
           >
         </li>
@@ -66,12 +63,8 @@
           <button
             class="btn btn-primary text-dark nowrap"
             id="join-us"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasRight"
-            aria-controls="offcanvasRight"
           >
-            Join Us
+            <a class="text-dark" href="register.php">Join Us</a>
           </button>
         </li>
 
@@ -82,7 +75,7 @@
       </ul>
     </div>
   </div>
-  </nav>
+</nav>
 
   <script>
   // detect scroll top or down
@@ -101,150 +94,22 @@
   }
   </script>
 
-    <!-- Offcanvas for Authentication -->
-    <div
-      class="offcanvas offcanvas-end p-2"
-      data-bs-scroll="false"
-      id="offcanvasRight"
-      >
-      <div class="offcanvas-header mx-2">
-        <h2 id="auth-title">Login</h2>
-        <button
-          type="button"
-          class="btn-close btn-close-white text-reset"
-          data-bs-dismiss="offcanvas"
-          aria-label="Close"
-        ></button>
-      </div>
-      <div class="offcanvas-body mx-2">
-        <!-- <a
-          class="btn btn-outline-secondary mb-4"
-          href="&lt;?php echo $client->createAuthUrl() ?>"
-        >
-          Sign in with google
-        </a> -->
-        <!-- LOGIN -->
-        <form
-          id="login-form"
-          class="needs-validation"
-          novalidate
-          action="includes/login.php"
-          method="POST">
-          <div class="mb-5">
-            <label for="username" class="form-label">Username</label>
-            <input
-              type="text"
-              class="form-control"
-              name="username"
-              pattern="[a-zA-Z0-9-]+"
-              title="Letters and numbers only"
-              maxlength="16"
-              required
-            />
-            <div class="invalid-feedback">* Invalid input</div>
-          </div>
-          
-
-          <div class="mb-3">
-            <label for="password" class="form-label">Password</label>
-            <input
-              type="password"
-              class="form-control password"
-              id="password"
-              name="password"
-              required
-            />
-            <div class="invalid-feedback">* Required field</div>
-          </div>
-          <div class="mb-5 form-check">
-            <input type="checkbox" class="form-check-input" id="checkbox"/>
-            <label class="form-check-label" for="checkbox">Show password</label>
-          </div>
-          <button
-            type="submit"
-            name="submit"
-            class="btn btn-primary text-dark px-5"
-          >
-            Login
-          </button>
-        </form>
-
-        <!-- REGISTER -->
-        <form id="register-form" class="needs-validation" novalidate action="includes/register.php" method="POST">
-          <div class="mb-5">
-            <label for="username" class="form-label">Username</label>
-            <input
-              type="text"
-              class="form-control"
-              name="username"
-              pattern="[a-zA-Z0-9-]+"
-              title="Letters and numbers only"
-              maxlength="16"
-              required              
-            />
-            <div class="invalid-feedback">* Invalid input</div>
-          </div>
-          <div class="mb-3">
-            <label for="password" class="form-label">Password</label>
-            <input
-              type="password"
-              class="form-control password"
-              id="password_"
-              name="password"
-              required
-            />
-            <div class="invalid-feedback">* Required field</div>
-          </div>
-          <div class="mb-5 form-check">
-            <input type="checkbox" class="form-check-input" id="checkbox_"/>
-            <label class="form-check-label" for="checkbox"
-              >Show password</label
-            >
-          </div>
-
-          <div class="mb-5">
-            <label for="name" class="form-label">Name</label>
-            <input
-              type="text"
-              class="form-control"
-              name="name"
-              pattern="[a-zA-Z\s]+"
-              title="Letters and white space only"
-              required
-            />
-            <div class="invalid-feedback">* Invalid input</div>
-          </div>
-
-          <div class="mb-5">
-            <label for="email" class="form-label">Email</label>
-            <input
-              type="email"
-              class="form-control"
-              name="email"
-              required
-            />
-            <div class="invalid-feedback">* Invalid input</div>
-          </div>
-
-          <div class="mb-5">
-            <label for="phone" class="form-label">Mobile Phone</label>
-            <input
-              type="tel"
-              class="form-control"
-              name="phone"
-              pattern="[\+\s0-9]{7,}"
-              required
-            />
-            <div class="invalid-feedback">* Invalid input</div>
-          </div>
-
-          <button
-            type="submit"
-            name="submit"
-            class="g-recaptcha btn btn-primary text-dark px-5"
-          >
-            Register
-          </button>
-        </form>
-      </div>
+  <!-- Offcanvas for Authentication -->
+  <div
+    class="offcanvas offcanvas-end p-2"
+    data-bs-scroll="false"
+    id="offcanvasRight"
+    >
+    <div class="offcanvas-header mx-2">
+      <h2 id="auth-title">Login</h2>
+      <button
+        type="button"
+        class="btn-close btn-close-white text-reset"
+        data-bs-dismiss="offcanvas"
+        aria-label="Close"
+      ></button>
     </div>
+    <div class="offcanvas-body mx-2">
+      
+    </div>
+  </div>

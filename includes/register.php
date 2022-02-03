@@ -79,6 +79,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             ]);
 
             echo "Thank you for registering";
+
+            header('location: ../login.php?u='.$username);
         }
     }
 
