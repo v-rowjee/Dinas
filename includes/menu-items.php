@@ -8,22 +8,34 @@
     
     $rows = $query->rowCount();
 
+    // array to store menu item name
+    $items = array();
+
     while($menu = $query->fetch(PDO::FETCH_ASSOC)){
-        echo '
-        <div class="col-sm-6 col-lg-3 col-xxl-3">
-            <div class="card">
-            <img
-                src="images/'.$menu['img'].'"
-                class="card-img-top"
-                alt="..."
-            />
-            <div class="card-body">
-                <h5 class="card-title">'.$menu['name'].'</h5>
-                <p style="font-size: 0.8rem; height: 3rem" class="card-text readMore">'.$menu['caption'].'</p>
-                <h6 class="price">Rs '.$menu['price'].'</h6>
-                <a href="#" class="btn btn-primary">Buy now</a>
-            </div>
-            </div>
-        </div>
-        ';
+        
+        if($active == 'menu'){
+            echo '
+                <div class="col-sm-6 col-lg-3 col-xxl-3">
+                    <div class="card">
+                    <img
+                        src="images/'.$menu['img'].'"
+                        class="card-img-top"
+                        alt="'.$menu['name'].'"
+                    />
+                    <div class="card-body">
+                        <h5 class="card-title">'.$menu['name'].'</h5>
+                        <p class="card-text">'.$menu['caption'].'</p>
+                        <h6 class="price">Rs '.$menu['price'].'</h6>
+                        <a href="#" class="btn btn-primary">Buy now</a>
+                    </div>
+                    </div>
+                </div>
+            ';
+        }else if($active == 'index'){
+            array_push($items, $menu['name']); // store in array
+        }
+    }
+    if($active == 'index'){
+        $list = implode(' - ', $items);
+        echo $list;
     }

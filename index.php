@@ -80,7 +80,7 @@ include 'includes/navbar.php';
       <div class="col-12 col-md-5">
         <h1>- Starter -</h1>
         <p>
-          Prawn ravioli - Mozzarella sticks - Salad - Seafood gratin - Soup
+          <?php $categorie="starter"; include 'includes/menu-items.php'; ?>
         </p>
         <a href="menu.php">View Menu</a>
       </div>
@@ -92,10 +92,7 @@ include 'includes/navbar.php';
       </div>
       <div class="col-12 col-md-5">
         <h1>- Pasta -</h1>
-        <p>
-          Spaghetti - Penne - Tagiatelle - Pesto - Bolognese - Ravioli -
-          Carbonara - Lasagna - Ricotta - Gnocchi - Linguine
-        </p>
+        <p><?php $categorie="pasta"; include 'includes/menu-items.php'?></p>
         <a href="menu.php">View Menu</a>
       </div>
     </div>
@@ -106,7 +103,7 @@ include 'includes/navbar.php';
       </div>
       <div class="col-12 col-md-5">
         <h1>- Pizza -</h1>
-        <p>Margherita - Calzone - Hawaiian - Quatro Fromaggi</p>
+        <p><?php $categorie="pizza"; include 'includes/menu-items.php'?></p>
         <a href="menu.php">View Menu</a>
       </div>
     </div>
@@ -117,10 +114,7 @@ include 'includes/navbar.php';
       </div>
       <div class="col-12 col-md-5">
         <h1>- Dessert -</h1>
-        <p>
-          Gelato - Biscotti - Tiramisu - Tart - Cookies - Triffle -
-          Zabaglione
-        </p>
+        <p><?php $categorie="dessert"; include 'includes/menu-items.php'?></p>
         <a href="menu.php">View Menu</a>
       </div>
     </div>
@@ -131,7 +125,7 @@ include 'includes/navbar.php';
       </div>
       <div class="col-12 col-md-5">
         <h1>- Drinks -</h1>
-        <p>Water - Wine - Tea - Juice - Cocktail</p>
+        <p><?php $categorie="drinks"; include 'includes/menu-items.php'?></p>
         <a href="menu.php">View Menu</a>
       </div>
     </div>
@@ -217,7 +211,8 @@ include 'includes/navbar.php';
     <!-- custom reservation -->
     <form action="" method="post">
       <div class="row justify-content-center g-3 mx-5">
-        <div class="col-12 col-lg-3">
+        <div class="col-12 col-lg-3 text-start">
+          <label class="ms-1">Party size</label>
           <input
             type="number"
             class="form-control"
@@ -225,7 +220,8 @@ include 'includes/navbar.php';
             required
           />
         </div>
-        <div class="col-12 col-lg-3">
+        <div class="col-12 col-lg-3 text-start">
+          <label class="ms-1">Date</label>
           <input
             type="date"
             id="datepicker"
@@ -234,9 +230,9 @@ include 'includes/navbar.php';
           />
         </div>
         
-        <div class="col-12 col-lg-3">
+        <div class="col-12 col-lg-3 text-start">
+          <label class="ms-1">Time</label>
           <select class="form-select">
-            <option selected disabled>Time Available</option>
             <option value="5">5pm</option>
             <option value="6">6pm</option>
             <option value="7" disabled>7pm</option>
@@ -246,6 +242,7 @@ include 'includes/navbar.php';
           </select>
         </div>
         <div class="col-12 col-lg-3">
+          <label></label>
           <input
             type="submit"
             class="btn btn-primary w-100"

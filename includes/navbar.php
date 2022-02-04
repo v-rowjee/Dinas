@@ -36,15 +36,11 @@
       <ul class="navbar-nav">
         
         <?php 
-        if(isset($_SESSION['id'])){
+        if(isset($_SESSION['id'])){ // if user is logged in
         ?>
 
         <li class="nav-item nowrap">
-          <a
-            class="nav-link"
-            href="includes/logout.php"
-            >Sign Out</a
-          >
+          <a class="nav-link" href="includes/logout.php">Sign Out</a>
         </li>
 
         <?php
@@ -52,21 +48,13 @@
         ?>
 
           <li class="nav-item">
-          <a
-            class="nav-link"
-            id="sign-in"
-            href="login.php"
-            >Sign In</a
-          >
-        </li>
-        <li>
-          <button
-            class="btn btn-primary text-dark nowrap"
-            id="join-us"
-          >
-            <a class="text-dark" href="register.php">Join Us</a>
-          </button>
-        </li>
+            <a class="nav-link" href="login.php">Sign In</a>
+          </li>
+          <li>
+            <button class="btn btn-primary text-dark nowrap">
+              <a class="text-dark" href="register.php">Join Us</a>
+            </button>
+          </li>
 
         <?php
         } // end else
@@ -77,39 +65,19 @@
   </div>
 </nav>
 
-  <script>
-  // detect scroll top or down
-  if ($(".smart-scroll").length > 0) {
-    // check if element exists
-    var last_scroll_top = 0;
-    $(window).on("scroll", function () {
-      scroll_top = $(this).scrollTop();
-      if (scroll_top < last_scroll_top) {
-        $(".smart-scroll").removeClass("scrolled-down").addClass("scrolled-up");
-      } else {
-        $(".smart-scroll").removeClass("scrolled-up").addClass("scrolled-down");
-      }
-      last_scroll_top = scroll_top;
-    });
-  }
-  </script>
-
-  <!-- Offcanvas for Authentication -->
-  <div
-    class="offcanvas offcanvas-end p-2"
-    data-bs-scroll="false"
-    id="offcanvasRight"
-    >
-    <div class="offcanvas-header mx-2">
-      <h2 id="auth-title">Login</h2>
-      <button
-        type="button"
-        class="btn-close btn-close-white text-reset"
-        data-bs-dismiss="offcanvas"
-        aria-label="Close"
-      ></button>
-    </div>
-    <div class="offcanvas-body mx-2">
-      
-    </div>
-  </div>
+<script>
+// detect scroll top or down
+if ($(".smart-scroll").length > 0) {
+  // check if element exists
+  var last_scroll_top = 0;
+  $(window).on("scroll", function () {
+    scroll_top = $(this).scrollTop();
+    if (scroll_top < last_scroll_top) {
+      $(".smart-scroll").removeClass("scrolled-down").addClass("scrolled-up");
+    } else {
+      $(".smart-scroll").removeClass("scrolled-up").addClass("scrolled-down");
+    }
+    last_scroll_top = scroll_top;
+  });
+}
+</script>

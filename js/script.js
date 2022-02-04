@@ -66,13 +66,33 @@ $(document).ready(function () {
     });
   }
 
+  // Owl Carousel 2
+  $(".owl-carousel").owlCarousel({
+    margin: 10,
+    nav: true,
+    navText: [
+      "<i class='fa fa-chevron-left'></i>",
+      "<i class='fa fa-chevron-right'></i>",
+    ],
+    responsive: {
+      0: {
+        items: 1,
+      },
+      600: {
+        items: 3,
+      },
+      1000: {
+        items: 5,
+      },
+    },
+  });
+
   //end
 });
 
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function () {
   "use strict";
-
   // Fetch all the forms we want to apply custom Bootstrap validation styles to
   var forms = document.querySelectorAll(".needs-validation");
 

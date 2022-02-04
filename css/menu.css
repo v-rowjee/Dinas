@@ -5,6 +5,7 @@ section:nth-of-type(0) {
 }
 main section {
   padding: 0;
+  padding-bottom: 100px;
 }
 
 #menu {
