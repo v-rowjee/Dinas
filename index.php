@@ -195,70 +195,17 @@ include 'includes/navbar.php';
 <!-- Reservation Section -->
 <section id="reservation">
   <div class="container text-center">
-    <div class="row justify-content-center align-items-center mb-5">
-      <div class="col-8">
-        <h6 class="gold">Book a table now.</h6>
-        <h1>Reservation</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-          Repudiandae temporibus id quaerat. Tenetur magnam aperiam debitis
-          delectus eveniet. Architecto iste nihil esse tempora. Numquam
-          natus dolorum dolor, rerum obcaecati facilis.
-        </p>
-      </div>
-    </div>
 
     <!-- custom reservation -->
-    <?php include 'includes/reservation.php' ?>
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-      <div class="row justify-content-center g-3 mx-5">
-        <div class="col-12 col-lg-3 text-start">
-          <label class="ms-1">Party size</label>
-          <input
-            type="number"
-            name="size"
-            class="form-control"
-            min="1"
-            value="2"
-            required
-          />
-        </div>
-        <div class="col-12 col-lg-3 text-start">
-          <label class="ms-1">Date</label>
-          <input
-            type="date"
-            name="date"
-            id="datepicker"
-            class="form-control datepicker"
-            required
-          />
-        </div>
-        
-        <div class="col-12 col-lg-3 text-start">
-          <label class="ms-1">Time</label>
-          <select class="form-select" name="time">
-            <option value="5" <?=$time == '5' ? ' selected="selected"' : '';?>>5pm</option>
-            <option value="6" <?=$time == '6' ? ' selected="selected"' : '';?>>6pm</option>
-            <option value="7" <?=$time == '7' ? ' selected="selected"' : '';?>>7pm</option>
-            <option value="8" <?=$time == '8' ? ' selected="selected"' : '';?>>8pm</option>
-            <option value="9" <?=$time == '9' ? ' selected="selected"' : '';?>>9pm</option>
-            <option value="10" <?=$time == '10' ? ' selected="selected"' : '';?>>10pm</option>
-          </select>
-        </div>
-        <div class="col-12 col-lg-3">
-          <label></label>
-          <input
-            type="submit"
-            name="submit-reservation"
-            class="btn btn-primary w-100"
-            value="Reserve Now"
-          />
-        </div>
-      </div>
-      <div class="row">
-        <p class="msg mt-5"><?php echo $msg ?></p>
-      </div>
-    </form>
+    <?php 
+    
+    if(!isset($_SESSION['rid']))
+      include 'includes/reservation_add.php';
+    else
+      include 'includes/reservation_cancel.php';
+    
+    ?>
+
 
     <!-- OpenTable API -->
     <!-- <div class="row justify-content-center">
