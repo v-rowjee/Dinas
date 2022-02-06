@@ -115,11 +115,8 @@ video {
 }
 
 /* RESERVATION */
-/* #reservation .ot-button {
-  display: none;
-} */
 #reservation {
-  overflow: visible;
+  padding-bottom: 20vh;
 }
 #reservation input:not(.btn),
 .form-select {
@@ -141,14 +138,17 @@ video {
   opacity: 0.2;
 }
 
-@media (max-width: 902px) {
+/* #reservation .ot-button {
+  display: none;
+} */
+/* @media (max-width: 902px) {
   #reservation .ot-wide {
     display: none;
   }
   #reservation .ot-button {
     display: initial;
   }
-}
+} */
 
 /* Contact */
 #contact {

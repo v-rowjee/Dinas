@@ -209,14 +209,17 @@ include 'includes/navbar.php';
     </div>
 
     <!-- custom reservation -->
-    <form action="" method="post">
+    <?php include 'includes/reservation.php' ?>
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
       <div class="row justify-content-center g-3 mx-5">
         <div class="col-12 col-lg-3 text-start">
           <label class="ms-1">Party size</label>
           <input
             type="number"
+            name="size"
             class="form-control"
-            placeholder="People"
+            min="1"
+            value="2"
             required
           />
         </div>
@@ -224,6 +227,7 @@ include 'includes/navbar.php';
           <label class="ms-1">Date</label>
           <input
             type="date"
+            name="date"
             id="datepicker"
             class="form-control datepicker"
             required
@@ -232,26 +236,27 @@ include 'includes/navbar.php';
         
         <div class="col-12 col-lg-3 text-start">
           <label class="ms-1">Time</label>
-          <select class="form-select">
-            <option value="5">5pm</option>
-            <option value="6">6pm</option>
-            <option value="7" disabled>7pm</option>
-            <option value="8">8pm</option>
-            <option value="9">9pm</option>
-            <option value="10">10pm</option>
+          <select class="form-select" name="time">
+            <option value="5" <?=$time == '5' ? ' selected="selected"' : '';?>>5pm</option>
+            <option value="6" <?=$time == '6' ? ' selected="selected"' : '';?>>6pm</option>
+            <option value="7" <?=$time == '7' ? ' selected="selected"' : '';?>>7pm</option>
+            <option value="8" <?=$time == '8' ? ' selected="selected"' : '';?>>8pm</option>
+            <option value="9" <?=$time == '9' ? ' selected="selected"' : '';?>>9pm</option>
+            <option value="10" <?=$time == '10' ? ' selected="selected"' : '';?>>10pm</option>
           </select>
         </div>
         <div class="col-12 col-lg-3">
           <label></label>
           <input
             type="submit"
+            name="submit-reservation"
             class="btn btn-primary w-100"
             value="Reserve Now"
           />
         </div>
       </div>
       <div class="row">
-        <p class="invalid-feedback">* Fill the required input</p>
+        <p class="msg mt-5"><?php echo $msg ?></p>
       </div>
     </form>
 
@@ -283,11 +288,11 @@ include 'includes/navbar.php';
 <!-- Order online -->
 <section id="online-order">
   <div class="container text-center">
-    <div class="row align-items-center justify-content-center g-5">
+    <div class="row align-items-center justify-content-around g-5">
       <div class="col-10 col-lg-5">
         <img src="images/mockup.png" alt="" class="img-fluid" />
       </div>
-      <div class="col-12 col-lg-7">
+      <div class="col-12 col-lg-5">
         <h6 class="gold">We make your life easier !</h6>
         <h1>Order Online</h1>
         <p class="mb-5">
@@ -515,8 +520,8 @@ include 'includes/navbar.php';
 <!-- About Us -->
 <section id="about-us">
   <div class="container text-center">
-    <div class="row">
-      <div class="col-12 col-md-6 align-self-center order-md-2">
+    <div class="row justify-content-around">
+      <div class="col-12 col-md-5 align-self-center order-md-2">
         <h6 class="gold">Who are we?</h6>
         <h1>About Us</h1>
         <p>
@@ -540,7 +545,7 @@ include 'includes/navbar.php';
 <!-- Reviews -->
 <section id="reviews">
   <div class="container text-center">
-    <div class="row flex-row-reverse g-4">
+    <div class="row flex-row-reverse justify-content-around g-4">
       <div class="col-12 col-lg-6 order-2 order-lg-1">
         <div
           id="reviews-carousel"
