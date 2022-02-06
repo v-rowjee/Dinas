@@ -58,6 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 $_SESSION['email'] = $user['email'];
                 $_SESSION['phone'] = $user['phone'];
                 $_SESSION['is-admin'] = $user['is-admin'];
+                $_SESSION['rid'] = $user['rid'];
 
                 if($user['is_admin']=='yes') // admin
                     header('location: admin/dashboard.html');

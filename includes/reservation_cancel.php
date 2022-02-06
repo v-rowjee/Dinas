@@ -28,6 +28,12 @@ if(isset($_POST['cancel-reservation'])){
         ':id' => $_SESSION['rid']
     ]);
 
+    // remove tables allocation in res_tab
+    $sql3 = "DELETE FROM res_tab WHERE rid = :rid";
+    $result3 = $conn->prepare($sql3);
+    $result3->execute([
+        ':rid' => $_SESSION['rid']
+    ]);
 
     // unset session's reservation
     unset($_SESSION['rid']);

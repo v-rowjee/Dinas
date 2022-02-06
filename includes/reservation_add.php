@@ -18,7 +18,7 @@ if (isset($_POST['submit-reservation'])) {
     $time = $_POST['time'];
 
     // get num of reservation at input date and time
-    $sql1 = "SELECT * FROM reservation WHERE date = :date AND time = :time"; 
+    $sql1 = "SELECT * FROM res_tab WHERE rid = (SELECT id FROM reservation WHERE date = :date AND time = :time)"; 
     $result1 = $conn->prepare($sql1); 
     $result1->execute([
         ':date' => $date,
@@ -36,19 +36,27 @@ if (isset($_POST['submit-reservation'])) {
         $msg = "Restaurant full at this time";
 
     else{
-        // if table available, add reservations for n tid
-        $sql3 = "INSERT INTO reservation (party_size,date, time, tid) VALUES (:size,:date,:time,:tid)";
+        // if table available, add a new reservation
+        $sql5 = "INSERT INTO reservation (party_size,date,time) VALUES (:size,:date,:time)";
+        $result5 = $conn->prepare($sql5);
+        $result5->execute([
+            ':size' => $size,
+            ':date' => $date,
+            ':time' => $time
+        ]);
+        // set session rid
+        $_SESSION['rid'] = $conn->lastInsertId();
+
+        // put n rows for n table needed
+        $sql3 = "INSERT INTO res_tab (rid, tid) VALUES (:rid,:tid)";
         $result3 = $conn->prepare($sql3);
-        for($i=0; $i<$tables_needed; $i++){
+        
+        for($i=0; $i < $tables_needed; $i++){
             $result3->execute([
-                ':size' => $size,
-                ':date' => $date,
-                ':time' => $time,
-                ':tid' => $num_of_reservations+1
+                ':rid' => $_SESSION['rid'],
+                ':tid' => $num_of_reservations+1+$i
             ]); 
         }
-
-        $_SESSION['rid'] = $conn->lastInsertId();
         
         // put reservation on customer
         $sql4 = "UPDATE users SET rid = :rid WHERE id = :id";
