@@ -18,19 +18,19 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mx-auto mb-2 mb-lg-0" id="spy-target">
         <li class="nav-item">
-          <a class="nav-link <?php if($active == "menu")echo "active"?>" href="<?php if($active != "index") echo "index.php" ?>#menu">Menu</a>
+          <a class="nav-link <?php if($active == "menu")echo "active"?>" href="index.php#menu">Menu</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link <?php if($active == "reservation")echo "active"?>" href="<?php if($active != "index") echo "index.php" ?>#reservation">Reservation</a>
+          <a class="nav-link <?php if($active == "reservation")echo "active"?>" href="index.php#reservation">Reservation</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link <?php if($active == "online-order")echo "active"?>" href="<?php if($active != "index") echo "index.php" ?>#online-order">Online Order</a>
+          <a class="nav-link <?php if($active == "online-order")echo "active"?>" href="index.php#online-order">Online Order</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link <?php if($active == "contact")echo "active"?>" href="<?php if($active != "index") echo "index.php" ?>#contact" role="button">Contact</a>
+          <a class="nav-link <?php if($active == "contact")echo "active"?>" href="index.php#contact" role="button">Contact</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link <?php if($active == "about-us")echo "active"?>" href="<?php if($active != "index") echo "index.php" ?>#about-us" role="button">About Us</a>
+          <a class="nav-link <?php if($active == "about-us")echo "active"?>" href="index.php#about-us" role="button">About Us</a>
         </li>
       </ul>
       <ul class="navbar-nav">

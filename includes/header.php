@@ -40,7 +40,8 @@ session_start();
       if($active == "about-us") echo'<link rel="stylesheet" href="css/about.css" />';
       if($active == "online-order")  echo'<link rel="stylesheet" href="css/online_order.css" />';
       if($active == "reviews") echo'<link rel="stylesheet" href="css/reviews.css" />';
-      if($active == "account") echo'<link rel="stylesheet" href="css/account.css" />'; 
+      if($active == "account") echo'<link rel="stylesheet" href="css/account.css" />';
+      if($active == "reservation") echo'<link rel="stylesheet" href="css/reservation.css" />'; 
     ?>
     
   </head>

@@ -38,29 +38,29 @@ if(isset($_POST['cancel-reservation'])){
     // unset session's reservation
     unset($_SESSION['rid']);
 
-    // ask user to refresh page
-    $msg = 'Reservation cancelled. Refresh page.';
+    // redirect page
+    header('location: index.php#reservation');
 }
 ?>
 
 <div class="container">
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+    <form action="reservation.php" method="post">
 
         <div class="row justify-content-center align-items-center mb-5">
             <h6 class="gold">You already have a reservation</h6>
             <h1>Reservation Number <?php echo $res['id'] ?></h1> 
 
-            <p>
+            <p class="mb-5">
                 Your reservation has been set for <?php echo $res['time']."pm" ?> on <?php echo $show_date ?>.
                 Tables have been reserved for a total of <?php echo $res['party_size'] ?> guests.
                 If you wish to cancel your reservation please do so at least one hour before the reservation time by clicking on the cancel button below.
-            </p></br>
+            </p>
 
             <div class="row justify-content-around align-items-center mt-5">
                 <div class="col-10 col-md-3"><h5>Party Size: <?php echo $res['party_size'] ?></h5></div>
                 <div class="col-10 col-md-3"><h5>Date: <?php echo $show_date ?></h5></div>
                 <div class="col-10 col-md-3"><h5>Time: <?php echo $res['time']."pm" ?></h5></div>
-                <div class="col-10 col-md-3"><input type="submit" name="cancel-reservation" class="btn btn-primary w-100" value="Cancel"></div>
+                <div class="col-10 col-md-3"><input type="submit" name="cancel-reservation" class="btn btn-outline-primary w-100" value="Cancel"></div>
                 <div class="msg"><?php echo $msg ?></div>
             </div>
 

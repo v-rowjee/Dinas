@@ -17,8 +17,8 @@ include 'includes/navbar.php';
           discovery menu designed and regularly updated by the chef.
         </h5>
 
-        <a href="#reservation" class="btn btn-outline-primary my-5"
-          >Reserve A Table</a
+        <a href="reservation.php" class="btn btn-outline-primary my-5"
+          >Reserve A Table Now</a
         >
       </div>
     </div>
@@ -133,7 +133,7 @@ include 'includes/navbar.php';
 </section>
 
 <!-- <div class="restaurant-divider"></div> -->
-<div class="video">
+<div class="video" id="reservations" >
   <div class="divider">
     <div style="overflow: hidden">
       <svg
@@ -199,10 +199,23 @@ include 'includes/navbar.php';
     <!-- custom reservation -->
     <?php 
     
-    if(!isset($_SESSION['rid']))
-      include 'includes/reservation_add.php';
-    else
-      include 'includes/reservation_cancel.php';
+    if(!isset($_SESSION['id'])){ // not logged in
+      header('location: login.php');
+
+    }else{
+      if(!isset($_SESSION['rid'])){   // no reservation yet
+        include 'includes/reservation_add.php';
+        if($msg == 'Refresh page')
+          header('location: reservation.php');
+
+      }else{
+        include 'includes/reservation_cancel.php';
+        if($msg == 'Refresh page')
+          header('location: reservation.php');
+      }
+
+      
+    }
     
     ?>
 

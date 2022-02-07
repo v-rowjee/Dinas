@@ -65,7 +65,10 @@ if (isset($_POST['submit-reservation'])) {
             ':rid' => $_SESSION['rid'],
             ':id' => $_SESSION['id']
         ]);
-        $msg = 'Reservation booked. Refresh page';
+
+        // redirect 
+        header('location: index.php#reservation');
+        
     }
 }
 ?>
@@ -83,7 +86,7 @@ if (isset($_POST['submit-reservation'])) {
     </div>
 </div>
 
-<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+<form action="reservation.php" method="post">
     <div class="row justify-content-center g-3 mx-5">
     <div class="col-12 col-lg-3 text-start">
         <label class="ms-1">Party size</label>
@@ -123,7 +126,7 @@ if (isset($_POST['submit-reservation'])) {
         <input
         type="submit"
         name="submit-reservation"
-        class="btn btn-primary w-100"
+        class="btn btn-outline-primary w-100"
         value="Reserve Now"
         />
     </div>
