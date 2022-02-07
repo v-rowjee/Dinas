@@ -21,8 +21,8 @@ if(isset($_POST['cancel-reservation'])){
     ]);
     
 
-    // remove actual reservation
-    $sql2 = "DELETE FROM reservation WHERE id = :id";
+    // set reservation status to cancelled
+    $sql2 = "UPDATE reservation SET status = 'cancel' WHERE id = :id";
     $result2 = $conn->prepare($sql2);
     $result2->execute([
         ':id' => $_SESSION['rid']
