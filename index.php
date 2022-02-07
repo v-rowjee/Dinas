@@ -17,7 +17,7 @@ include 'includes/navbar.php';
           discovery menu designed and regularly updated by the chef.
         </h5>
 
-        <a href="reservation.php" class="btn btn-outline-primary my-5"
+        <a href="<?php if(isset($_SESSION['id'])) echo 'reservation.php'; else echo 'login.php' ?>" class="btn btn-outline-primary my-5"
           >Reserve A Table Now</a
         >
       </div>
@@ -199,23 +199,10 @@ include 'includes/navbar.php';
     <!-- custom reservation -->
     <?php 
     
-    if(!isset($_SESSION['id'])){ // not logged in
-      header('location: login.php');
-
-    }else{
-      if(!isset($_SESSION['rid'])){   // no reservation yet
+      if(!isset($_SESSION['rid']))   // no reservation yet
         include 'includes/reservation_add.php';
-        if($msg == 'Refresh page')
-          header('location: reservation.php');
-
-      }else{
+      else
         include 'includes/reservation_cancel.php';
-        if($msg == 'Refresh page')
-          header('location: reservation.php');
-      }
-
-      
-    }
     
     ?>
 

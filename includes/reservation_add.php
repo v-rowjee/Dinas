@@ -9,6 +9,10 @@ $msg = "";
 
 if (isset($_POST['submit-reservation'])) {
 
+    if(!isset($_SESSION['id'])){
+        header('location: login.php');
+    }else{
+
     $dateInput = $_POST['date'];
     $date = date("Y-m-d", strtotime($dateInput));   // set format of date
 
@@ -70,6 +74,7 @@ if (isset($_POST['submit-reservation'])) {
         header('location: index.php#reservation');
         
     }
+  }
 }
 ?>
 
