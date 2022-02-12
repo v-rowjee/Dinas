@@ -3,8 +3,10 @@ $active = "sign-in";
 include 'includes/header.php';
 include 'includes/navbar.php';
 
-if(isset($_SESSION['id']))
+if(isset($_SESSION['id'])){
   header('location: index.php?id='.$_SESSION['id']);
+  die();
+}
 
 $username = $password = "";
 $usernameErr = $passwordErr = "";
@@ -38,11 +40,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
     if($usernameErr=="" && $passwordErr==""){ // if no error...
 
-        $sql = "SELECT * FROM users WHERE username = :username";
+        $sql = "SELECT * FROM users WHERE username = ?";
         $statement = $conn->prepare($sql);
-
-        $statement->bindParam(':username',$username);
-        $statement->execute();
+        $statement->execute([$username]);
 
         $user = $statement->fetch(PDO::FETCH_ASSOC);
 
@@ -57,13 +57,16 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 $_SESSION['name'] = $user['name'];
                 $_SESSION['email'] = $user['email'];
                 $_SESSION['phone'] = $user['phone'];
-                $_SESSION['is-admin'] = $user['is-admin'];
+                $_SESSION['is_admin'] = $user['is_admin'];
                 $_SESSION['rid'] = $user['rid'];
 
-                if($user['is_admin']=='yes') // admin
-                    header('location: admin/dashboard.html');
-                else // normal user
-                    header('location: index.php?id='.$user['id']);
+                if($user['is_admin']=='yes'){ // admin
+                    header('location: admin/dashboard.php');
+                    die();
+                }else{ // normal user
+                    header('location: index.php');
+                    die();
+                }
 
             } else
                 $passwordErr = "* Invalid password";

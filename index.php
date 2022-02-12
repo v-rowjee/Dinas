@@ -233,7 +233,7 @@ include 'includes/navbar.php';
 </section>
 
 <!-- Order online -->
-<section id="online-order">
+<section id="order">
   <div class="container text-center">
     <div class="row align-items-center justify-content-around g-5">
       <div class="col-10 col-lg-5">
@@ -248,7 +248,7 @@ include 'includes/navbar.php';
           tempore deleniti fugit, delectus.
         </p>
         <a
-          href="online_order.php"
+          href="order.php"
           class="btn btn-outline-primary px-5"
           >Order now</a
         >
@@ -334,7 +334,7 @@ include 'includes/navbar.php';
 </section>
 
 <!-- about us divider -->
-<div id="about-us-divider">
+<div id="about-divider">
   <div class="divider">
     <div style="overflow: hidden">
       <svg
@@ -465,7 +465,7 @@ include 'includes/navbar.php';
 </div>
 
 <!-- About Us -->
-<section id="about-us">
+<section id="about">
   <div class="container text-center">
     <div class="row justify-content-around">
       <div class="col-12 col-md-5 align-self-center order-md-2">

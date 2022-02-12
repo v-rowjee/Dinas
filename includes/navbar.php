@@ -24,13 +24,13 @@
           <a class="nav-link <?php if($active == "reservation")echo "active"?>" href="index.php#reservation">Reservation</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link <?php if($active == "online-order")echo "active"?>" href="index.php#online-order">Online Order</a>
+          <a class="nav-link <?php if($active == "order")echo "active"?>" href="index.php#order">Online Order</a>
         </li>
         <li class="nav-item">
           <a class="nav-link <?php if($active == "contact")echo "active"?>" href="index.php#contact" role="button">Contact</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link <?php if($active == "about-us")echo "active"?>" href="index.php#about-us" role="button">About Us</a>
+          <a class="nav-link <?php if($active == "about")echo "active"?>" href="index.php#about" role="button">About Us</a>
         </li>
       </ul>
       <ul class="navbar-nav">
@@ -40,7 +40,17 @@
         ?>
 
         <li class="nav-item nowrap">
-          <a class="nav-link" href="includes/logout.php">Sign Out</a>
+        <div class="dropdown">
+        <button class="btn btn-outline-primary px-3 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="fa fa-user"></i> 
+          <p style="opacity: 1;" class="d-inline px-2"><?php echo $_SESSION['username'] ?></p>
+        </button>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <?php if($_SESSION['is_admin'] == 'yes') echo '<li><a class="dropdown-item" href="admin/dashboard.php">Dashboard</a></li>' ?>
+            <li><a class="dropdown-item" href="includes/logout.php">Log out</a></li>
+          </ul>
+        </div>
         </li>
 
         <?php

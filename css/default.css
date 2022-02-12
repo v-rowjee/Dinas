@@ -142,6 +142,13 @@ a:hover {
   opacity: 0.5;
 }
 
+/* dropdown */
+.dropdown-menu-dark .dropdown-item.active,
+.dropdown-menu-dark .dropdown-item:active {
+  color: #fff;
+  background-color: var(--primary-light);
+}
+
 /* Checkbox */
 .form-check-input:focus {
   border-color: var(--primary-light);

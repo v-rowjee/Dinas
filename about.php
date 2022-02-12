@@ -1,5 +1,5 @@
 <?php 
-  $active = "about-us";
+  $active = "about";
   include 'includes/header.php';
   include 'includes/navbar.php'
 ?>

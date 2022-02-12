@@ -1,10 +1,12 @@
 <?php 
-  $active = "join-us";
+  $active = "register";
   include 'includes/header.php';
   include 'includes/navbar.php';
 
-  if(isset($_SESSION['id']))
+  if(isset($_SESSION['id'])){
     header('location: index.php?id='.$_SESSION['id']);
+    die();
+  }
   
   else{
 
@@ -68,11 +70,9 @@
         }
             
         // Checking if username available
-        $check_sql = "SELECT * FROM users WHERE username = :username";
+        $check_sql = "SELECT * FROM users WHERE username = ?";
         $handler = $conn->prepare($check_sql);
-    
-        $handler->bindParam(':username',$username);
-        $handler->execute();   
+        $handler->execute([$username]);   
         
         if($handler->rowCount()>0){
           $usernameErr = "* Username already exists";
@@ -96,6 +96,7 @@
                 ]);
         
                 header('location: login.php?u='.$username);
+                die();
             }
         }
     }

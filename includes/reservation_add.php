@@ -11,6 +11,7 @@ if (isset($_POST['submit-reservation'])) {
 
     if(!isset($_SESSION['id'])){
         header('location: login.php');
+        die();
     }else{
 
     $dateInput = $_POST['date'];
@@ -22,7 +23,7 @@ if (isset($_POST['submit-reservation'])) {
     $time = $_POST['time'];
 
     // get num of reservation at input date and time
-    $sql1 = "SELECT * FROM res_tab WHERE rid = (SELECT id FROM reservation WHERE date = :date AND time = :time AND status = 'reserved')"; 
+    $sql1 = "SELECT * FROM res_tab WHERE rid = (SELECT id FROM reservation WHERE date = :date AND time = :time AND status = 'reserve')"; 
     $result1 = $conn->prepare($sql1); 
     $result1->execute([
         ':date' => $date,
@@ -71,7 +72,8 @@ if (isset($_POST['submit-reservation'])) {
         ]);
 
         // redirect 
-        header('location: index.php#reservation');
+        header("Refresh:0; url=index.php#reservation");
+        die();
         
     }
   }
@@ -93,48 +95,49 @@ if (isset($_POST['submit-reservation'])) {
 
 <form action="reservation.php" method="post">
     <div class="row justify-content-center g-3 mx-5">
-    <div class="col-12 col-lg-3 text-start">
-        <label class="ms-1">Party size</label>
-        <input
-        type="number"
-        name="size"
-        class="form-control"
-        min="1"
-        value="2"
-        required
-        />
-    </div>
-    <div class="col-12 col-lg-3 text-start">
-        <label class="ms-1">Date</label>
-        <input
-        type="date"
-        name="date"
-        id="datepicker"
-        class="form-control datepicker"
-        required
-        />
-    </div>
-    
-    <div class="col-12 col-lg-3 text-start">
-        <label class="ms-1">Time</label>
-        <select class="form-select" name="time">
-        <option value="5" <?=$time == '5' ? ' selected="selected"' : '';?>>5pm</option>
-        <option value="6" <?=$time == '6' ? ' selected="selected"' : '';?>>6pm</option>
-        <option value="7" <?=$time == '7' ? ' selected="selected"' : '';?>>7pm</option>
-        <option value="8" <?=$time == '8' ? ' selected="selected"' : '';?>>8pm</option>
-        <option value="9" <?=$time == '9' ? ' selected="selected"' : '';?>>9pm</option>
-        <option value="10" <?=$time == '10' ? ' selected="selected"' : '';?>>10pm</option>
-        </select>
-    </div>
-    <div class="col-12 col-lg-3">
-        <label></label>
-        <input
-        type="submit"
-        name="submit-reservation"
-        class="btn btn-outline-primary w-100"
-        value="Reserve Now"
-        />
-    </div>
+        <div class="col-12 col-lg-3 text-start">
+            <label class="ms-1">Party size</label>
+            <input
+            type="number"
+            name="size"
+            class="form-control"
+            min="1"
+            value="2"
+            required
+            />
+        </div>
+        <div class="col-12 col-lg-3 text-start">
+            <label class="ms-1">Date</label>
+            <input
+            type="date"
+            name="date"
+            id="datepicker"
+            class="form-control datepicker"
+            value="<?php echo $date ?>"
+            required
+            />
+        </div>
+        
+        <div class="col-12 col-lg-3 text-start">
+            <label class="ms-1">Time</label>
+            <select class="form-select" name="time">
+            <option value="5" <?=$time == '5' ? ' selected="selected"' : '';?>>5pm</option>
+            <option value="6" <?=$time == '6' ? ' selected="selected"' : '';?>>6pm</option>
+            <option value="7" <?=$time == '7' ? ' selected="selected"' : '';?>>7pm</option>
+            <option value="8" <?=$time == '8' ? ' selected="selected"' : '';?>>8pm</option>
+            <option value="9" <?=$time == '9' ? ' selected="selected"' : '';?>>9pm</option>
+            <option value="10" <?=$time == '10' ? ' selected="selected"' : '';?>>10pm</option>
+            </select>
+        </div>
+        <div class="col-12 col-lg-3">
+            <label></label>
+            <input
+            type="submit"
+            name="submit-reservation"
+            class="btn btn-outline-primary w-100"
+            value="Reserve Now"
+            />
+        </div>
     </div>
     <div class="row">
     <p class="msg mt-5"><?php echo $msg ?></p>

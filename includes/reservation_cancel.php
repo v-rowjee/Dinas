@@ -29,17 +29,16 @@ if(isset($_POST['cancel-reservation'])){
     ]);
 
     // remove tables allocation in res_tab
-    $sql3 = "DELETE FROM res_tab WHERE rid = :rid";
+    $sql3 = "DELETE FROM res_tab WHERE rid = ?";
     $result3 = $conn->prepare($sql3);
-    $result3->execute([
-        ':rid' => $_SESSION['rid']
-    ]);
+    $result3->execute([$_SESSION['rid']]);
 
     // unset session's reservation
     unset($_SESSION['rid']);
 
     // redirect page
-    header('location: index.php#reservation');
+    header("Refresh:0; url=index.php#reservation");
+    die();
 }
 ?>
 

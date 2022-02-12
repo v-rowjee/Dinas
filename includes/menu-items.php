@@ -1,12 +1,8 @@
 <?php  
     include_once 'includes/db_connect.php';
-    $sql = "SELECT * FROM menu WHERE categorie = :cat";
+    $sql = "SELECT * FROM menu WHERE categorie = ?";
     $query = $conn->prepare($sql);
-    $query->bindParam(':cat',$categorie);
-
-    $query->execute();
-    
-    $rows = $query->rowCount();
+    $query->execute([$categorie]);
 
     // array to store menu item name
     $items = array();
@@ -31,9 +27,9 @@
                     </div>
                 </div>
             ';
-        }else if($active == 'index'){
+            
+        }else if($active == 'index')
             array_push($items, $menu['name']); // store in array
-        }
     }
     if($active == 'index'){
         $list = implode(' - ', $items);

@@ -73,7 +73,7 @@
 }
 
 /* ONLINE ORDER */
-#online-order img {
+#order img {
   width: 100%;
   aspect-ratio: 1/1;
   object-fit: contain;
@@ -156,13 +156,13 @@ video {
 }
 
 /* About us divider */
-#about-us-divider img {
+#about-divider img {
   height: 75vh;
   object-fit: cover;
 }
 
 /* About Us */
-#about-us {
+#about {
   padding-bottom: 0;
 }
 
