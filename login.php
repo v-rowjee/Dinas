@@ -1,10 +1,11 @@
 <?php 
+ob_start();
 $active = "sign-in";
 include 'includes/header.php';
 include 'includes/navbar.php';
 
 if(isset($_SESSION['id'])){
-  header('location: index.php?id='.$_SESSION['id']);
+  header('location: index.php');
   die();
 }
 
@@ -154,4 +155,7 @@ function filter($data){
 </div>
 </main>
 
-<?php include 'includes/footer.php' ?>
+<?php 
+include 'includes/footer.php';
+ob_end_flush();
+?>

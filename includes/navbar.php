@@ -41,11 +41,11 @@
 
         <li class="nav-item nowrap">
         <div class="dropdown">
-        <button class="btn btn-outline-primary px-3 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <i class="fa fa-user"></i> 
+        <button class="btn btn-outline-secondary px-3 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="fa-regular fa-user"></i> 
           <p style="opacity: 1;" class="d-inline px-2"><?php echo $_SESSION['username'] ?></p>
         </button>
-          <ul class="dropdown-menu dropdown-menu-dark">
+          <ul class="dropdown-menu dropdown-menu-dark w-100" style="min-width:inherit">
             <li><a class="dropdown-item" href="#">Profile</a></li>
             <?php if($_SESSION['is_admin'] == 'yes') echo '<li><a class="dropdown-item" href="admin/dashboard.php">Dashboard</a></li>' ?>
             <li><a class="dropdown-item" href="includes/logout.php">Log out</a></li>

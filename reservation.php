@@ -19,4 +19,7 @@
 </section>
 
 
-<?php include 'includes/footer.php' ?>
+<?php 
+include 'includes/footer.php';
+ob_end_flush();
+?>

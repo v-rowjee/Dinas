@@ -1,4 +1,5 @@
 <?php 
+  ob_start();
   $active = "register";
   include 'includes/header.php';
   include 'includes/navbar.php';
@@ -209,4 +210,7 @@
 </div>
 </main>
 
-<?php include 'includes/footer.php' ?>
+<?php 
+include 'includes/footer.php';
+ob_end_flush();
+?>
