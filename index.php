@@ -18,8 +18,7 @@ include 'includes/navbar.php';
         </h5>
 
         <a href="<?php if(isset($_SESSION['id'])) echo 'reservation.php'; else echo 'login.php' ?>" class="btn btn-outline-primary my-5"
-          >Reserve A Table Now</a
-        >
+          ><?php if(!isset($_SESSION['rid'])) echo 'Reserve a table now'; else echo 'View your reservation'?></a>
       </div>
     </div>
     <div class="row align-items-center">
