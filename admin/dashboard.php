@@ -1,4 +1,4 @@
-<?php $active= 'dashboard'; include 'includes/header.php' ?>
+<?php $active= 'dashboard'; include_once 'includes/header.php' ?>
     <!--Container Main start-->
     <div class="container py-3">
       <h2>Dashboard</h2>
