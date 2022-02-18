@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Italiana&family=Italianno&family=Prompt:wght@300;400&display=swap");
 
 :root {
-  --header-height: 3rem;
+  --header-height: 2rem;
   --nav-width: 68px;
   --first-color: var(--bg-light);
   --first-color-light: #ddd;
@@ -32,7 +32,7 @@ a {
   left: 0;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   padding: 0 1rem;
   background-color: var(--white-color);
   z-index: var(--z-fixed);
@@ -65,7 +65,7 @@ a {
   width: var(--nav-width);
   height: 100vh;
   background-color: var(--first-color);
-  padding: 0.75rem 0 0 0;
+  padding: 0 1rem 0 0;
   transition: 0.5s;
   z-index: var(--z-fixed);
 }
@@ -89,7 +89,7 @@ a {
 
 .nav_logo {
   margin-bottom: 2rem;
-  margin-top: 0.8rem;
+  margin-top: 0.4rem;
 }
 
 .nav_logo-icon {
@@ -148,6 +148,7 @@ a {
   height: 100vh;
 }
 
+/*  for larger screen */
 @media screen and (min-width: 768px) {
   body {
     margin: calc(var(--header-height) + 1rem) 0 0 0;
@@ -170,7 +171,7 @@ a {
 
   .l-navbar {
     left: 0;
-    padding: 0 1rem 0 0;
+    padding: 0 0.5rem 0 0;
   }
 
   .show {

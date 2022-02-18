@@ -13,7 +13,7 @@
         <div class="nav_list">
           <a href="dashboard.php" class="nav_link <?php if($active == 'dashboard') echo 'active' ?>">
             <i class="bx bx-grid-alt nav_icon" title="Dashboard"></i>
-            <span class="nav_name">Dashboard</span>
+            <span class="nav_name">Dashboard</span> 
           </a>
           <a href="users.php" class="nav_link <?php if($active == 'users') echo 'active' ?>">
             <i class="bx bx-user nav_icon" title="Users"></i>
