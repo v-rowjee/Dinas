@@ -39,8 +39,8 @@
         if(isset($_SESSION['id'])){ // if user is logged in
         ?>
 
-        <li class="nav-item nowrap">
-        <div class="dropdown">
+        <li class="nav-item nowrap" title="Profile">
+        <!-- <div class="dropdown">
         <button class="btn btn-outline-secondary px-3 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
           <i class="fa-regular fa-user"></i> 
           <p style="opacity: 1;" class="d-inline px-2"><?php echo $_SESSION['username'] ?></p>
@@ -50,8 +50,17 @@
             <?php if($_SESSION['is_admin'] == 'yes') echo '<li><a class="dropdown-item" href="admin/dashboard.php">Dashboard</a></li>' ?>
             <li><a class="dropdown-item" href="includes/logout.php">Log out</a></li>
           </ul>
-        </div>
+        </div> -->
+          
+            <a href="../profile.php"> <i class="fa-solid fa-user px-1"></i> </a>         
         </li>
+
+        <?php if($_SESSION['is_admin'] == 'yes') echo '<li class="nav-item" title="Dashboard"><a href="admin/dashboard.php"><i class="fa-solid fa-gear px-1"></i></a></li>' ?>
+
+        <li class="nav-item" title="Log Out">
+            <a href="includes/logout.php"><i class="fa-solid fa-right-from-bracket px-1"></i></a>
+        </li>
+
 
         <?php
         }else{  // else

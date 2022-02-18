@@ -11,7 +11,7 @@
   --secondary-light: rgb(133, 146, 158);
   --secondary-dark: rgba(0, 39, 63, 0.5);
 
-  --text: #f5f5f5;
+  --text: #eee;
 }
 html {
   scroll-behavior: smooth;
@@ -62,6 +62,10 @@ a:hover {
 }
 
 /* Buttons */
+/* .btn {
+  border-radius: 0;
+} */
+
 .btn-primary {
   color: var(--bg);
   background-color: var(--primary-light);
@@ -268,7 +272,9 @@ section:nth-of-type(odd) {
   margin-right: 1rem;
   margin-left: 0.5rem;
 }
-
+.nav-item i {
+  color: #c0c0c0;
+}
 /* divider */
 .divider {
   overflow: hidden;
@@ -279,6 +285,7 @@ section:nth-of-type(odd) {
   background-color: transparent;
   color: var(--text);
   border-color: var(--text);
+  /* border-radius: 0; */
 }
 .form-control:focus {
   background-color: transparent;

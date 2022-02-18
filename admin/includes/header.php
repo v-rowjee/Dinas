@@ -21,6 +21,7 @@ if($_SESSION['is_admin'] != 'yes'){ header('location: ../index.php'); die();}
     <!-- My Styles -->
     <link rel="stylesheet" href="../css/default.css" />
     <link rel="stylesheet" href="css/sidenav.css" />
+    <link rel="stylesheet" href="css/styles1.css">
 
     <?php if($active == 'menu') echo '<link rel="stylesheet" href="../css/menu.css" />' ?>
     

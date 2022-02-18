@@ -1,0 +1,33 @@
+.input-group-text {
+  background-color: transparent;
+  border: 1px solid var(--text);
+  height: 2rem;
+}
+.input-group-text:hover {
+  background-color: #444;
+}
+.input-group-text i {
+  color: var(--text);
+}
+.input-group {
+  width: 25%;
+}
+@media only screen and (max-width: 991px) {
+  .input-group {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .input-group {
+    width: 70%;
+  }
+}
+
+.form-control {
+  height: 2rem;
+}
+form {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+}
