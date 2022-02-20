@@ -2,7 +2,7 @@
 ob_start();
 $active = "sign-in";
 include 'includes/header.php';
-include 'includes/navbar.php';
+
 
 if(isset($_SESSION['id'])){
   header('location: index.php');

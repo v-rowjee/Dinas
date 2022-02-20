@@ -1,8 +1,8 @@
 <?php  
     include_once 'includes/db_connect.php';
-    $sql = "SELECT * FROM menu WHERE categorie = ?";
+    $sql = "SELECT * FROM menu WHERE category = ?";
     $query = $conn->prepare($sql);
-    $query->execute([$categorie]);
+    $query->execute([$category]);
 
     // array to store menu item name
     $items = array();

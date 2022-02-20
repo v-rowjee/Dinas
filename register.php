@@ -2,7 +2,7 @@
   ob_start();
   $active = "register";
   include 'includes/header.php';
-  include 'includes/navbar.php';
+  
 
   if(isset($_SESSION['id'])){
     header('location: index.php?id='.$_SESSION['id']);

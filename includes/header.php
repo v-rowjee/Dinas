@@ -43,11 +43,14 @@ session_start();
     ?>
     
   </head>
-  <?php 
-    if($active == "index")
-      echo '<body data-bs-spy="scroll" data-bs-target="#spy-target" data-bs-offset="100">';
-    else
-      echo '<body>';
-   ?>
+<?php 
+  if($active == "index")
+    echo '<body data-bs-spy="scroll" data-bs-target="#spy-target" data-bs-offset="100">';
+  else
+    echo '<body>';
+
+
+include 'navbar.php';
+  ?>
 
 

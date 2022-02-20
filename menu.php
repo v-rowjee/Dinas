@@ -1,7 +1,7 @@
 <?php 
   $active = "menu"; 
   include 'includes/header.php';
-  include 'includes/navbar.php';
+  
 ?>
     <section id="menu">
       <div class="container">
@@ -119,7 +119,7 @@
               <h1>Starter</h1>
             </div>
             <div class="row g-5">
-              <?php $categorie = 'starter'; include 'includes/menu-items.php' ?>
+              <?php $category = 'starter'; include 'includes/menu-items.php' ?>
             </div>
 
           <!-- pasta -->
@@ -127,7 +127,7 @@
               <h1>Pasta</h1>
             </div>
             <div class="row g-5">
-              <?php $categorie = 'pasta'; include 'includes/menu-items.php' ?>
+              <?php $category = 'pasta'; include 'includes/menu-items.php' ?>
             </div>
 
           <!-- pizza -->
@@ -135,7 +135,7 @@
               <h1>Pizza</h1>
             </div>
             <div class="row g-5">
-              <?php $categorie = 'pizza'; include 'includes/menu-items.php' ?>
+              <?php $category = 'pizza'; include 'includes/menu-items.php' ?>
             </div>
 
           <!-- dessert -->
@@ -143,7 +143,7 @@
               <h1>Dessert</h1>
             </div>
             <div class="row g-5">
-              <?php $categorie = 'dessert'; include 'includes/menu-items.php' ?>
+              <?php $category = 'dessert'; include 'includes/menu-items.php' ?>
             </div>
 
           <!-- drinks -->
@@ -151,7 +151,7 @@
               <h1>Drinks</h1>
             </div>
             <div class="row g-5">
-              <?php $categorie = 'drinks'; include 'includes/menu-items.php' ?>
+              <?php $category = 'drinks'; include 'includes/menu-items.php' ?>
             </div>
         </div>
       </section>
@@ -162,7 +162,7 @@
               <h1>Starter</h1>
             </div>
             <div class="row g-5">
-              <?php $categorie = 'starter'; include 'includes/menu-items.php' ?>
+              <?php $category = 'starter'; include 'includes/menu-items.php' ?>
             </div>
         </div>
       </section>
@@ -173,7 +173,7 @@
               <h1>Pasta</h1>
             </div>
             <div class="row g-5">
-              <?php $categorie = 'pasta'; include 'includes/menu-items.php' ?>
+              <?php $category = 'pasta'; include 'includes/menu-items.php' ?>
             </div>
         </div>
       </section>
@@ -184,7 +184,7 @@
               <h1>Pizza</h1>
             </div>
             <div class="row g-5">
-              <?php $categorie = 'pizza'; include 'includes/menu-items.php' ?>
+              <?php $category = 'pizza'; include 'includes/menu-items.php' ?>
             </div>
         </div>
       </section>
@@ -195,7 +195,7 @@
               <h1>Dessert</h1>
             </div>
             <div class="row g-5">
-              <?php $categorie = 'dessert'; include 'includes/menu-items.php' ?>
+              <?php $category = 'dessert'; include 'includes/menu-items.php' ?>
             </div>
         </div>
       </section>
@@ -206,7 +206,7 @@
               <h1>Drinks</h1>
             </div>
             <div class="row g-5">
-              <?php $categorie = 'drinks'; include 'includes/menu-items.php' ?>
+              <?php $category = 'drinks'; include 'includes/menu-items.php' ?>
             </div>
         </div>
       </section>

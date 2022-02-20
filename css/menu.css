@@ -28,7 +28,7 @@ main section {
   overflow: hidden;
 }
 .card:hover {
-  background-color: var(--primary-dark);
+  /* background-color: rgba(34, 34, 34, 0.3); */
   border-color: var(--primary-light);
 }
 .card img {
@@ -45,10 +45,14 @@ main section {
   display: inline-flex;
   margin-top: 0.5rem;
 }
-
+.card .card-text {
+  height: 2.5rem;
+}
 .card p {
   font-size: 0.8rem;
-  height: 3rem;
+}
+.card:hover .price {
+  opacity: 0.9;
 }
 
 /* PILLS */

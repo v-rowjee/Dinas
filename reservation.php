@@ -2,7 +2,7 @@
   ob_start();
   $active = "reservation";
   include 'includes/header.php';
-  include 'includes/navbar.php';
+  
 ?>
 
 <section id="reservation">

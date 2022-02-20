@@ -283,7 +283,7 @@ section:nth-of-type(odd) {
 /* Form control */
 .form-control {
   background-color: transparent;
-  color: var(--text);
+  color: #ccc;
   border-color: var(--text);
   /* border-radius: 0; */
 }

@@ -1,7 +1,7 @@
 <?php 
 $active = "index"; 
 include 'includes/header.php';
-include 'includes/navbar.php';
+
 ?>
 
 <!-- Home Section -->
@@ -21,7 +21,7 @@ include 'includes/navbar.php';
           ><?php if(!isset($_SESSION['rid'])) echo 'Reserve a table now'; else echo 'View your reservation'?></a>
       </div>
     </div>
-    <div class="row align-items-center">
+    <div class="row align-items-center my-3">
       <div class="col social-media">
         <a
           href="https://www.tripadvisor.com/Restaurant_Review-g488105-d2571445-Reviews-Dina_s-Le_Morne.html"
@@ -40,7 +40,7 @@ include 'includes/navbar.php';
         ></a>
         <a href="tel:+230407-9000" class="nowrap">
           <i class="fa fa-phone me-1"></i>
-          <p class="d-inline">(+230) 407-9000</p>
+          <p class="d-inline" style="opacity: 0.8;">(+230) 407-9000</p>
         </a>
       </div>
     </div>
@@ -74,12 +74,12 @@ include 'includes/navbar.php';
   <div class="container text-center">
     <div class="row my-5 align-items-center justify-content-between">
       <div class="col-12 col-md-6">
-        <img src="images/farfalle.jpg" alt="" />
+        <img src="images/menu/farfalle.jpg" alt="" />
       </div>
       <div class="col-12 col-md-5">
         <h1>- Starter -</h1>
         <p>
-          <?php $categorie="starter"; include 'includes/menu-items.php'; ?>
+          <?php $category="starter"; include 'includes/menu-items.php'; ?>
         </p>
         <a href="menu.php">View Menu</a>
       </div>
@@ -87,44 +87,44 @@ include 'includes/navbar.php';
 
     <div class="row my-5 align-items-center justify-content-between">
       <div class="col-12 col-md-6">
-        <img src="images/spaghetti.jpg" alt="" />
+        <img src="images/menu/spaghetti.jpg" alt="" />
       </div>
       <div class="col-12 col-md-5">
         <h1>- Pasta -</h1>
-        <p><?php $categorie="pasta"; include 'includes/menu-items.php'?></p>
+        <p><?php $category="pasta"; include 'includes/menu-items.php'?></p>
         <a href="menu.php">View Menu</a>
       </div>
     </div>
 
     <div class="row my-5 align-items-center justify-content-between">
       <div class="col-12 col-md-6">
-        <img src="images/pizza.jpg" alt="" />
+        <img src="images/menu/pizza.jpg" alt="" />
       </div>
       <div class="col-12 col-md-5">
         <h1>- Pizza -</h1>
-        <p><?php $categorie="pizza"; include 'includes/menu-items.php'?></p>
+        <p><?php $category="pizza"; include 'includes/menu-items.php'?></p>
         <a href="menu.php">View Menu</a>
       </div>
     </div>
 
     <div class="row my-5 align-items-center justify-content-between">
       <div class="col-12 col-md-6">
-        <img src="images/chestnut.jpg" alt="" />
+        <img src="images/menu/chestnut.jpg" alt="" />
       </div>
       <div class="col-12 col-md-5">
         <h1>- Dessert -</h1>
-        <p><?php $categorie="dessert"; include 'includes/menu-items.php'?></p>
+        <p><?php $category="dessert"; include 'includes/menu-items.php'?></p>
         <a href="menu.php">View Menu</a>
       </div>
     </div>
 
     <div class="row my-5 align-items-center justify-content-between">
       <div class="col-12 col-md-6">
-        <img src="images/greentea.jpg" alt="" />
+        <img src="images/menu/greentea.jpg" alt="" />
       </div>
       <div class="col-12 col-md-5">
         <h1>- Drinks -</h1>
-        <p><?php $categorie="drinks"; include 'includes/menu-items.php'?></p>
+        <p><?php $category="drinks"; include 'includes/menu-items.php'?></p>
         <a href="menu.php">View Menu</a>
       </div>
     </div>
