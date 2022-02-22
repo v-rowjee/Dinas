@@ -146,6 +146,11 @@ a:hover {
   opacity: 0.5;
 }
 
+/* shadow */
+.card-shadow {
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
+}
+
 /* dropdown */
 .dropdown-menu-dark .dropdown-item.active,
 .dropdown-menu-dark .dropdown-item:active {

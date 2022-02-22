@@ -1,7 +1,10 @@
 <?php 
 $active= 'menu';
-include_once 'includes/header.php';
-if(!isset($_GET['id'])){
+include 'includes/header.php';
+
+if(isset($_GET['id'])){
+  include 'includes/menu_edit.php';
+}else{
 ?>
   <!--Container Main start-->
   <div class="container py-3">
@@ -13,7 +16,7 @@ if(!isset($_GET['id'])){
 
       <!-- SEARCH BAR -->
       <?php
-      include_once '../includes/db_connect.php';
+      include_once 'includes/db_connect.php';
       $search = "";
       $msg = "";
       if(isset($_POST['search-menu'])){
@@ -31,7 +34,8 @@ if(!isset($_GET['id'])){
         }
       }
       else{
-        $sql = "SELECT * FROM menu ORDER BY category DESC";
+        // order by descending category (z-a) and descending id (most recent to oldest)
+        $sql = "SELECT * FROM menu ORDER BY category DESC, name ASC"; 
         $query = $conn->prepare($sql);
         $query->execute();
       }
@@ -54,15 +58,40 @@ if(!isset($_GET['id'])){
 
     <!-- ITEMS -->
     <div class="row g-4 mt-3">
-    <?php  
+      <!-- Create new item -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <a href="includes/menu_new.php" class="card-link">
+          <div class="card card-shadow">
+            <img
+                src="../images/logo-only.png"
+                class="card-img-top"
+                alt=""
+            />
+            <div class="card-img-overlay">
+              <p class="item-cat">New</p>
+            </div>
+            <div class="card-body text-center">
+                <h5 class="card-title">New Item</h5>
+                <p class="card-text">Add a new item to the menu now!</p>
+                <h6 class="price"></h6>
 
+                <a href="includes/menu_new.php" class="btn btn-primary float-none">
+                  Add <i class="bx bx-plus"></i>
+                </a>
+
+            </div>
+          </div>
+        </a>
+      </div>
+      <!-- Edit selected item -->
+    <?php  
       echo $msg;
 
       while($item = $query->fetch(PDO::FETCH_ASSOC)){
           echo '
               <div class="col-sm-6 col-md-4 col-lg-3">
                 <a href="menu.php?id='.$item['id'].'" class="card-link">
-                  <div class="card shadow">
+                  <div class="card card-shadow">
                     <img
                         src="../images/menu/'.$item['img'].'"
                         class="card-img-top"
@@ -92,8 +121,5 @@ if(!isset($_GET['id'])){
   </div>
   <!--Container Main end-->
 <?php 
-}else{
-  include 'includes/menu_edit.php';
-}
-include 'includes/footer.php';
+}include 'includes/footer.php';
 ?>
