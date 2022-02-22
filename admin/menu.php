@@ -19,11 +19,12 @@ if(isset($_GET['id'])){
       include_once 'includes/db_connect.php';
       $search = "";
       $msg = "";
-      if(isset($_POST['search-menu'])){
+      if(isset($_POST['search-menu']) && isset($_POST['search-input'])){
         $msg = "";
 
         $search = $_POST['search-input'];
-        $sql = "SELECT * FROM menu WHERE name LIKE :search_name OR category = :search_cat ";
+
+        $sql = "SELECT * FROM menu WHERE name LIKE :search_name OR category = :search_cat ORDER BY category DESC, name ASC";
         $query = $conn->prepare($sql);
         $query->bindValue(':search_name', '%' . $search . '%');
         $query->bindParam(':search_cat',$search);
