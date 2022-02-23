@@ -1,5 +1,6 @@
 <?php  
-    include_once 'includes/db_connect.php';
+    include 'includes/db_connect.php';
+    
     $sql = "SELECT * FROM menu WHERE category = ?";
     $query = $conn->prepare($sql);
     $query->execute([$category]);

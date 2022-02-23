@@ -23,9 +23,17 @@
   }
 }
 
-.form-control {
+.form-control,
+.form-select {
   height: 2rem;
   border-color: #aaa;
+}
+.form-select::after {
+  color: white;
+}
+.form-select select {
+  background-color: transparent;
+  color: var(--text);
 }
 form {
   display: flex;

@@ -1,7 +1,6 @@
 <?php 
 $active = "index"; 
 include 'includes/header.php';
-
 ?>
 
 <!-- Home Section -->
