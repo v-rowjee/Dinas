@@ -1,0 +1,74 @@
+/* MENU PAGE */
+section:nth-of-type(0) {
+  width: 100%;
+  padding: 11vh 0;
+}
+main section {
+  padding: 0;
+  padding-bottom: 100px;
+}
+
+#menu {
+  background-image: url(../images/wine1.jpg);
+  background-position: top;
+
+  padding-top: 125px;
+}
+
+#menu button {
+  padding: 0.5rem 3rem;
+  margin: 1rem 0rem;
+  width: 10rem;
+}
+
+/* CARD */
+.card {
+  background-color: var(--bg);
+  border: 1px solid var(--primary-dark);
+  overflow: hidden;
+}
+.card:hover {
+  /* background-color: rgba(34, 34, 34, 0.3); */
+  border-color: var(--primary-light);
+}
+.card img {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+.card-title {
+  opacity: 1;
+}
+.card-body .btn {
+  float: right;
+}
+.card-body .price {
+  display: inline-flex;
+  margin-top: 0.5rem;
+}
+.card .card-text {
+  height: 2.5rem;
+}
+.card p {
+  font-size: 0.8rem;
+}
+.card:hover .price {
+  opacity: 0.9;
+}
+
+/* PILLS */
+#menu .nav-link {
+  color: var(--primary-light);
+  border: 1px solid var(--primary-light);
+}
+#menu .nav-link::after {
+  content: none;
+}
+#menu .active {
+  color: var(--bg);
+  background-color: var(--primary-light);
+}
+#menu .nav-link:hover {
+  color: var(--bg);
+  background-color: var(--primary-light);
+  opacity: 0.9;
+}
