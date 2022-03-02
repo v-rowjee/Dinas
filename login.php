@@ -62,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 $_SESSION['rid'] = $user['rid'];
 
                 if($user['is_admin']=='yes'){ // admin
-                    header('location: /dinasadmin/dashboard.php');
+                    header('location: dinasadmin/dashboard.php');
                     die();
                 }else{ // normal user
                     header('location: index.php');
