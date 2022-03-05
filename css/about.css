@@ -1,11 +1,9 @@
 #story {
   background-image: url(../images/wine1.jpg);
   background-position: top;
-
-  padding-top: 125px;
-}
-#story h1 {
-  font-size: 25vh;
+  height: 85vh;
+  padding-top: 120px;
+  overflow-y: hidden;
 }
 
 #chefs {
@@ -13,7 +11,6 @@
 }
 #chefs img {
   width: 80%;
-  transition: ease-in-out 0.35s;
 }
 
 #location iframe {
@@ -29,4 +26,25 @@
 #interior span {
   margin-right: -10vw;
   background-color: var(--bg);
+}
+
+#location iframe {
+  height: 100%;
+}
+#location .row {
+  height: 50vh;
+}
+
+#details i {
+  margin-right: 1rem;
+}
+#details .col-12:hover a,
+#details .col-12:hover i {
+  color: var(--primary-light);
+}
+#details a {
+  color: #aaa;
+}
+table {
+  opacity: 0.8;
 }

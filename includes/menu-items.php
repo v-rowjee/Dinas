@@ -15,7 +15,7 @@
                 <div class="col-sm-6 col-lg-3 col-xxl-3">
                     <div class="card">
                     <img
-                        src="images/'.$menu['img'].'"
+                        src="images/menu/'.$menu['img'].'"
                         class="card-img-top"
                         alt="'.$menu['name'].'"
                     />

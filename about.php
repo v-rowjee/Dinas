@@ -1,7 +1,6 @@
 <?php 
   $active = "about";
   include 'includes/header.php';
-  include 'includes/navbar.php'
 ?>
 
     <section id="story">
@@ -14,9 +13,7 @@
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
               ratione reiciendis impedit assumenda expedita, dolorum, saepe,
               eaque natus enim magni veritatis perspiciatis blanditiis ullam
-              vero tempora rem hic quasi sequi? Ut, reprehenderit tempore
-              inventore, doloremque sequi et, nemo neque itaque culpa voluptatum
-              quia? Amet blanditiis ratione quia officiis nihil voluptas.
+              vero tempora rem hic quasi sequi.
             </p>
           </div>
         </div>
@@ -44,6 +41,69 @@
         />
       </svg>
     </div>
+
+    <section id="details">
+      <div class="container">
+        <div class="row g-5 pb-5 text-center justify-content-center">
+          <div class="col-8 ">
+            <h6 class="gold">Who are we?</h6>
+            <h1>Know more about us!</h1>
+            <p>
+              Explore the deverse photos and reviews from our social media and get in touch.
+            </p>
+          </div>
+        </div>
+        <div class="row justify-content-around nowrap text-center gy-3">
+          <div class="col-12 col-md-6 col-lg-2"><i class="fa fa-phone"></i><a href="tel:+230407-9000">+230 407-9000</a></div>
+          <div class="col-12 col-md-6 col-lg-2"><i class="fa fa-instagram"></i><a href="https://www.instagram.com/dinarobinbeachcomber/" target="blank">Instragram</a></div>
+          <div class="col-12 col-md-6 col-lg-2"><i class="fa fa-facebook"></i><a href="https://www.facebook.com/DinarobinBeachcomber/" target="blank">Facebook</a></div>
+          <div class="col-12 col-md-6 col-lg-2"><i class="fa fa-tripadvisor"></i><a href="https://www.tripadvisor.com/Restaurant_Review-g488105-d2571445-Reviews-Dina_s-Le_Morne.html" target="blank">Tripadvisor</a></div>
+          <div class="col-12 col-md-6 col-lg-4"><i class="fa-solid fa-envelope"></i><a href="index.php#contact">dinasrestaurant.test@gmail.com</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="hours">
+      <div class="container">
+        <div class="row text-center pb-3 justify-content-center">
+          <h6 class="gold">When are we open?</h6>
+          <h1>Opening Hours</h1>
+          <p>We are open seven days a week.</p>
+        </div>
+        <div class="row text-center justify-content-center mx-5">
+          <table class="table table-dark table-borderless table-hover rounded-5">
+            <tr>
+              <th>Weekdays</th>
+              <td>5pm</td>
+              <td>-</td>
+              <td>10pm</td>
+              <td> </td>
+            </tr>
+            <tr>
+              <th>Saturday</th>
+              <td>5pm</td>
+              <td>-</td>
+              <td>10pm</td>
+              <td> </td>
+            </tr>
+            <tr>
+              <th>Sunday</th>
+              <td>5pm</td>
+              <td>-</td>
+              <td>8pm</td>
+              <td> </td>
+            </tr>
+            <tr>
+              <th>Public Holidays</th>
+              <td>5pm</td>
+              <td>-</td>
+              <td>8pm</td>
+              <td> </td>
+            </tr>
+          </table>
+        </div>                 
+      </div>
+    </section>
 
     <section id="interior">
       <div class="container">
@@ -138,27 +198,19 @@
     </section>
 
     <section id="chefs">
-      <div class="container">
-        <div class="mb-3">
-          <h6 class="gold">Who are we?</h6>
-          <h1>The Chefs</h1>
-        </div>
+      <div class="container text-center">
         <div class="row">
-          <div class="col-8 align-self-center">
+          <div class="col-12 col-md-7 align-self-center order-md-2">
+            <h6 class="gold">Who are we?</h6>
+            <h1>The Chef</h1>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt
-              harum sed perspiciatis exercitationem quidem, recusandae
-              temporibus tempore.
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
+              voluptate facilis quia, vero nostrum officia iste qui minus
+              voluptatibus sapiente deserunt.
             </p>
           </div>
-
-          <div class="row pt-5 text-center">
-            <div class="col" id="chef-1">
-              <img src="images/chef-1.png" alt="" />
-            </div>
-            <div class="col" id="chef-2">
-              <img src="images/chef-2.png" alt="" />
-            </div>
+          <div class="col-12 col-md-5">
+            <img src="images/chef-1.png" alt="" class="img-fluid order-md-1" />
           </div>
         </div>
       </div>
@@ -166,8 +218,8 @@
 
     <section id="location">
       <div class="container">
-        <div class="row">
-          <div class="col-8">
+        <div class="row justify-content-around">
+          <div class="col-12 col-md-5 align-self-center">
             <h6 class="gold">Where are we?</h6>
             <h1>Our Location</h1>
             <p>
@@ -176,9 +228,7 @@
               eaque natus enim magni veritatis.
             </p>
           </div>
-        </div>
-        <div class="row mt-5">
-          <div class="col-12">
+          <div class="col-12 col-md-7">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3143.58289833625!2d57.31549706969271!3d-20.449943734814518!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x217c6ce5467ff93d%3A0x5f3dc0d61308636b!2sDinarobin%20Beachcomber%20Golf%20Resort%20%26%20Spa!5e0!3m2!1sen!2sus!4v1640989092845!5m2!1sen!2sus"
               allowfullscreen="true"
@@ -188,5 +238,6 @@
         </div>
       </div>
     </section>
+
 
 <?php include 'includes/footer.php' ?>
