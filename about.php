@@ -48,60 +48,82 @@
           <div class="col-8 ">
             <h6 class="gold">Who are we?</h6>
             <h1>Know more about us!</h1>
-            <p>
-              Explore the deverse photos and reviews from our social media and get in touch.
-            </p>
           </div>
         </div>
         <div class="row justify-content-around nowrap text-center gy-3">
-          <div class="col-12 col-md-6 col-lg-2"><i class="fa fa-phone"></i><a href="tel:+230407-9000">+230 407-9000</a></div>
-          <div class="col-12 col-md-6 col-lg-2"><i class="fa fa-instagram"></i><a href="https://www.instagram.com/dinarobinbeachcomber/" target="blank">Instragram</a></div>
-          <div class="col-12 col-md-6 col-lg-2"><i class="fa fa-facebook"></i><a href="https://www.facebook.com/DinarobinBeachcomber/" target="blank">Facebook</a></div>
-          <div class="col-12 col-md-6 col-lg-2"><i class="fa fa-tripadvisor"></i><a href="https://www.tripadvisor.com/Restaurant_Review-g488105-d2571445-Reviews-Dina_s-Le_Morne.html" target="blank">Tripadvisor</a></div>
-          <div class="col-12 col-md-6 col-lg-4"><i class="fa-solid fa-envelope"></i><a href="index.php#contact">dinasrestaurant.test@gmail.com</a></div>
+          
+          <div class="col-12 col-md-6 col-lg-2">
+            <i class="fa fa-phone d-block"></i>
+            <a href="tel:+230407-9000">+230 407-9000</a>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <i class="fa-solid fa-envelope d-block"></i>
+            <a href="index.php#contact">dinasrestaurant.test@gmail.com</a>
+          </div>
+          <div class="col-12 col-md-6 col-lg-2">
+            <i class="fa fa-instagram d-block"></i>
+            <a href="https://www.instagram.com/dinarobinbeachcomber/" target="blank">Instragram</a>
+          </div>
+          <div class="col-12 col-md-6 col-lg-2">
+            <i class="fa fa-facebook d-block"></i>
+            <a href="https://www.facebook.com/DinarobinBeachcomber/" target="blank">Facebook</a>
+          </div>
+          <div class="col-12 col-md-6 col-lg-2">
+            <i class="fa fa-tripadvisor d-block"></i>
+            <a href="https://www.tripadvisor.com/Restaurant_Review-g488105-d2571445-Reviews-Dina_s-Le_Morne.html" target="blank">Tripadvisor</a>
+          </div>
+          
         </div>
       </div>
     </section>
 
     <section id="hours">
-      <div class="container">
-        <div class="row text-center pb-3 justify-content-center">
-          <h6 class="gold">When are we open?</h6>
-          <h1>Opening Hours</h1>
-          <p>We are open seven days a week.</p>
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-6">
+          <video muted autoplay class="img-fluid video">
+            <source src="images/vid-glass.mp4">
+            <source src="images/bg-table-dark.jpg">
+          </video>
         </div>
-        <div class="row text-center justify-content-center mx-5">
-          <table class="table table-dark table-borderless table-hover rounded-5">
-            <tr>
-              <th>Weekdays</th>
-              <td>5pm</td>
-              <td>-</td>
-              <td>10pm</td>
-              <td> </td>
-            </tr>
-            <tr>
-              <th>Saturday</th>
-              <td>5pm</td>
-              <td>-</td>
-              <td>10pm</td>
-              <td> </td>
-            </tr>
-            <tr>
-              <th>Sunday</th>
-              <td>5pm</td>
-              <td>-</td>
-              <td>8pm</td>
-              <td> </td>
-            </tr>
-            <tr>
-              <th>Public Holidays</th>
-              <td>5pm</td>
-              <td>-</td>
-              <td>8pm</td>
-              <td> </td>
-            </tr>
-          </table>
-        </div>                 
+        <div class="col-12 col-md-6 align-self-center">
+            <div class="row text-center">
+              <h6 class="gold">When are we open?</h6>
+              <h1 style="font-size: 5rem;">Opening Hours</h1>
+            </div>
+            <div class="row text-center mx-5">
+              <table class="table table-dark table-borderless table-hover rounded-5">
+                <tr>
+                  <td>Monday - Saturday</td>
+                  <td>5 pm</td>
+                  <td>-</td>
+                  <td>10 pm</td>
+                  <td> </td>
+                </tr>
+                <!-- <tr>
+                  <td>Saturday</td>
+                  <td>5pm</td>
+                  <td>-</td>
+                  <td>10pm</td>
+                  <td> </td>
+                </tr>  -->
+                <tr>
+                  <td>Sunday</td>
+                  <td>5 pm</td>
+                  <td>-</td>
+                  <td>8 pm</td>
+                  <td> </td>
+                </tr>            
+                <tr>
+                  <td>Public Holidays</td>
+                  <td>5 pm</td>
+                  <td>-</td>
+                  <td>8 pm</td>
+                  <td> </td>
+                </tr>
+                
+              </table>
+            </div>                 
+        </div>
       </div>
     </section>
 

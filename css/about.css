@@ -36,7 +36,8 @@
 }
 
 #details i {
-  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
 }
 #details .col-12:hover a,
 #details .col-12:hover i {
@@ -47,4 +48,13 @@
 }
 table {
   opacity: 0.8;
+  border-radius: 1rem;
+}
+.table > :not(caption) > * > * {
+  padding: 1rem;
+  background-color: rgba(34, 34, 34, 0.5);
+}
+
+#hours {
+  padding: 0;
 }
