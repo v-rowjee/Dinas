@@ -5,7 +5,7 @@
 ?>
     <section id="menu">
       <div class="container">
-        <h1 class="text-center pb-5">MENU</h1>
+        <h1 class="text-center pb-3">MENU</h1>
         <ul class="nav nav-pills justify-content-around g-3" role="tablist">
           <li class="nav-item" role="presentation">
             <button

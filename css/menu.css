@@ -1,7 +1,6 @@
 /* MENU PAGE */
-section:nth-of-type(0) {
-  width: 100%;
-  padding: 11vh 0;
+section:nth-of-type(odd) {
+  background-color: transparent;
 }
 main section {
   padding: 0;
@@ -9,10 +8,10 @@ main section {
 }
 
 #menu {
-  background-image: url(../images/wine1.jpg);
-  background-position: top;
-
-  padding-top: 125px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../images/bg-menu.jpg);
+  background-position: center;
+  padding: 100px 0 1rem 0;
 }
 
 #menu button {
@@ -59,6 +58,7 @@ main section {
 #menu .nav-link {
   color: var(--primary-light);
   border: 1px solid var(--primary-light);
+  background-color: rgba(34, 34, 34, 0.7);
 }
 #menu .nav-link::after {
   content: none;
@@ -70,5 +70,5 @@ main section {
 #menu .nav-link:hover {
   color: var(--bg);
   background-color: var(--primary-light);
-  opacity: 0.9;
+  opacity: 1;
 }

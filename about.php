@@ -79,13 +79,13 @@
 
     <section id="hours">
       <div class="row justify-content-center">
-        <div class="col-12 col-md-6">
-          <video muted autoplay class="img-fluid video">
+        <div class="col-12 col-lg-6">
+          <video muted autoplay class="img-fluid h-100">
             <source src="images/vid-glass.mp4">
             <source src="images/bg-table-dark.jpg">
           </video>
         </div>
-        <div class="col-12 col-md-6 align-self-center">
+        <div class="col-12 col-lg-6 align-self-center">
             <div class="row text-center">
               <h6 class="gold">When are we open?</h6>
               <h1 style="font-size: 5rem;">Opening Hours</h1>
