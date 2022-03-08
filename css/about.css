@@ -1,7 +1,6 @@
 #story {
   background-image: url(../images/wine1.jpg);
   background-position: top;
-  height: 85vh;
   padding-top: 120px;
   overflow-y: hidden;
 }
@@ -47,17 +46,17 @@
   color: #aaa;
 }
 table {
-  opacity: 0.8;
-  border-radius: 1rem;
+  opacity: 0.9;
+  background-image: url(../images/bg-table-dark.jpg);
+  background-size: cover;
 }
 .table > :not(caption) > * > * {
-  padding: 1rem;
+  padding: 1.5rem;
   background-color: rgba(34, 34, 34, 0.5);
 }
 td {
   white-space: nowrap;
 }
-
-#hours {
-  padding: 0;
+td:hover {
+  background-color: transparent;
 }

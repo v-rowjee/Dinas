@@ -6,7 +6,7 @@
     <section id="story">
       <div class="container">
         <div class="row justify-content-center text-center">
-          <div class="col-lg-8">
+          <div class="col-lg-8 align-self-center">
             <h6 class="gold">What are we?</h6>
             <h1>Our Story</h1>
             <p class="my-5">
@@ -45,9 +45,9 @@
     <section id="details">
       <div class="container">
         <div class="row g-5 pb-5 text-center justify-content-center">
-          <div class="col-8 ">
+          <div class="col-md-8 ">
             <h6 class="gold">Who are we?</h6>
-            <h1>Know more about us!</h1>
+            <h1 class="sm-h1">Know more about us!</h1>
           </div>
         </div>
         <div class="row justify-content-around nowrap text-center gy-3">
@@ -79,19 +79,13 @@
 
     <section id="hours">
       <div class="row justify-content-center">
-        <div class="col-12 col-lg-6">
-          <video muted autoplay class="img-fluid h-100">
-            <source src="images/vid-glass.mp4">
-            <source src="images/bg-table-dark.jpg">
-          </video>
-        </div>
-        <div class="col-12 col-lg-6 align-self-center">
-            <div class="row text-center">
+        <div class="col-12 align-self-center">
+            <div class="row text-center mb-5">
               <h6 class="gold">When are we open?</h6>
-              <h1 style="font-size: 5rem;">Opening Hours</h1>
+              <h1 class="sm-h1">Opening Hours</h1>
             </div>
-            <div class="row text-center mx-5">
-              <table class="table table-dark table-borderless table-hover rounded-5">
+            <div class="row text-center justify-content-around mx-5">
+              <!-- <table class="table table-dark table-borderless table-hover rounded-5">
                 <tr>
                   <td>Monday - Saturday</td>
                   <td>5 pm</td>
@@ -99,13 +93,6 @@
                   <td>10 pm</td>
                   <td> </td>
                 </tr>
-                <!-- <tr>
-                  <td>Saturday</td>
-                  <td>5pm</td>
-                  <td>-</td>
-                  <td>10pm</td>
-                  <td> </td>
-                </tr>  -->
                 <tr>
                   <td>Sunday</td>
                   <td>5 pm</td>
@@ -121,7 +108,19 @@
                   <td> </td>
                 </tr>
                 
-              </table>
+              </table> -->
+              <div class="col-4">
+                <h2>5pm - 10pm</h2>
+                <p>Monday - Saturday</p>
+              </div>
+              <div class="col-4">
+                <h2>5pm - 8pm</h2>
+                <p>Sunday</p>
+              </div>
+              <div class="col-4">
+                <h2>5pm - 8pm</h2>
+                <p>Public holidays</p>
+              </div>
             </div>                 
         </div>
       </div>
@@ -130,7 +129,7 @@
     <section id="interior">
       <div class="container">
         <div class="row g-5 pb-5">
-          <div class="col-8">
+          <div class="col-md-8">
             <h6 class="gold">How are we?</h6>
             <h1>Restaurant Tour</h1>
             <p>
@@ -222,7 +221,7 @@
     <section id="chefs">
       <div class="container text-center">
         <div class="row">
-          <div class="col-12 col-md-7 align-self-center order-md-2">
+          <div class="col-md-7 align-self-center order-md-2">
             <h6 class="gold">Who are we?</h6>
             <h1>The Chef</h1>
             <p>
@@ -231,7 +230,7 @@
               voluptatibus sapiente deserunt.
             </p>
           </div>
-          <div class="col-12 col-md-5">
+          <div class="col-md-5">
             <img src="images/chef-1.png" alt="" class="img-fluid order-md-1" />
           </div>
         </div>
@@ -240,8 +239,8 @@
 
     <section id="location">
       <div class="container">
-        <div class="row justify-content-around">
-          <div class="col-12 col-md-5 align-self-center">
+        <div class="row justify-content-around text-center">
+            <div class="col-md-8  align-self-center">
             <h6 class="gold">Where are we?</h6>
             <h1>Our Location</h1>
             <p>
@@ -249,13 +248,16 @@
               ratione reiciendis impedit assumenda expedita, dolorum, saepe,
               eaque natus enim magni veritatis.
             </p>
-          </div>
-          <div class="col-12 col-md-7">
+            </div>
+        </div>
+          <div class="row justify-content-around">
+            <div class="col-md-8">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3143.58289833625!2d57.31549706969271!3d-20.449943734814518!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x217c6ce5467ff93d%3A0x5f3dc0d61308636b!2sDinarobin%20Beachcomber%20Golf%20Resort%20%26%20Spa!5e0!3m2!1sen!2sus!4v1640989092845!5m2!1sen!2sus"
               allowfullscreen="true"
               class="rounded"
             ></iframe>
+            </div>
           </div>
         </div>
       </div>

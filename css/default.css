@@ -207,6 +207,11 @@ p {
 .nowrap {
   white-space: nowrap;
 }
+.sm-h1 {
+  font-family: "Italianno", cursive;
+  font-size: 5rem;
+  white-space: nowrap;
+}
 
 /* SECTION */
 section {
