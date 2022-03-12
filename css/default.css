@@ -304,10 +304,6 @@ section:nth-of-type(odd) {
   border-color: grey;
 }
 
-input[name="name"] {
-  text-transform: capitalize;
-}
-
 .msg {
   color: #ae303c;
   margin: 1rem;
