@@ -14,15 +14,15 @@ $show_date = date("D, d M Y", strtotime($res['date']));
 if(isset($_POST['cancel-reservation'])){
 
     // remove user's reservation
-    $sql1 = "UPDATE users SET rid = NULL WHERE id = :id";
-    $result1 = $conn->prepare($sql1);
-    $result1->execute([
-        ':id' => $_SESSION['id']
-    ]);
+    // $sql1 = "UPDATE users SET rid = NULL WHERE id = :id";
+    // $result1 = $conn->prepare($sql1);
+    // $result1->execute([
+    //     ':id' => $_SESSION['id']
+    // ]);
     
 
     // set reservation status to cancelled
-    $sql2 = "UPDATE reservation SET status = 'cancel' WHERE id = :id";
+    $sql2 = "UPDATE reservation SET status = 'cancelled' WHERE id = :id";
     $result2 = $conn->prepare($sql2);
     $result2->execute([
         ':id' => $_SESSION['rid']
