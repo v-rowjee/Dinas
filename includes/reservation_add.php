@@ -23,7 +23,7 @@ if (isset($_POST['submit-reservation'])) {
     $time = $_POST['time'];
 
     // get num of reservation at input date and time
-    $sql1 = "SELECT * FROM res_tab WHERE rid = (SELECT id FROM reservation WHERE date = :date AND time = :time AND status = 'booked')"; 
+    $sql1 = "SELECT * FROM res_tab WHERE rid = (SELECT id FROM reservation WHERE date = :date AND time = :time AND status in('booked','approved'))"; 
     $result1 = $conn->prepare($sql1); 
     $result1->execute([
         ':date' => $date,
@@ -42,7 +42,7 @@ if (isset($_POST['submit-reservation'])) {
 
     else{
         // if table available, add a new reservation
-        $sql5 = "INSERT INTO reservation (uid,party_size,date,time) VALUES (:uid,:size,:date,:time,:status)";
+        $sql5 = "INSERT INTO reservation (uid,party_size,date,time,status) VALUES (:uid,:size,:date,:time,:status)";
         $result5 = $conn->prepare($sql5);
         $result5->execute([
             ':uid' => $_SESSION['id'],
