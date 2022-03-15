@@ -12,21 +12,11 @@ $res = $result->fetch(PDO::FETCH_ASSOC);
 $show_date = date("D, d M Y", strtotime($res['date']));  
 
 if(isset($_POST['cancel-reservation'])){
-
-    // remove user's reservation
-    // $sql1 = "UPDATE users SET rid = NULL WHERE id = :id";
-    // $result1 = $conn->prepare($sql1);
-    // $result1->execute([
-    //     ':id' => $_SESSION['id']
-    // ]);
     
-
-    // set reservation status to cancelled
-    $sql2 = "UPDATE reservation SET status = 'cancelled' WHERE id = :id";
+    // delete reservation
+    $sql2 = "DELETE FROM reservation WHERE id = ?";
     $result2 = $conn->prepare($sql2);
-    $result2->execute([
-        ':id' => $_SESSION['rid']
-    ]);
+    $result2->execute([$_SESSION['rid']]);
 
     // remove tables allocation in res_tab
     $sql3 = "DELETE FROM res_tab WHERE rid = ?";

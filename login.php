@@ -52,6 +52,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             $hashed_password = $user['password'];
 
             if (password_verify($password,$hashed_password)) { // if password correct
+
+                $sql2 = "SELECT id FROM reservation WHERE uid = ?";
+                $statement2 = $conn->prepare($sql2);
+                $statement2->execute([$user['id']]);
+                $res = $statement->fetch(PDO::FETCH_ASSOC);
                 
                 $_SESSION['id'] = $user['id'];
                 $_SESSION['username'] = $user['username'];
@@ -59,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 $_SESSION['email'] = $user['email'];
                 $_SESSION['phone'] = $user['phone'];
                 $_SESSION['is_admin'] = $user['is_admin'];
-                $_SESSION['rid'] = $user['rid'];
+                $_SESSION['rid'] = $res['id'];
 
                 if($user['is_admin']=='yes'){ // admin
                     header('location: /dinasadmin/dashboard.php');
