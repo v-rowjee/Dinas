@@ -49,6 +49,22 @@ session_start();
   else
     echo '<body>';
 
+  if(isset($_SESSION['id'])){
+    
+    include 'includes/db_connect.php';
+
+    $sql = "SELECT id FROM reservation WHERE uid=? AND status<>'check-out'";
+    $statement = $conn->prepare($sql);
+    $statement->execute([$_SESSION['id']]);
+    $res = $statement->fetch(PDO::FETCH_ASSOC);
+
+    if($statement->rowCount() > 0)
+      $_SESSION['rid'] = $res['id'];
+    else
+      unset($_SESSION['rid']);
+  }
+    
+
 
 include 'navbar.php';
   ?>
