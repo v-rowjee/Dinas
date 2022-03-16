@@ -23,11 +23,12 @@ if (isset($_POST['submit-reservation'])) {
     $time = $_POST['time'];
 
     // get num of reservation at input date and time
-    $sql1 = "SELECT * FROM res_tab WHERE rid = (SELECT id FROM reservation WHERE date = :date AND time = :time AND status in('booked','approved'))"; 
+    $sql1 = "SELECT * FROM res_tab WHERE rid = (SELECT id FROM reservation WHERE date = :date AND time = :time AND status <> :status)"; 
     $result1 = $conn->prepare($sql1); 
     $result1->execute([
         ':date' => $date,
-        ':time' => $time
+        ':time' => $time,
+        ':status' => 'check-out'
     ]); 
     $num_of_reservations = $result1->rowCount();
 
@@ -64,14 +65,6 @@ if (isset($_POST['submit-reservation'])) {
                 ':tid' => $num_of_reservations+1+$i
             ]); 
         }
-        
-        // put reservation on customer
-        // $sql4 = "UPDATE users SET rid = :rid WHERE id = :id";
-        // $result4 = $conn->prepare($sql4);
-        // $result4->execute([
-        //     ':rid' => $_SESSION['rid'],
-        //     ':id' => $_SESSION['id']
-        // ]);
 
         // redirect 
         header("Refresh:0; url=index.php#reservation");
