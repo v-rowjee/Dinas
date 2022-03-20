@@ -331,7 +331,7 @@ include 'includes/header.php';
   </div>
 </section>
 
-<!-- about us divider -->
+<!-- about us divider
 <div id="about-divider">
   <div class="divider">
     <div style="overflow: hidden">
@@ -460,7 +460,16 @@ include 'includes/header.php';
       />
     </svg>
   </div>
-</div>
+</div> -->
+
+<section id="interior">
+  <div class="container">
+    <img src="images/interior.jpg" class="img-fluid" alt="">
+    <img src="images/interior-bar.jpg" class="img-fluid" alt="">
+    <img src="images/interior-outdoor.jpg" class="img-fluid" alt="">
+    <img src="images/interior-vip.jpg" class="img-fluid" alt="">
+  </div>
+</section>
 
 <!-- About Us -->
 <section id="about">

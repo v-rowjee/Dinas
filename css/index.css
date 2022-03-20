@@ -183,3 +183,28 @@ video {
     display: initial;
   }
 }
+
+/* Interior */
+#interior{
+
+}
+#interior img{
+  height: 50vh;
+  width: 100%;
+  object-fit: cover;
+  margin-top: -5vh;
+  filter: grayscale(0.9);
+}
+#interior img:hover{
+  filter: grayscale(0);
+  transition: 500ms ease-in-out;
+  transform: scale(1.03);
+}
+#interior img:nth-of-type(even) {
+  clip-path: polygon(0 25%, 90% 0, 90% 100%, 0 75%);
+}
+#interior img:nth-of-type(odd) {
+  clip-path: polygon(10% 0, 100% 25%, 100% 75%, 10% 100%);
+
+
+}
