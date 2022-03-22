@@ -118,7 +118,7 @@
             <div class="row">
               <h1>Starter</h1>
             </div>
-            <div class="row g-5">
+            <div class="row g-4">
               <?php $category = 'starter'; include 'includes/menu-items.php' ?>
             </div>
 
@@ -126,7 +126,7 @@
             <div class="row mt-5">
               <h1>Pasta</h1>
             </div>
-            <div class="row g-5">
+            <div class="row g-4">
               <?php $category = 'pasta'; include 'includes/menu-items.php' ?>
             </div>
 
@@ -134,7 +134,7 @@
             <div class="row mt-5">
               <h1>Pizza</h1>
             </div>
-            <div class="row g-5">
+            <div class="row g-4">
               <?php $category = 'pizza'; include 'includes/menu-items.php' ?>
             </div>
 
@@ -142,7 +142,7 @@
             <div class="row mt-5">
               <h1>Dessert</h1>
             </div>
-            <div class="row g-5">
+            <div class="row g-4">
               <?php $category = 'dessert'; include 'includes/menu-items.php' ?>
             </div>
 
@@ -150,7 +150,7 @@
             <div class="row mt-5">
               <h1>Drinks</h1>
             </div>
-            <div class="row g-5">
+            <div class="row g-4">
               <?php $category = 'drinks'; include 'includes/menu-items.php' ?>
             </div>
         </div>

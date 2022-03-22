@@ -138,3 +138,9 @@ $(document).ready(function () {
 // Date picker
 let today = new Date().toISOString().substr(0, 10);
 document.querySelector("#datepicker").value = today;
+
+// Interior
+$('#interior').on('mouseover', 'img', function() {
+  $('img.active').removeClass('active');
+  $(this).addClass('active');
+});
