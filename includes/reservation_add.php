@@ -3,7 +3,7 @@ include 'db_connect.php';
 
 //default variables
 $size = 2;
-$date = date("D, d M Y",strtotime("now"));
+$date = date("Y-m-d");
 $time = "5";
 $msg = "";
 
@@ -106,8 +106,7 @@ if (isset($_POST['submit-reservation'])) {
             <input
             type="date"
             name="date"
-            id="datepicker"
-            class="form-control datepicker"
+            class="form-control"
             value="<?php echo $date ?>"
             required
             />
