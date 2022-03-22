@@ -345,7 +345,7 @@ select.decorated option:hover {
   width: 50vmax;
   overflow: hidden;
   z-index: -1;
-  animation: move 10s ease-in-out infinite;
+  animation: move 20s ease-in-out infinite;
   transform-origin: 50% 50%;
 }
 

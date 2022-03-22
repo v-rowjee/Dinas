@@ -39,17 +39,14 @@ $(document).ready(function () {
   }
 
   // date picker
-  $("#datepicker").datepicker({
-    format: "DD MM yy",
-    startDate: 0,
-    todayBtn: "linked",
-    clearBtn: true,
-    autoclose: true,
-  });
+  // $("#datepicker").datepicker({
+  //   format: "DD MM yy",
+  //   startDate: 0,
+  //   todayBtn: "linked",
+  //   clearBtn: true,
+  //   autoclose: true,
+  // });
 
-  // Navbar
-  // add padding top to show content behind navbar
-  $("body").css("padding-top", $(".navbar").outerHeight() + "px");
 
   // detect scroll top or down
   if ($(".smart-scroll").length > 0) {
@@ -67,25 +64,25 @@ $(document).ready(function () {
   }
 
   // Owl Carousel 2
-  $(".owl-carousel").owlCarousel({
-    margin: 10,
-    nav: true,
-    navText: [
-      "<i class='fa fa-chevron-left'></i>",
-      "<i class='fa fa-chevron-right'></i>",
-    ],
-    responsive: {
-      0: {
-        items: 1,
-      },
-      600: {
-        items: 3,
-      },
-      1000: {
-        items: 5,
-      },
-    },
-  });
+  // $(".owl-carousel").owlCarousel({
+  //   margin: 10,
+  //   nav: true,
+  //   navText: [
+  //     "<i class='fa fa-chevron-left'></i>",
+  //     "<i class='fa fa-chevron-right'></i>",
+  //   ],
+  //   responsive: {
+  //     0: {
+  //       items: 1,
+  //     },
+  //     600: {
+  //       items: 3,
+  //     },
+  //     1000: {
+  //       items: 5,
+  //     },
+  //   },
+  // });
 
   //end
 });
@@ -136,8 +133,8 @@ $(document).ready(function () {
 // }
 
 // Date picker
-let today = new Date().toISOString().substr(0, 10);
-document.querySelector("#datepicker").value = today;
+// let today = new Date().toISOString().substr(0, 10);
+// document.querySelector("#datepicker").value = today;
 
 // Interior
 $('#interior').on('mouseover', 'img', function() {
