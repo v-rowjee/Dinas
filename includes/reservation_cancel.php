@@ -35,7 +35,7 @@ if(isset($_POST['cancel-reservation'])){
 <form action="reservation.php" method="post">
 
     <div class="row justify-content-center align-items-center mb-5">
-        <h6 class="gold">You already have a reservation</h6>
+        <h6 class="text-gold">You already have a reservation</h6>
         <h1>Reservation Number <?php echo $res['id'] ?></h1> 
 
         <p class="mb-5">

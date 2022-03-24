@@ -7,7 +7,7 @@
       <div class="container">
         <div class="row justify-content-center text-center">
           <div class="col-lg-8 align-self-center">
-            <h6 class="gold">What are we?</h6>
+            <h6 class="text-gold">What are we?</h6>
             <h1>Our Story</h1>
             <p class="my-5">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
@@ -46,7 +46,7 @@
       <div class="container">
         <div class="row g-5 pb-5 text-center justify-content-center">
           <div class="col-md-8 ">
-            <h6 class="gold">Who are we?</h6>
+            <h6 class="text-gold">Who are we?</h6>
             <h1 class="sm-h1">Know more about us!</h1>
           </div>
         </div>
@@ -81,7 +81,7 @@
       <div class="row justify-content-center">
         <div class="col-12 align-self-center">
             <div class="row text-center mb-5">
-              <h6 class="gold">When are we open?</h6>
+              <h6 class="text-gold">When are we open?</h6>
               <h1 class="sm-h1">Opening Hours</h1>
             </div>
             <div class="row text-center justify-content-around mx-5">
@@ -130,7 +130,7 @@
       <div class="container">
         <div class="row g-5 pb-5">
           <div class="col-md-8">
-            <h6 class="gold">How are we?</h6>
+            <h6 class="text-gold">How are we?</h6>
             <h1>Restaurant Tour</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
@@ -222,7 +222,7 @@
       <div class="container text-center">
         <div class="row">
           <div class="col-md-7 align-self-center order-md-2">
-            <h6 class="gold">Who are we?</h6>
+            <h6 class="text-gold">Who are we?</h6>
             <h1>The Chef</h1>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
@@ -241,7 +241,7 @@
       <div class="container">
         <div class="row justify-content-around text-center">
             <div class="col-md-8  align-self-center">
-            <h6 class="gold">Where are we?</h6>
+            <h6 class="text-gold">Where are we?</h6>
             <h1>Our Location</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam

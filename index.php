@@ -194,7 +194,7 @@ include 'includes/header.php';
         <img src="images/mockup.png" alt="" class="img-fluid" />
       </div>
       <div class="col-12 col-lg-5">
-        <h6 class="gold">We make your life easier !</h6>
+        <h6 class="text-gold">We make your life easier !</h6>
         <h1>Order Online</h1>
         <p class="mb-5">
           Canva.com dolor sit amet consectetur adipisicing elit. Sunt
@@ -216,7 +216,7 @@ include 'includes/header.php';
   <div class="container">
     <div class="row justify-content-around align-items-center gy-5">
       <div class="col-sm-12 col-lg-7">
-        <h6 class="gold">Let's get in touch,</h6>
+        <h6 class="text-gold">Let's get in touch,</h6>
         <h1>Contact Us</h1>
         <form action="includes/send_mail.php" method="post" class="needs-validation" novalidate>
           <label for="name" class="form-label">Name</label>
@@ -435,7 +435,7 @@ include 'includes/header.php';
   <div class="container text-center">
     <div class="row justify-content-around">
       <div class="col-12 col-md-5 align-self-center order-md-2">
-        <h6 class="gold">Who are we?</h6>
+        <h6 class="text-gold">Who are we?</h6>
         <h1>About Us</h1>
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
@@ -545,7 +545,7 @@ include 'includes/header.php';
       <div class="elfsight-app-9e526d95-464e-4fdc-ba0b-5b494aaf413c"></div> -->
     </div>
     <div class="col-12 col-lg-6 align-self-center order-1 order-lg-2">
-        <h6 class="gold">What people say about us,</h6>
+        <h6 class="text-gold">What people say about us,</h6>
         <h1>Reviews</h1>
         <p class="mb-5">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit.

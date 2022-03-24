@@ -77,7 +77,7 @@ if (isset($_POST['submit-reservation'])) {
 
 <div class="row justify-content-center align-items-center mb-5">
     <div class="col-8">
-    <h6 class="gold">Book a table now.</h6>
+    <h6 class="text-gold">Book a table now.</h6>
     <h1>Reservation</h1>
     <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit.
