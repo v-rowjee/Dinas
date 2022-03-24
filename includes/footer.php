@@ -1,6 +1,5 @@
   <!-- Footer -->
   <footer class="footer py-4" >
-
     <div class="container text-center text-md-start">
         <div class="row text-center text-md-start">
             <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
@@ -46,16 +45,16 @@
 
             <div class="col-12 col-md-3 mt-3">
                 <h5 class="text-uppercase mb-4 font-weight-bold text-gold">Contact Us</h5>
-                <p class="nowrap">
+                <p>
                     <i class="fas fa-home me-3"></i> Beachcomber,Le Morne,Mauritius
                 </p>
-                <p class="nowrap">
+                <p>
                     <i class="fas fa-envelope me-3"></i>dinasrestaurant.test@gmail.com
                 </p>
-                <p class="nowrap">
+                <p>
                     <i class="fas fa-phone me-3"></i>  (+230) 407-9000
                 </p>
-                <p class="nowrap">
+                <p>
                     <i class="fas fa-print me-3"></i> +230rgwr
                 </p>
 

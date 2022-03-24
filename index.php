@@ -204,7 +204,7 @@ include 'includes/header.php';
         <a
           href="order.php"
           class="btn btn-outline-primary px-5"
-          >Order now</a
+          >View your order</a
         >
       </div>
     </div>

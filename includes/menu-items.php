@@ -20,10 +20,12 @@
                         alt="'.$menu['name'].'"
                     />
                     <div class="card-body">
-                        <h5 class="card-title">'.$menu['name'].'</h5>
+                        <h5 class="card-title nowrap">'.$menu['name'].'</h5>
                         <p class="card-text">'.$menu['caption'].'</p>
-                        <h6 class="price">Rs '.$menu['price'].'</h6>
-                        <a href="#" class="btn btn-primary">Buy now</a>
+                        <div class="d-flex">
+                            <h6 class="price">Rs '.$menu['price'].'</h6>
+                            <a href="#" class="p-2 ms-auto card-cart"><i class="fa-solid fa-bag-shopping text-secondary"></i></a>
+                        </div>
                     </div>
                     </div>
                 </div>

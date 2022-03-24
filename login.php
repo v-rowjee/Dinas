@@ -113,7 +113,7 @@ function filter($data){
         Sign in with google
       </a> -->
     </div>
-    <div class="col-12 col-lg-5 ">
+    <div class="col-12 col-lg-5">
       <form
         id="login-form"
         class="needs-validation mt-3"

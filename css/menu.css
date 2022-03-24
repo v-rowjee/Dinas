@@ -72,3 +72,17 @@ main section {
   background-color: var(--primary-light);
   opacity: 1;
 }
+
+.card-cart{
+  opacity: 0;
+}
+.card:hover .card-cart{
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+}
+/* everything below lg */
+@media (max-width: 992px) {
+  .card-cart{
+    opacity: 1;
+  }
+}
