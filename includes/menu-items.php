@@ -24,7 +24,7 @@
                         <p class="card-text">'.$menu['caption'].'</p>
                         <div class="d-flex">
                             <h6 class="price">Rs '.$menu['price'].'</h6>
-                            <a href="#" class="p-2 ms-auto card-cart"><i class="fa-solid fa-bag-shopping text-secondary"></i></a>
+                            <a href="#" class="btn btn-outline-primary px-3 ms-auto card-cart"><i class="fa-solid fa-bag-shopping"></i></a>
                         </div>
                     </div>
                     </div>
