@@ -133,7 +133,7 @@ include 'includes/header.php';
 <section>
   <div class="container">
     <div class="video" id="reservations" >
-      <video autoplay loop class="align-bottom rounded-pill">
+      <video autoplay muted loop class="align-bottom rounded-pill">
         <source src="images/vid-gnocchi.mp4" type="video/mp4" />
       </video>
     </div>

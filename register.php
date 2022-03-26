@@ -25,6 +25,7 @@
         else{
             $usernameErr = "";
             $username = filter($_POST['username']);
+            $username = strtolower($username);
 
             if(!preg_match("/^[a-zA-Z0-9]+$/",$username)){
               $usernameErr = "* Only letters and numbers allowed";

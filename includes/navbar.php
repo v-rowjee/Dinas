@@ -1,5 +1,5 @@
 <!-- Nav Bar -->
-<nav class="navbar navbar-expand-lg smart-scroll navbar-dark bg-dark fixed-top my-md-3 mx-md-5 rounded">
+<nav class="navbar navbar-expand-lg smart-scroll navbar-dark bg-grey fixed-top my-md-3 mx-md-5 rounded shadow">
   <div class="container">
     <a class="navbar-brand" href="index.php">
       <img src="images/logo.png" alt="" />

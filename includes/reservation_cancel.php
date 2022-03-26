@@ -44,12 +44,16 @@ if(isset($_POST['cancel-reservation'])){
             If you wish to cancel your reservation please do so at least one hour before the reservation time by clicking on the cancel button below.
         </p>
 
-        <div class="row justify-content-around align-items-center mt-5">
-            <div class="col-10 col-md-3"><h5>Party Size: <?php echo $res['party_size'] ?></h5></div>
-            <div class="col-10 col-md-3"><h5>Date: <?php echo $show_date ?></h5></div>
-            <div class="col-10 col-md-3"><h5>Time: <?php echo $res['time']."pm" ?></h5></div>
-            <div class="col-10 col-md-3"><input type="submit" name="cancel-reservation" class="btn btn-outline-primary w-100" value="Cancel"></div>
-            <div class="msg"><?php echo $msg ?></div>
+        <div class="card bg-grey shadow">
+            <div class="card-body">
+                <div class="row justify-content-around align-items-center mt-5">
+                    <div class="col-10 col-md-3"><h5>Party Size: <?php echo $res['party_size'] ?></h5></div>
+                    <div class="col-10 col-md-3"><h5>Date: <?php echo $show_date ?></h5></div>
+                    <div class="col-10 col-md-3"><h5>Time: <?php echo $res['time']."pm" ?></h5></div>
+                    <div class="col-10 col-md-3"><input type="submit" name="cancel-reservation" class="btn btn-outline-primary w-100" value="Cancel"></div>
+                    <div class="msg"><?php echo $msg ?></div>
+                </div>
+            </div>
         </div>
 
     </div>

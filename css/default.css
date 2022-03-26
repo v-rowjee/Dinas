@@ -380,3 +380,8 @@ select.decorated option:hover {
 .h-2rem {
   height: 2rem;
 }
+
+.bg-grey{
+  background-color: rgba(54, 54, 54, 0.4);
+  backdrop-filter: blur(10px);
+}
