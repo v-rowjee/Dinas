@@ -3,7 +3,7 @@ include 'db_connect.php';
 
 //default variables
 $size = 2;
-$date = date("Y-m-d");
+$date = date("Y-m-d", strtotime("+1 day"));
 $time = "5";
 $msg = "";
 
