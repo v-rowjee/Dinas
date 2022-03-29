@@ -14,7 +14,8 @@ if(isset($_SESSION['rid'])){
 $msg='';
 
 $username = $_SESSION['username'];
-$password = '';
+$password_old = '';
+$password_new = '';
 $name = $_SESSION['name'];
 $email = $_SESSION['email'];
 $phone = $_SESSION['phone'];
@@ -34,7 +35,8 @@ if(isset($_POST['delete'])){
     $msg = '';
     
     $username = strtolower($_POST['username']);
-    $password = $_POST['password'];
+    $password_old = $_POST['password_old'];
+    $password_new = $_POST['password_new'];
     $name = $_POST['name'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
@@ -44,8 +46,25 @@ if(isset($_POST['delete'])){
     if($email == '') $msg="Email required";
     if($phone == '') $msg="Phone required";
 
+    if(!empty($_POST['password_new']) && empty($_POST['password_old'])) 
+        $msg="Leave password fields blank or enter old password";
+    if(empty($_POST['password_new']) && !empty($_POST['password_old'])) 
+        $msg="Leave password fields blank or enter new password";
+
+    else if(!empty($_POST['password_old']) && !empty($_POST['password_new'])){
+
+        $sql_p = "SELECT password FROM users WHERE id =?";
+        $query_p = $conn->prepare($sql_p);
+        $query_p->execute([$_SESSION['id']]);
+        $password_actual = $query_p->fetchColumn();
+        
+        if (!password_verify($password_old,$password_actual)) // if password incorrect
+            $msg="Old password wrong";
+
+    }
+
     if($msg == ''){
-        if(empty($_POST['password'])){
+        if(empty($_POST['password_new']) && empty($_POST['password_old'])){
             $sql_u = "UPDATE users SET username = :username, name = :name, phone = :phone, email = :email WHERE id = :id";
             $query_u = $conn->prepare($sql_u);
             $query_u->execute([
@@ -55,9 +74,10 @@ if(isset($_POST['delete'])){
                 ':phone' => $phone,
                 ':id' => $_SESSION['id']
             ]);
-        }else{
-            $hashed_password = password_hash($password,PASSWORD_DEFAULT);
-            $sql_u = "UPDATE users SET username = :username, name = :name, phone = :phone, email = : email, password = :password WHERE id = :id";
+        }else if(password_verify($password_old,$password_actual)){
+
+            $hashed_password = password_hash($password_new,PASSWORD_DEFAULT);
+            $sql_u = "UPDATE users SET username = :username, name = :name, phone = :phone, email = :email, password = :password WHERE id = :id";
             $query_u = $conn->prepare($sql_u);
             $query_u->execute([
                 ':username' => $username,
@@ -67,9 +87,11 @@ if(isset($_POST['delete'])){
                 ':password' => $hashed_password,
                 ':id' => $_SESSION['id']
             ]);
+        }else {
+            $msg = "Some error occured";
         }
 
-        header('location: includes/logout.php');
+        // header('location: includes/logout.php');
     }
     
 }
@@ -80,39 +102,45 @@ if(isset($_POST['delete'])){
     <div class="container">
         <div class="row justify-content-around g-3">
             <!-- USER DETAILS -->
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-lg-6">
                 <div class="card bg-grey shadow p-3">
                     <h2 class="ps-3">User Details</h2>
                     <div class="card-body">
                         <form action="" method="post">
                             <div class="row">
-                                <div class="col-12 col-md-6">
+                                <div class="col-12 col-lg-6">
                                     <label class="form-label">Username</label>
                                     <input type="text" class="form-control mb-3" maxlength="16" name="username" value="<?php echo $username ?>" required>
                                 </div>
-                                <div class="col-12 col-md-6">
-                                    <label class="form-label">New Password</label>
-                                    <input type="text" class="form-control mb-3" name="password" value="<?php echo $password ?>">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12 col-md-6">
+                                <div class="col-12 col-lg-6">
                                     <label class="form-label">Name</label>
                                     <input type="text" class="form-control mb-3" name="name" value="<?php echo $name ?>" required>
                                 </div>
-                                <div class="col-12 col-md-6">
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-lg-6">
+                                    <label class="form-label">Email</label>
+                                    <input type="mail" class="form-control mb-3" name="email" value="<?php echo $email ?>" required>
+                                </div>
+                                <div class="col-12 col-lg-6">
                                     <label class="form-label">Phone</label>
                                     <input type="text" class="form-control mb-3" name="phone" value="<?php echo $phone ?>">
                                 </div>
                             </div>
+                            <hr>
                             <div class="row">
-                                <div class="col-12">
-                                    <label class="form-label">Email</label>
-                                    <input type="mail" class="form-control mb-3" name="email" value="<?php echo $email ?>" required>
+                                <div class="col-12 col-lg-6">
+                                    <label class="form-label">Old Password</label>
+                                    <input type="text" class="form-control mb-3" name="password_old" value="<?php echo $password_old ?>">
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <label class="form-label">New Password</label>
+                                    <input type="text" class="form-control mb-3" name="password_new" value="<?php echo $password_new ?>">
                                 </div>
                             </div>
+                            <hr>
                             <p class="msg text-center"><?php echo $msg ?></p>
-                            <div class="row">
+                            <div class="row mt-4">
                                 <div class="col-4">
                                     <button type="submit" name="delete" class="btn btn-danger w-100">Delete</button>
                                 </div>
@@ -128,9 +156,9 @@ if(isset($_POST['delete'])){
                 </div>
             </div>
             <!-- RESERVATION -->
-            <div class="col-12 col-md-4 ">
+            <div class="col-12 col-lg-4 ">
                 <div class="card bg-grey shadow p-3">
-                    <h2 class="mx-auto">Current Reservation</h2>
+                    <h2 class="ms-2">Current Reservation</h2>
                     <?php if(isset($_SESSION['rid'])){ ?>
                         <div class="card-body">
                             <p class="gold"><i class="fa-solid fa-star mx-2"></i>ID <?php echo $res['id'] ?></p>

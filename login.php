@@ -66,13 +66,14 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 $_SESSION['is_admin'] = $user['is_admin'];
                 // $_SESSION['rid'] = $res['id'];
 
-                if($user['is_admin']=='yes'){ // admin
-                    header('location: /dinasadmin/dashboard.php');
-                    die();
-                }else{ // normal user
-                    header('location: index.php');
-                    die();
-                }
+                // if($user['is_admin']=='yes'){ // admin
+                //     header('location: /dinasadmin/dashboard.php');
+                //     die();
+                // }else{ // normal user
+                //     header('location: index.php');
+                //     die();
+                // }
+                header('location: index.php');
 
             } else
                 $passwordErr = "* Invalid password";
