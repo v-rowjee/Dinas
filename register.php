@@ -144,6 +144,7 @@
             class="form-control <?php if(isset($_POST['submit'])){if($usernameErr=="")echo "is-valid"; else echo "is-invalid";} ?>"
             name="username"
             maxlength="16"
+            pattern="[a-zA-Z0-9\._-]+"
             value="<?php echo $username ?>"
           />
           <div class="invalid-feedback"><?php echo $usernameErr?></div>
@@ -153,17 +154,16 @@
           <input
             type="password"
             class="form-control password <?php if(isset($_POST['submit'])){if($passwordErr=="")echo "is-valid"; else echo "is-invalid";}?>"
-            id="password_"
+            id="password"
             name="password"
+            maxlength="16"
             value="<?php echo $password ?>"
           />
           <div class="invalid-feedback"><?php echo $passwordErr ?></div>
         </div>
         <div class="mb-5 form-check">
-          <input type="checkbox" class="form-check-input" id="checkbox_"/>
-          <label class="form-check-label" for="checkbox"
-            >Show password</label
-          >
+          <input type="checkbox" class="form-check-input" id="checkbox"/>
+          <label class="form-check-label" for="checkbox">Show password</label>
         </div>
 
         <hr>
@@ -174,6 +174,8 @@
             type="text"
             class="form-control <?php if(isset($_POST['submit'])){if($nameErr=="")echo "is-valid"; else echo "is-invalid";}?>"
             name="name"
+            maxlength="24"
+            pattern="[a-zA-Z\.\s]+"
             value="<?php echo $name ?>"
           />
           <div class="invalid-feedback"><?php echo $nameErr ?></div>
@@ -196,6 +198,8 @@
             type="tel"
             class="form-control <?php if(isset($_POST['submit'])){if($passwordErr=="")echo "is-valid"; else echo "is-invalid";}?>"
             name="phone"
+            pattern="[0-9\s\+]+"
+            maxlength="16"
             value="<?php echo $phone ?>"
           />
           <div class="invalid-feedback"><?php echo $phoneErr ?></div>

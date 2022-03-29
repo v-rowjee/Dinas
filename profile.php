@@ -110,11 +110,11 @@ if(isset($_POST['delete'])){
                             <div class="row">
                                 <div class="col-12 col-lg-6">
                                     <label class="form-label">Username</label>
-                                    <input type="text" class="form-control mb-3" maxlength="16" name="username" value="<?php echo $username ?>" required>
+                                    <input type="text" class="form-control mb-3" maxlength="16" pattern="[a-zA-Z0-9\._-]+" name="username" value="<?php echo $username ?>" required>
                                 </div>
                                 <div class="col-12 col-lg-6">
                                     <label class="form-label">Name</label>
-                                    <input type="text" class="form-control mb-3" name="name" value="<?php echo $name ?>" required>
+                                    <input type="text" class="form-control mb-3" maxlength="24" pattern="[a-zA-Z\s]+" name="name" value="<?php echo $name ?>" required>
                                 </div>
                             </div>
                             <div class="row">
@@ -124,18 +124,18 @@ if(isset($_POST['delete'])){
                                 </div>
                                 <div class="col-12 col-lg-6">
                                     <label class="form-label">Phone</label>
-                                    <input type="text" class="form-control mb-3" name="phone" value="<?php echo $phone ?>">
+                                    <input type="text" class="form-control mb-3" pattern="[0-9\s\.]+" maxlength="16" name="phone" value="<?php echo $phone ?>">
                                 </div>
                             </div>
                             <hr>
                             <div class="row">
                                 <div class="col-12 col-lg-6">
                                     <label class="form-label">Old Password</label>
-                                    <input type="text" class="form-control mb-3" name="password_old" value="<?php echo $password_old ?>">
+                                    <input type="password" class="form-control mb-3" maxlength="16" name="password_old" value="<?php echo $password_old ?>">
                                 </div>
                                 <div class="col-12 col-lg-6">
                                     <label class="form-label">New Password</label>
-                                    <input type="text" class="form-control mb-3" name="password_new" value="<?php echo $password_new ?>">
+                                    <input type="password" class="form-control mb-3" maxlength="16" name="password_new" value="<?php echo $password_new ?>">
                                 </div>
                             </div>
                             <hr>

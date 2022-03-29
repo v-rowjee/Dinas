@@ -129,6 +129,7 @@ function filter($data){
             class="form-control <?php if(isset($_POST['submit'])){if($usernameErr=="")echo "is-valid"; else echo "is-invalid";} ?>"
             name="username"
             maxlength="16"
+            pattern="[a-zA-Z0-9\._-]+"
             value="<?php echo $username; if(isset($_GET['u'])) echo $_GET['u'] ?>" 
           />
           <div class="invalid-feedback"><?php echo $usernameErr ?></div>
@@ -141,6 +142,7 @@ function filter($data){
             class="form-control password <?php if(isset($_POST['submit'])){if($passwordErr=="")echo "is-valid"; else echo "is-invalid";} ?>"
             id="password"
             name="password"
+            maxlength="16"
           />
           <div class="invalid-feedback"><?php echo $passwordErr ?></div>
         </div>
