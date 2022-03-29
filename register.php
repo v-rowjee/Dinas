@@ -86,6 +86,9 @@
               // encrypting password
               $password = password_hash($password,PASSWORD_DEFAULT);
 
+              // making username case insensitive
+              $username = strtolower($username);
+
                 $sql = "INSERT INTO users (username,password,name,email,phone) VALUES (:username,:password,:name,:email,:phone)";
                 $statement = $conn->prepare($sql);
     

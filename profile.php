@@ -33,7 +33,7 @@ if(isset($_POST['delete'])){
 
     $msg = '';
     
-    $username = $_POST['username'];
+    $username = strtolower($_POST['username']);
     $password = $_POST['password'];
     $name = $_POST['name'];
     $email = $_POST['email'];
@@ -88,7 +88,7 @@ if(isset($_POST['delete'])){
                             <div class="row">
                                 <div class="col-12 col-md-6">
                                     <label class="form-label">Username</label>
-                                    <input type="text" class="form-control mb-3" name="username" value="<?php echo $username ?>" required>
+                                    <input type="text" class="form-control mb-3" maxlength="16" name="username" value="<?php echo $username ?>" required>
                                 </div>
                                 <div class="col-12 col-md-6">
                                     <label class="form-label">New Password</label>
