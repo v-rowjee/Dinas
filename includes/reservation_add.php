@@ -29,7 +29,7 @@ if (isset($_POST['submit-reservation'])) {
         $time = $_POST['time'];
 
         // get num of reservation at input date and time
-        $sql1 = "SELECT * FROM res_tab WHERE rid = (SELECT id FROM reservation WHERE date = :date AND time = :time AND status <> :status)"; 
+        $sql1 = "SELECT * FROM res_tab WHERE rid IN (SELECT id FROM reservation WHERE date = :date AND time = :time AND status <> :status)"; 
         $result1 = $conn->prepare($sql1); 
         $result1->execute([
             ':date' => $date,
