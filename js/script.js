@@ -1,19 +1,5 @@
 // AUTHENTICATION
 $(document).ready(function () {
-  // // open register
-  // $("#join-us").click(function () {
-  //   $("#auth-title").html("Register");
-  //   $("#login-form").hide();
-  //   $("#register-form").show();
-  // });
-
-  // // open login
-  // $("#sign-in").click(function () {
-  //   $("#auth-title").html("Login");
-  //   $("#register-form").hide();
-  //   $("#login-form").show();
-  // });
-
   // toggle passwod visibility
   $("#checkbox").click(function () {
     var x = document.querySelector("#password");
@@ -62,27 +48,6 @@ $(document).ready(function () {
       last_scroll_top = scroll_top;
     });
   }
-
-  // Owl Carousel 2
-  // $(".owl-carousel").owlCarousel({
-  //   margin: 10,
-  //   nav: true,
-  //   navText: [
-  //     "<i class='fa fa-chevron-left'></i>",
-  //     "<i class='fa fa-chevron-right'></i>",
-  //   ],
-  //   responsive: {
-  //     0: {
-  //       items: 1,
-  //     },
-  //     600: {
-  //       items: 3,
-  //     },
-  //     1000: {
-  //       items: 5,
-  //     },
-  //   },
-  // });
 
   //end
 });
