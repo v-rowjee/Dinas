@@ -10,10 +10,13 @@
             <h6 class="text-gold">What are we?</h6>
             <h1>Our Story</h1>
             <p class="my-5">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
-              ratione reiciendis impedit assumenda expedita, dolorum, saepe,
-              eaque natus enim magni veritatis perspiciatis blanditiis ullam
-              vero tempora rem hic quasi sequi.
+            Dina's Restaurant began on April 26th, 2002 in the coast of Le Morne beaches. 
+            Focusing on the goals of “Quality, Healthy, and Tradition” the company is family 
+            operation making each dish in our own kitchens from scratch. Dina's Restaurant 
+            has three generations of family member working together to fulfill the idea “Honor 
+            the Customer, Quality Comes First”. Through hard work and dedication, Dina's
+            Restaurant began building its brand around the idea of delicious and authentic 
+            traditional Italian food.
             </p>
           </div>
         </div>
@@ -133,9 +136,9 @@
             <h6 class="text-gold">How are we?</h6>
             <h1>Restaurant Tour</h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
-              ratione reiciendis impedit assumenda expedita, dolorum, saepe,
-              eaque natus enim magni veritatis.
+              Located on the coast of the island, Dina's provide an astonishing view
+              by the sea. The place is full of nature and relaxation with a green wall 
+              and centrepieces inside as well as an outdoor terrace with aromatic plant beds.
             </p>
           </div>
         </div>
@@ -151,10 +154,8 @@
           <div class="col-md-6">
             <h2>Interior</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste,
-              quia repellendus ullam beatae accusantium dolorum tempore cum
-              esse. Tempora id facere architecto omnis velit incidunt distinctio
-              itaque dolorem voluptate odit.
+              The interior is spacious and provide enough space to accomodate a large
+              group of people. Lighting is impacable as natural light enters the room.
             </p>
           </div>
         </div>
@@ -170,10 +171,9 @@
           <div class="col-md-6 text-end">
             <h2>VIP corner</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste,
-              quia repellendus ullam beatae accusantium dolorum tempore cum
-              esse. Tempora id facere architecto omnis velit incidunt distinctio
-              itaque dolorem voluptate odit.
+              This part of the restaurant is reserved for special events. Guests eating
+              there shall experience a whole different atmosphere in the room as they are
+              more comfortable and have their privacy.
             </p>
           </div>
         </div>
@@ -189,10 +189,9 @@
           <div class="col-md-6">
             <h2>Bar</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste,
-              quia repellendus ullam beatae accusantium dolorum tempore cum
-              esse. Tempora id facere architecto omnis velit incidunt distinctio
-              itaque dolorem voluptate odit.
+              The bar is located at the center of the restaurant so that anybody could
+              have immediate access to it. Two bar tenders are generally there to serve
+              you any drinks or cocktails you wish.
             </p>
           </div>
         </div>
@@ -208,10 +207,9 @@
           <div class="col-md-6 text-end">
             <h2>Outdoor</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste,
-              quia repellendus ullam beatae accusantium dolorum tempore cum
-              esse. Tempora id facere architecto omnis velit incidunt distinctio
-              itaque dolorem voluptate odit.
+              The terrace provide an amazing view on the coastal landscape while 
+              being in a natural environment with fresh air. At night the lights 
+              illuminate the place, reflecting on the swimming pool.
             </p>
           </div>
         </div>
@@ -225,9 +223,10 @@
             <h6 class="text-gold">Who are we?</h6>
             <h1>The Chef</h1>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
-              voluptate facilis quia, vero nostrum officia iste qui minus
-              voluptatibus sapiente deserunt.
+              Chef Antonino Cannavacciuolo is an Italian chef and restaurateur 
+              known for his highly acclaimed restaurants and cookbooks. He has
+              been working with Dina's for more that 10 year and has more than 
+              30 years of experience.
             </p>
           </div>
           <div class="col-md-5">
@@ -244,9 +243,9 @@
             <h6 class="text-gold">Where are we?</h6>
             <h1>Our Location</h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
-              ratione reiciendis impedit assumenda expedita, dolorum, saepe,
-              eaque natus enim magni veritatis.
+              Located in the southen coast of the island at Le Morne, Mauritius. 
+              The restaurant can be easily accessed by the main road. For more
+              information check the map below.
             </p>
             </div>
         </div>

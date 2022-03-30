@@ -438,9 +438,11 @@ include 'includes/header.php';
         <h6 class="text-gold">Who are we?</h6>
         <h1>About Us</h1>
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
-          voluptate facilis quia, vero nostrum officia iste qui minus
-          voluptatibus sapiente deserunt.
+        Dina’s is a bistronomy venue that lets the true taste of the produce 
+        come through to allow guests to rediscover the culinary delights of 
+        yesteryear. The restaurant is a delectable introduction to a healthy 
+        cuisine.
+        
         </p>
         <a
           href="about.php"
@@ -459,7 +461,7 @@ include 'includes/header.php';
 <section id="reviews">
   <div class="container text-center">
     <div class="row flex-row-reverse justify-content-around g-4">
-      <div class="col-12 col-lg-6 order-2 order-lg-1">
+      <div class="col-12 col-lg-6 order-2 order-lg-1 align-self-center">
         <div
           id="reviews-carousel"
           class="carousel slide"
@@ -473,17 +475,11 @@ include 'includes/header.php';
                   <i class="fa fa-quote-left text-dark"></i>
                 </div>
                 <p class="mb-0 mt-2 font-italic">
-                  "1Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                  sed do eiusmod tempor incididunt ut labore et dolore magna
-                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                  ullamco laboris nisi ut aliquip ex ea commodo
-                  <a href="#" class="text-info">@consequat</a>."
+                  "Oh! My! God!!!! If you’re anywhere close to Le Morne, Dina’s 
+                  in Dina Robin is a must!!! Everything we had we were like: Damn!!!
+                   How can this be so good?"
+                  <a href="#" class="text-info">@Heaven</a>
                 </p>
-                <hr />
-                <footer class="blockquote-footer pt-4">
-                  Someone famous in
-                  <cite title="Source Title">Source Title</cite>
-                </footer>
               </blockquote>
             </div>
             <div class="carousel-item">
@@ -494,17 +490,11 @@ include 'includes/header.php';
                   <i class="fa fa-quote-left text-dark"></i>
                 </div>
                 <p class="mb-0 mt-2 font-italic">
-                  "2Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                  sed do eiusmod tempor incididunt ut labore et dolore magna
-                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                  ullamco laboris nisi ut aliquip ex ea commodo
-                  <a href="#" class="text-info">@consequat</a>."
+                  "Total bliss, clean, friendly, marvellous location, beach 
+                  and coastline protected by outlying reef - even during 3 days 
+                  of cyclone no massive breakers."
+                  <a href="#" class="text-info">@Jana</a>
                 </p>
-                <hr />
-                <footer class="blockquote-footer pt-4">
-                  Someone famous in
-                  <cite title="Source Title">Source Title</cite>
-                </footer>
               </blockquote>
             </div>
             <div class="carousel-item">
@@ -515,17 +505,11 @@ include 'includes/header.php';
                   <i class="fa fa-quote-left text-dark"></i>
                 </div>
                 <p class="mb-0 mt-2 font-italic">
-                  "3Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                  sed do eiusmod tempor incididunt ut labore et dolore magna
-                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                  ullamco laboris nisi ut aliquip ex ea commodo
-                  <a href="#" class="text-info">@consequat</a>."
+                  "Loved our dinner here. Gorgeous parma ham and other delicious
+                   starters to choose from. Lovely setting. Small and intimate. 
+                   Choices for main and desser"
+                  <a href="#" class="text-info">@sophia</a>
                 </p>
-                <hr />
-                <footer class="blockquote-footer pt-4">
-                  Someone famous in
-                  <cite title="Source Title">Source Title</cite>
-                </footer>
               </blockquote>
             </div>
           </div>
@@ -548,9 +532,9 @@ include 'includes/header.php';
         <h6 class="text-gold">What people say about us,</h6>
         <h1>Reviews</h1>
         <p class="mb-5">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          Necessitatibus dolore atque rerum vel! Explicabo molestias ipsam
-          tenetur, impedit quae iure.
+          Rated a 4.0 star restaurant on TripAdvisor, Dina's is proud to have 
+          made a name in one of the best restaurant in mauritius ans is suggested
+          by various guides.
         </p>
         <a href="reviews.php" class="btn btn-outline-primary px-5"
           >Share your experience</a

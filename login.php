@@ -102,11 +102,10 @@ function filter($data){
     <div class="col-12 col-lg-5">
       <h2 style="font-size: 4rem;">Login</h2><hr>
       <h6 class="mt-5">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque sunt
-        voluptas veritatis explicabo temporibus iusto, tempore officiis
-        repudiandae quae laborum obcaecati accusamus possimus eos sed beatae
-        recusandae maiores quasi porro tempora.
+        Welcom back! To keep connected with us please login with your
+        personal information by username and password.
       </h6>
+      <h6 class="pt-3">New Here? <a href="register.php">Create a new account now</a></h6>
       <!-- <a
         class="btn btn-outline-secondary mb-4"
         href="&lt;?php echo $client->createAuthUrl() ?>"

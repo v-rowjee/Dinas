@@ -91,7 +91,7 @@ if(isset($_POST['delete'])){
             $msg = "Some error occured";
         }
 
-        // header('location: includes/logout.php');
+        header('location: includes/logout.php');
     }
     
 }

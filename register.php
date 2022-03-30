@@ -123,11 +123,11 @@
     <div class="col-12 col-lg-5">
       <h2 style="font-size: 4rem;">Register</h2><hr>
       <h6 class="mt-5">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque sunt
-        voluptas veritatis explicabo temporibus iusto, tempore officiis
-        repudiandae quae laborum obcaecati accusamus possimus eos sed beatae
-        recusandae maiores quasi porro tempora.
+        Create a new account within few steps by providing personal informations that we need to 
+        reserve your table at our restaurant. You will need an account to book a reservation
+        and to order online.
       </h6>
+      <h6 class="pt-3">Already have an account? <a href="login.php">Login now</a></h6>
       <!-- <a
         class="btn btn-outline-secondary mb-4"
         href="&lt;?php echo $client->createAuthUrl() ?>"
