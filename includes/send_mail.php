@@ -34,15 +34,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $subject = "Feedback from ".$name;
         $to = "dinasrestaurant.test@gmail.com";
         $to = filter_var($to,FILTER_VALIDATE_EMAIL);
-        // $headers = array(
-        //     'From' => $email,
-        //     'Cc' => $email,
-        //     'Reply-To' => $email,
-        //     'X-Mailer' => 'PHP/' . phpversion()
-        // );
         $header = "From: $name <$email>";
         $header .= "Reply-To: $email \r\n";
 
+        // send mail
         mail($to,$subject,$message,$header);
 
         echo "Email sent successfully.</br> Thank You for messaging us.";

@@ -3,24 +3,24 @@ include 'db_connect.php';
 
 //default variables
 $size = 2;
-$date = date("Y-m-d", strtotime("+1 day"));
+$date = date("Y-m-d", strtotime("+1 day")); // set date to tommorrow's date
 $time = "5";
 $msg = "";
 
 if (isset($_POST['submit-reservation'])) {
 
     if(!isset($_SESSION['id'])){
-        header('location: login.php');
+        header('location: login.php');  // if user not logged in redirect to login page
         die();
     }else{
 
     $dateInput = $_POST['date'];
     $date = date("Y-m-d", strtotime($dateInput));   // set format of date
 
-    $checkDate = new DateTime($date);
-    $now = new DateTime();
+    $checkDate = new DateTime($date);       // input date
+    $now = new DateTime();                  // today's date
 
-    if($checkDate < $now) {
+    if($checkDate <= $now) {            // reservation is only valid for future dates
         $msg = 'Please choose a valid date';
     }else{
         $size = $_POST['size'];
@@ -29,24 +29,19 @@ if (isset($_POST['submit-reservation'])) {
         $time = $_POST['time'];
 
         // get num of reservation at input date and time
-        $sql1 = "SELECT * FROM res_tab WHERE rid IN (SELECT id FROM reservation WHERE date = :date AND time = :time AND status <> :status)"; 
+        $sql1 = "SELECT * FROM res_tab WHERE rid IN(SELECT id FROM reservation WHERE date = :date AND time = :time AND status <> :status)"; 
         $result1 = $conn->prepare($sql1); 
         $result1->execute([
             ':date' => $date,
             ':time' => $time,
             ':status' => 'check-out'
         ]); 
-        $num_of_reservations = $result1->rowCount();
+        $table_booked = $result1->rowCount(); // num of tables booked on same datetime
+        $tables_available = $num_of_tables - $table_booked; // num of tables available
+        $res_available = $tables_available*2;   // num of reservation available
 
-        // get num of tables 
-        $sql2 = "SELECT * FROM tables "; 
-        $result2 = $conn->prepare($sql2); 
-        $result2->execute(); 
-        $num_of_tables = $result2->rowCount();
-
-        if(($tables_needed+$num_of_reservations) > $num_of_tables) // if num of table not enough(restaurant full) when current reservation is added
+        if($guest > $res_available) // if num of table not enough(restaurant full) when current reservation is added
             $msg = "Restaurant full at this time";
-
         else{
             // if table available, add a new reservation
             $sql5 = "INSERT INTO reservation (uid,party_size,date,time,status) VALUES (:uid,:size,:date,:time,:status)";
@@ -65,10 +60,10 @@ if (isset($_POST['submit-reservation'])) {
             $sql3 = "INSERT INTO res_tab (rid, tid) VALUES (:rid,:tid)";
             $result3 = $conn->prepare($sql3);
             
-            for($i=0; $i < $tables_needed; $i++){
+            for($i=1; $i <= $tables_needed; $i++){
                 $result3->execute([
                     ':rid' => $_SESSION['rid'],
-                    ':tid' => $num_of_reservations+1+$i
+                    ':tid' => $num_of_reservations+$i
                 ]); 
             }
 
