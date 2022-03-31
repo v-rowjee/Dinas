@@ -130,6 +130,7 @@ include 'includes/header.php';
   </div>
 </section>
 
+<!-- Video Divider -->
 <section>
   <div class="container">
     <div class="video" id="reservations" >
@@ -288,6 +289,7 @@ include 'includes/header.php';
   </div>
 </section>
 
+<!-- Photo divider -->
 <section id="interior">
   <div class="container">
     <div class="row text-end">
