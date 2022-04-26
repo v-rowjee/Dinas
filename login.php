@@ -99,7 +99,7 @@ function filter($data){
 <main style="margin: 100px 0;">
 <div class="container">
   <div class="row justify-content-around gx-5">
-    <div class="col-12 col-lg-5">
+    <div class="col-12 col-lg-5" data-aos="fade-right">
       <h2 style="font-size: 4rem;">Login</h2><hr>
       <h6 class="mt-5">
         Welcom back! To keep connected with us please login with your
@@ -113,7 +113,7 @@ function filter($data){
         Sign in with google
       </a> -->
     </div>
-    <div class="col-12 col-lg-5">
+    <div class="col-12 col-lg-5" data-aos="fade-left">
       <form
         id="login-form"
         class="needs-validation mt-3"

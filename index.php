@@ -6,7 +6,7 @@ include 'includes/header.php';
 <!-- Home Section -->
 <section id="home">
   <div class="container col-12 align-items-stretch">
-    <div class="row align-items-center">
+    <div class="row align-items-center" data-aos="fade-right" data-aos-duration="2000">
       <div class="col-xxs-6 col-sm-12 col-lg-7 mt-3">
         <h6><i>Mauritian Bistronomy</i></h6>
         <h1 style="white-space: nowrap">Dina's Restaurant</h1>
@@ -72,10 +72,10 @@ include 'includes/header.php';
 <section id="menu">
   <div class="container text-center">
     <div class="row my-5 align-items-center justify-content-between">
-      <div class="col-12 col-md-6">
+      <div class="col-12 col-md-6" data-aos="fade-right">
         <img src="images/menu/farfalle.jpg" alt="" />
       </div>
-      <div class="col-12 col-md-5">
+      <div class="col-12 col-md-5" data-aos="fade-left">
         <h1>- Starter -</h1>
         <p>
           <?php $category="starter"; include 'includes/menu-items.php'; ?>
@@ -85,10 +85,10 @@ include 'includes/header.php';
     </div>
 
     <div class="row my-5 align-items-center justify-content-between">
-      <div class="col-12 col-md-6">
+      <div class="col-12 col-md-6" data-aos="fade-left">
         <img src="images/menu/spaghetti.jpg" alt="" />
       </div>
-      <div class="col-12 col-md-5">
+      <div class="col-12 col-md-5" data-aos="fade-right">
         <h1>- Pasta -</h1>
         <p><?php $category="pasta"; include 'includes/menu-items.php'?></p>
         <a href="menu.php">View Menu</a>
@@ -96,10 +96,10 @@ include 'includes/header.php';
     </div>
 
     <div class="row my-5 align-items-center justify-content-between">
-      <div class="col-12 col-md-6">
+      <div class="col-12 col-md-6" data-aos="fade-right">
         <img src="images/menu/pizza.jpg" alt="" />
       </div>
-      <div class="col-12 col-md-5">
+      <div class="col-12 col-md-5" data-aos="fade-left">
         <h1>- Pizza -</h1>
         <p><?php $category="pizza"; include 'includes/menu-items.php'?></p>
         <a href="menu.php">View Menu</a>
@@ -107,10 +107,10 @@ include 'includes/header.php';
     </div>
 
     <div class="row my-5 align-items-center justify-content-between">
-      <div class="col-12 col-md-6">
+      <div class="col-12 col-md-6" data-aos="fade-left">
         <img src="images/menu/chestnut.jpg" alt="" />
       </div>
-      <div class="col-12 col-md-5">
+      <div class="col-12 col-md-5" data-aos="fade-right">
         <h1>- Dessert -</h1>
         <p><?php $category="dessert"; include 'includes/menu-items.php'?></p>
         <a href="menu.php">View Menu</a>
@@ -118,10 +118,10 @@ include 'includes/header.php';
     </div>
 
     <div class="row my-5 align-items-center justify-content-between">
-      <div class="col-12 col-md-6">
+      <div class="col-12 col-md-6" data-aos="fade-right">
         <img src="images/menu/greentea.jpg" alt="" />
       </div>
-      <div class="col-12 col-md-5">
+      <div class="col-12 col-md-5" data-aos="fade-left">
         <h1>- Drinks -</h1>
         <p><?php $category="drinks"; include 'includes/menu-items.php'?></p>
         <a href="menu.php">View Menu</a>
@@ -194,7 +194,7 @@ include 'includes/header.php';
       <div class="col-10 col-lg-5">
         <img src="images/mockup.png" alt="" class="img-fluid" />
       </div>
-      <div class="col-12 col-lg-5">
+      <div class="col-12 col-lg-5" data-aos="fade-left">
         <h6 class="text-gold">We make your life easier !</h6>
         <h1>Order Online</h1>
         <p class="mb-5">
@@ -263,13 +263,13 @@ include 'includes/header.php';
       </div>
       <div class="col-sm-12 col-lg-2 h-100">
         <div class="row gy-5">
-          <div class="col">
+          <div class="col" data-aos="fade-left">
             <h6 class="mb-4">Opening Hours</h6>
             <h5 class="mb-3 nowrap">Monday - Saturday<br />5pm - 10pm</h5>
             <h5 class="mt-2">Sunday<br />5pm - 8pm</h5>
           </div>
 
-          <div class="col">
+          <div class="col" data-aos="fade-left">
             <h6 class="mb-4">Location</h6>
             <h5 style="white-space: nowrap">
               Beachcomber, <br />
@@ -278,7 +278,7 @@ include 'includes/header.php';
             </h5>
           </div>
 
-          <div class="col">
+          <div class="col" data-aos="fade-left">
             <h6 class="mb-4">Support</h6>
             <h5 style="font-size: medium" class="mb-3">dinasrestaurant.test@gmail.com</h5>
             <h5 style="white-space: nowrap; font-size: medium">+230 407-9000</h5>
@@ -306,7 +306,7 @@ include 'includes/header.php';
 <section id="about">
   <div class="container text-center">
     <div class="row justify-content-around">
-      <div class="col-12 col-md-5 align-self-center order-md-2">
+      <div class="col-12 col-md-5 align-self-center order-md-2" data-aos="fade-left">
         <h6 class="text-gold">Who are we?</h6>
         <h1>About Us</h1>
         <p>
@@ -400,7 +400,7 @@ include 'includes/header.php';
       <!-- <script src="https://apps.elfsight.com/p/platform.js" defer></script>
       <div class="elfsight-app-9e526d95-464e-4fdc-ba0b-5b494aaf413c"></div> -->
     </div>
-    <div class="col-12 col-lg-6 align-self-center order-1 order-lg-2">
+    <div class="col-12 col-lg-6 align-self-center order-1 order-lg-2" data-aos="fade-right">
         <h6 class="text-gold">What people say about us,</h6>
         <h1>Reviews</h1>
         <p class="mb-5">

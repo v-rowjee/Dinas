@@ -115,7 +115,7 @@
       <section id="all" class="tab-pane fade show active" role="tabpanel">
         <div class="container mb-3">
           <!-- starter -->
-            <div class="row">
+            <div class="row" data-aos="fade-right">
               <h1>Starter</h1>
             </div>
             <div class="row g-4">
@@ -123,7 +123,7 @@
             </div>
 
           <!-- pasta -->
-            <div class="row mt-5">
+            <div class="row mt-5" data-aos="fade-right">
               <h1>Pasta</h1>
             </div>
             <div class="row g-4">
@@ -131,7 +131,7 @@
             </div>
 
           <!-- pizza -->
-            <div class="row mt-5">
+            <div class="row mt-5" data-aos="fade-right">
               <h1>Pizza</h1>
             </div>
             <div class="row g-4">
@@ -139,7 +139,7 @@
             </div>
 
           <!-- dessert -->
-            <div class="row mt-5">
+            <div class="row mt-5" data-aos="fade-right">
               <h1>Dessert</h1>
             </div>
             <div class="row g-4">
@@ -147,7 +147,7 @@
             </div>
 
           <!-- drinks -->
-            <div class="row mt-5">
+            <div class="row mt-5" data-aos="fade-right">
               <h1>Drinks</h1>
             </div>
             <div class="row g-4">

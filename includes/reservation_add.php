@@ -90,7 +90,7 @@ if (isset($_POST['submit-reservation'])) {
     </div>
 </div>
 
-<div class="card bg-grey shadow mb-5">
+<div class="card bg-grey shadow mb-5" data-aos="zoom-in-up" data-aos-anchor-placement="top-bottom">
     <div class="card-body">
         <form action="reservation.php" method="post" class="pt-4">
             <div class="row justify-content-center g-3 mx-5">

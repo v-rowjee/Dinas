@@ -52,6 +52,12 @@ $(document).ready(function () {
   //end
 });
 
+// AOS Animation
+AOS.init({
+  duration: 1000,
+  disable: 'mobile'
+});
+
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function () {
   "use strict";

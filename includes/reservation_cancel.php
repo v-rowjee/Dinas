@@ -44,7 +44,7 @@ if(isset($_POST['cancel-reservation'])){
             If you wish to cancel your reservation please do so at least one hour before the reservation time by clicking on the cancel button below.
         </p>
 
-        <div class="card bg-grey shadow">
+        <div class="card bg-grey shadow" data-aos="zoom-in-up" data-aos-anchor-placement="top-bottom">
             <div class="card-body">
                 <div class="row justify-content-around align-items-center mt-5">
                     <div class="col-10 col-md-3"><h5>Party Size: <?php echo $res['party_size'] ?></h5></div>

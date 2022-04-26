@@ -1,5 +1,5 @@
   <!-- Footer -->
-  <footer class=" text-white pt-5 pb-4" >
+  <footer class=" text-white pt-5 pb-4">
             <!-- <div class="waveWrapper waveAnimation">
                 <div class="waveWrapperInner bgTop">
                   <div class="wave waveTop" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')"></div>
@@ -147,6 +147,9 @@
     <!-- TIDIO -->
     <!-- <script src="//code.tidio.co/q995miexellgrajt7qj45rslvqlczdtz.js" async></script> -->
 
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
     <!-- My script -->
     <script src="js/script.js" type="text/javascript"></script>
     

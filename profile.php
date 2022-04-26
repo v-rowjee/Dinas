@@ -103,7 +103,7 @@ if(isset($_POST['delete'])){
         <div class="row justify-content-around g-3">
             <!-- USER DETAILS -->
             <div class="col-12 col-lg-6">
-                <div class="card bg-grey shadow p-3">
+                <div class="card bg-grey shadow p-3" data-aos="fade-right">
                     <h2 class="ps-3">User Details</h2>
                     <div class="card-body">
                         <form action="" method="post">
@@ -156,8 +156,8 @@ if(isset($_POST['delete'])){
                 </div>
             </div>
             <!-- RESERVATION -->
-            <div class="col-12 col-lg-4 ">
-                <div class="card bg-grey shadow p-3">
+            <div class="col-12 col-lg-4">
+                <div class="card bg-grey shadow p-3" data-aos="fade-left">
                     <h2 class="ms-2">Current Reservation</h2>
                     <?php if(isset($_SESSION['rid'])){ ?>
                         <div class="card-body">

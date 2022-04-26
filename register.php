@@ -120,7 +120,7 @@
 <main style="margin: 100px 0;">
 <div class="container">
   <div class="row justify-content-around gx-5">
-    <div class="col-12 col-lg-5">
+    <div class="col-12 col-lg-5" data-aos="fade-right">
       <h2 style="font-size: 4rem;">Register</h2><hr>
       <h6 class="mt-5">
         Create a new account within few steps by providing personal informations that we need to 
@@ -135,7 +135,7 @@
         Sign in with google
       </a> -->
     </div>
-    <div class="col-12 col-lg-5">
+    <div class="col-12 col-lg-5" data-aos="fade-left">
     <form class="needs-validation mt-3" novalidate action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
         <div class="mb-5">
           <label for="username" class="form-label">Username</label>
