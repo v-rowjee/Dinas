@@ -205,10 +205,12 @@
           <div class="invalid-feedback"><?php echo $phoneErr ?></div>
         </div>
 
+        <div class="g-recaptcha mb-5" data-sitekey="6Lfzz6MfAAAAACCfMkAVpHJmGthZotS2BEo_v_V4" data-theme="dark"></div>
+
         <button
           type="submit"
           name="submit"
-          class="g-recaptcha btn btn-primary text-dark w-100"
+          class="btn btn-primary text-dark w-100"
         >
           Register
         </button>

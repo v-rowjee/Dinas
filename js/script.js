@@ -81,27 +81,6 @@ AOS.init({
   });
 })();
 
-// reCAPTCHA
-// function onSubmit(token) {
-//   document.getElementById("register-form").submit();
-// }
-// function onRecaptchaLoadCallback() {
-//   var clientId = grecaptcha.render("inline-badge", {
-//     sitekey: "6LedzUMeAAAAAEopHYgH45weICZbcodupci-dK9W",
-//     badge: "inline",
-//     size: "invisible",
-//   });
-
-//   grecaptcha.ready(function () {
-//     grecaptcha
-//       .execute(clientId, {
-//         action: "includes/register.php",
-//       })
-//       .then(function (token) {
-//         // Verify the token on the server.
-//       });
-//   });
-// }
 
 // Date picker
 // let today = new Date().toISOString().substr(0, 10);
