@@ -5,7 +5,7 @@
 
     <section id="story">
       <div class="container">
-        <div class="row justify-content-center text-center">
+        <div class="row justify-content-center text-center" data-aos="zoom-in">
           <div class="col-lg-8 align-self-center">
             <h6 class="text-gold">What are we?</h6>
             <h1>Our Story</h1>
@@ -45,41 +45,6 @@
       </svg>
     </div>
 
-    <section id="details">
-      <div class="container">
-        <div class="row g-5 pb-5 text-center justify-content-center">
-          <div class="col-md-8 ">
-            <h6 class="text-gold">Who are we?</h6>
-            <h1 class="sm-h1">Know more about us!</h1>
-          </div>
-        </div>
-        <div class="row justify-content-around nowrap text-center gy-3">
-          
-          <div class="col-12 col-md-6 col-lg-2">
-            <i class="fa fa-phone d-block"></i>
-            <a href="tel:+230407-9000">+230 407-9000</a>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4">
-            <i class="fa-solid fa-envelope d-block"></i>
-            <a href="index.php#contact">dinasrestaurant.test@gmail.com</a>
-          </div>
-          <div class="col-12 col-md-6 col-lg-2">
-            <i class="fa fa-instagram d-block"></i>
-            <a href="https://www.instagram.com/dinarobinbeachcomber/" target="blank">Instragram</a>
-          </div>
-          <div class="col-12 col-md-6 col-lg-2">
-            <i class="fa fa-facebook d-block"></i>
-            <a href="https://www.facebook.com/DinarobinBeachcomber/" target="blank">Facebook</a>
-          </div>
-          <div class="col-12 col-md-6 col-lg-2">
-            <i class="fa fa-tripadvisor d-block"></i>
-            <a href="https://www.tripadvisor.com/Restaurant_Review-g488105-d2571445-Reviews-Dina_s-Le_Morne.html" target="blank">Tripadvisor</a>
-          </div>
-          
-        </div>
-      </div>
-    </section>
-
     <section id="hours">
       <div class="row justify-content-center">
         <div class="col-12 align-self-center">
@@ -87,7 +52,7 @@
               <h6 class="text-gold">When are we open?</h6>
               <h1 class="sm-h1">Opening Hours</h1>
             </div>
-            <div class="row text-center justify-content-around mx-5">
+            <div class="row text-center justify-content-around mx-5" data-aos="fade-up">
               <!-- <table class="table table-dark table-borderless table-hover rounded-5">
                 <tr>
                   <td>Monday - Saturday</td>
@@ -132,7 +97,7 @@
     <section id="interior">
       <div class="container">
         <div class="row g-5 pb-5">
-          <div class="col-md-8">
+          <div class="col-md-8" data-aos="fade-right">
             <h6 class="text-gold">How are we?</h6>
             <h1>Restaurant Tour</h1>
             <p>
@@ -144,14 +109,14 @@
         </div>
 
         <div class="row align-items-end my-5">
-          <div class="col-md-6">
+          <div class="col-md-6" data-aos="fade-left">
             <img
               src="images/interior.jpg"
               alt=""
               class="img-fluid float-end"
             />
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6" data-aos="fade-right">
             <h2>Interior</h2>
             <p>
               The interior is spacious and provide enough space to accomodate a large
@@ -161,14 +126,14 @@
         </div>
 
         <div class="row align-items-end my-5">
-          <div class="col-md-6 order-md-2">
+          <div class="col-md-6 order-md-2" data-aos="fade-right">
             <img
               src="images/interior-vip.jpg"
               alt=""
               class="img-fluid float-start"
             />
           </div>
-          <div class="col-md-6 text-end">
+          <div class="col-md-6 text-end" data-aos="fade-left">
             <h2>VIP corner</h2>
             <p>
               This part of the restaurant is reserved for special events. Guests eating
@@ -179,14 +144,14 @@
         </div>
 
         <div class="row align-items-end my-5">
-          <div class="col-md-6">
+          <div class="col-md-6" data-aos="fade-left">
             <img
               src="images/interior-bar.jpg"
               alt=""
               class="img-fluid float-end"
             />
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6" data-aos="fade-right">
             <h2>Bar</h2>
             <p>
               The bar is located at the center of the restaurant so that anybody could
@@ -197,14 +162,14 @@
         </div>
 
         <div class="row align-items-end my-5">
-          <div class="col-md-6 order-md-2">
+          <div class="col-md-6 order-md-2" data-aos="fade-right">
             <img
               src="images/interior-outdoor.jpg"
               alt=""
               class="img-fluid float-start"
             />
           </div>
-          <div class="col-md-6 text-end">
+          <div class="col-md-6 text-end" data-aos="fade-left">
             <h2>Outdoor</h2>
             <p>
               The terrace provide an amazing view on the coastal landscape while 
@@ -219,7 +184,7 @@
     <section id="chefs">
       <div class="container text-center">
         <div class="row">
-          <div class="col-md-7 align-self-center order-md-2">
+          <div class="col-md-7 align-self-center order-md-2" data-aos="fade-left">
             <h6 class="text-gold">Who are we?</h6>
             <h1>The Chef</h1>
             <p>
@@ -258,6 +223,41 @@
             ></iframe>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="details">
+      <div class="container">
+        <div class="row g-5 pb-5 text-center justify-content-center">
+          <div class="col-md-8 ">
+            <h6 class="text-gold">Who are we?</h6>
+            <h1 class="sm-h1">Know more about us!</h1>
+          </div>
+        </div>
+        <div class="row justify-content-around nowrap text-center gy-3" style="overflow-y: hidden" data-aos="fade-up">
+          
+          <div class="col-12 col-md-6 col-lg-2">
+            <i class="fa fa-phone d-block"></i>
+            <a href="tel:+230407-9000">+230 407-9000</a>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <i class="fa-solid fa-envelope d-block"></i>
+            <a href="index.php#contact">dinasrestaurant.test@gmail.com</a>
+          </div>
+          <div class="col-12 col-md-6 col-lg-2">
+            <i class="fa fa-instagram d-block"></i>
+            <a href="https://www.instagram.com/dinarobinbeachcomber/" target="blank">Instragram</a>
+          </div>
+          <div class="col-12 col-md-6 col-lg-2">
+            <i class="fa fa-facebook d-block"></i>
+            <a href="https://www.facebook.com/DinarobinBeachcomber/" target="blank">Facebook</a>
+          </div>
+          <div class="col-12 col-md-6 col-lg-2">
+            <i class="fa fa-tripadvisor d-block"></i>
+            <a href="https://www.tripadvisor.com/Restaurant_Review-g488105-d2571445-Reviews-Dina_s-Le_Morne.html" target="blank">Tripadvisor</a>
+          </div>
+          
         </div>
       </div>
     </section>

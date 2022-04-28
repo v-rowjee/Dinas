@@ -91,3 +91,34 @@ $('#interior').on('mouseover', 'img', function() {
   $('img.active').removeClass('active');
   $(this).addClass('active');
 });
+
+// Cursor
+// document.body.onmousemove = function(e) {
+//   document.documentElement.style.setProperty (
+//     '--x', (
+//       e.clientX+window.scrollX
+//     )
+//     + 'px'
+//   );
+//   document.documentElement.style.setProperty (
+//     '--y', (
+//       e.clientY+window.scrollY
+//     ) 
+//     + 'px'
+//   );
+// }
+let curs = document.querySelector('#cursor');
+
+document.addEventListener('mousemove', (e) => {
+  let x = e.pageX;
+  let y = e.pageY;
+  curs.style.left = (x - 22) + "px";
+  curs.style.top = (y - 22) + "px";
+});
+
+document.addEventListener('mouseleave', (e) => {
+  let x = e.pageX;
+  let y = e.pageY;
+  curs.style.left = (x - 22) + "px";
+  curs.style.top = (y - 22) + "px";
+});

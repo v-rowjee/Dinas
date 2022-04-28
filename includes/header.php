@@ -46,11 +46,13 @@ session_start();
     ?>
     
   </head>
+  <body>
+    <div id="cursor"></div>
 <?php 
-  if($active == "index")
-    echo '<body data-bs-spy="scroll" data-bs-target="#spy-target" data-bs-offset="100">';
-  else
-    echo '<body>';
+  // if($active == "index")
+  //   echo '<body data-bs-spy="scroll" data-bs-target="#spy-target" data-bs-offset="100">';
+  // else
+  //   echo '<body>';
 
   if(isset($_SESSION['id'])){
     

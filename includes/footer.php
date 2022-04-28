@@ -1,16 +1,5 @@
   <!-- Footer -->
   <footer class=" text-white pt-5 pb-4">
-            <!-- <div class="waveWrapper waveAnimation">
-                <div class="waveWrapperInner bgTop">
-                  <div class="wave waveTop" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')"></div>
-                </div>
-                <div class="waveWrapperInner bgMiddle">
-                  <div class="wave waveMiddle" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')"></div>
-                </div>
-                <div class="waveWrapperInner bgBottom">
-                  <div class="wave waveBottom" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')"></div>
-                </div>
-              </div> -->
         <div class="container text-center text-md-start">
             <div class="row text-center text-md-start">
                 <div class="col-12 col-md-3 mx-auto mt-1">
@@ -74,7 +63,7 @@
         </div>
             <hr class="mb-4" style="color: #B4A064;">
             <div class="row align-items-center">
-            <div class="col-md-7 col-lg-5">
+            <div class="col-12 col-md-6">
                 <p>Copyright @2022 All rights reserved by:
                     <a href="#" style= "text-decoration: none;">
                     <strong  style="color: #B4A064;">Dina Robin</strong>
@@ -83,7 +72,7 @@
 
             </div>
             
-            <div class="col-md-7 mx-auto  ">
+            <div class="col-12 col-md-6 text-end">
                 <div class="text-center text-right">
                     <ul class="list-unstyled list-inline">
                         <li class="list-inline-item">
@@ -145,7 +134,7 @@
     <!-- <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script> -->
 
     <!-- TIDIO -->
-    <!-- <script src="//code.tidio.co/q995miexellgrajt7qj45rslvqlczdtz.js" async></script> -->
+    <script src="//code.tidio.co/q995miexellgrajt7qj45rslvqlczdtz.js" async></script>
 
     <!-- AOS Animation -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
