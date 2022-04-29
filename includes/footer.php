@@ -98,10 +98,7 @@
                     </ul>
                 </div>
 
-            </div>
-
-            
-                                    
+            </div>                
         </footer>
         <!--Waves Container-->
         <div class="position-relative w-100">
@@ -122,10 +119,7 @@
     <script src="js/jquery-3.6.0.min.js"></script>
 
     <!-- Bootstrap -->
-    <script
-      src="bootstrap/bootstrap.bundle.min.js"
-      type="text/javascript"
-    ></script>
+    <script src="bootstrap/bootstrap.bundle.min.js" type="text/javascript"></script>
 
     <!-- Owl Carousel 2 -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
@@ -138,6 +132,9 @@
 
     <!-- AOS Animation -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- MagicMouseJs -->
+    <script type="text/javascript" src="https://res.cloudinary.com/veseylab/raw/upload/v1636192990/magicmouse/magic_mouse-1.2.1.cdn.min.js"></script>
     
     <!-- My script -->
     <script src="js/script.js" type="text/javascript"></script>

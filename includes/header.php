@@ -26,7 +26,7 @@ session_start();
     <!-- XXX Date picker -->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"> -->
 
-    <!-- XXX reCAPTCHA -->
+    <!-- reCAPTCHA -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <!-- AOS animation -->
@@ -47,7 +47,7 @@ session_start();
     
   </head>
   <body>
-    <div id="cursor"></div>
+    <!-- <div id="cursor"></div> -->
 <?php 
   // if($active == "index")
   //   echo '<body data-bs-spy="scroll" data-bs-target="#spy-target" data-bs-offset="100">';

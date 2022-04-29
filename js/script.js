@@ -24,16 +24,6 @@ $(document).ready(function () {
     tagArr[i].autocomplete = "off";
   }
 
-  // date picker
-  // $("#datepicker").datepicker({
-  //   format: "DD MM yy",
-  //   startDate: 0,
-  //   todayBtn: "linked",
-  //   clearBtn: true,
-  //   autoclose: true,
-  // });
-
-
   // detect scroll top or down
   if ($(".smart-scroll").length > 0) {
     // check if element exists
@@ -55,7 +45,7 @@ $(document).ready(function () {
 // AOS Animation
 AOS.init({
   duration: 1000,
-  disable: 'mobile'
+  disable: "mobile",
 });
 
 // Example starter JavaScript for disabling form submissions if there are invalid fields
@@ -81,44 +71,37 @@ AOS.init({
   });
 })();
 
-
-// Date picker
-// let today = new Date().toISOString().substr(0, 10);
-// document.querySelector("#datepicker").value = today;
-
 // Interior
-$('#interior').on('mouseover', 'img', function() {
-  $('img.active').removeClass('active');
-  $(this).addClass('active');
+$("#interior").on("mouseover", "img", function () {
+  $("img.active").removeClass("active");
+  $(this).addClass("active");
 });
 
 // Cursor
-// document.body.onmousemove = function(e) {
-//   document.documentElement.style.setProperty (
-//     '--x', (
-//       e.clientX+window.scrollX
-//     )
-//     + 'px'
-//   );
-//   document.documentElement.style.setProperty (
-//     '--y', (
-//       e.clientY+window.scrollY
-//     ) 
-//     + 'px'
-//   );
-// }
-let curs = document.querySelector('#cursor');
+// let curs = document.querySelector('#cursor');
 
-document.addEventListener('mousemove', (e) => {
-  let x = e.pageX;
-  let y = e.pageY;
-  curs.style.left = (x - 22) + "px";
-  curs.style.top = (y - 22) + "px";
-});
+// document.addEventListener('mousemove', (e) => {
+//   let x = e.pageX;
+//   let y = e.pageY;
+//   curs.style.left = (x - 22) + "px";
+//   curs.style.top = (y - 22) + "px";
+// });
 
-document.addEventListener('mouseleave', (e) => {
-  let x = e.pageX;
-  let y = e.pageY;
-  curs.style.left = (x - 22) + "px";
-  curs.style.top = (y - 22) + "px";
-});
+// document.addEventListener('mouseleave', (e) => {
+//   let x = e.pageX;
+//   let y = e.pageY;
+//   curs.style.left = (x - 22) + "px";
+//   curs.style.top = (y - 22) + "px";
+// });
+
+// Magic mouse
+$("a,img,button,video,input,select").addClass("magic-hover");
+options = {
+  cursorOuter: "circle-basic",
+  hoverEffect: "pointer-blur",
+  hoverItemMove: false,
+  defaultCursor: false,
+  outerWidth: 41,
+  outerHeight: 41,
+};
+magicMouse(options);
