@@ -98,10 +98,10 @@ $("#interior").on("mouseover", "img", function () {
 $("a,img,button,video,input,select").addClass("magic-hover");
 options = {
   cursorOuter: "circle-basic",
-  hoverEffect: "pointer-blur",
+  hoverEffect: "pointer-blur",//pointer-overlay
   hoverItemMove: false,
   defaultCursor: false,
-  outerWidth: 41,
-  outerHeight: 41,
+  outerWidth: 41, //50
+  outerHeight: 41,  //50
 };
 magicMouse(options);
