@@ -77,22 +77,10 @@ $("#interior").on("mouseover", "img", function () {
   $(this).addClass("active");
 });
 
-// Cursor
-// let curs = document.querySelector('#cursor');
-
-// document.addEventListener('mousemove', (e) => {
-//   let x = e.pageX;
-//   let y = e.pageY;
-//   curs.style.left = (x - 22) + "px";
-//   curs.style.top = (y - 22) + "px";
-// });
-
-// document.addEventListener('mouseleave', (e) => {
-//   let x = e.pageX;
-//   let y = e.pageY;
-//   curs.style.left = (x - 22) + "px";
-//   curs.style.top = (y - 22) + "px";
-// });
+// Confirm Form Resubmission
+if ( window.history.replaceState ) {
+  window.history.replaceState( null, null, window.location.href );
+}
 
 // Magic mouse
 $("a,img,button,video,input,select").addClass("magic-hover");
