@@ -28,7 +28,7 @@ if (isset($_POST['submit-reservation'])) {
 
         $time = $_POST['time'];
 
-        // get num of reservation at input date and time
+        // get num of reservation booked at input date and time
         $sql1 = "SELECT * FROM res_tab WHERE rid IN(SELECT id FROM reservation WHERE date = :date AND time = :time AND status <> :status)"; 
         $result1 = $conn->prepare($sql1); 
         $result1->execute([
@@ -37,10 +37,20 @@ if (isset($_POST['submit-reservation'])) {
             ':status' => 'check-out'
         ]); 
         $table_booked = $result1->rowCount(); // num of tables booked on same datetime
-        $tables_available = $num_of_tables - $table_booked; // num of tables available
-        $res_available = $tables_available*2;   // num of reservation available
+        
+        // total num of tables in restaurant
+        $sql2 = "SELECT * FROM tables"; 
+        $result2 = $conn->prepare($sql2); 
+        $result2->execute(); 
+        $num_of_tables = $result2->rowCount();
 
-        if($guest > $res_available) // if num of table not enough(restaurant full) when current reservation is added
+        // num of tables available
+        $tables_available = $num_of_tables - $table_booked; 
+
+        // num of reservation available
+        $res_available = $tables_available*2;   
+
+        if($size > $res_available) // if num of table not enough(restaurant full) when current reservation is added
             $msg = "Restaurant full at this time";
         else{
             // if table available, add a new reservation
@@ -63,7 +73,7 @@ if (isset($_POST['submit-reservation'])) {
             for($i=1; $i <= $tables_needed; $i++){
                 $result3->execute([
                     ':rid' => $_SESSION['rid'],
-                    ':tid' => $num_of_reservations+$i
+                    ':tid' => $table_booked+$i
                 ]); 
             }
 

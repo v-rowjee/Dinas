@@ -57,7 +57,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 // $statement2 = $conn->prepare($sql2);
                 // $statement2->execute([$user['id']]);
                 // $res = $statement->fetch(PDO::FETCH_ASSOC);
-                
                 $_SESSION['id'] = $user['id'];
                 $_SESSION['username'] = $user['username'];
                 $_SESSION['name'] = $user['name'];
