@@ -47,30 +47,29 @@
   object-fit: cover;
   object-position: center;
 
-  transform: scale(0.9);
+  /* transform: scale(0.9); */
   transition: ease-out 500ms;
-  transition-delay: 0ms;
 }
 #menu a {
   padding-bottom: 10vh;
 }
-#menu .row:nth-child(even) img {
+#menu .row:nth-child(even) img:hover {
   box-shadow: -20vh 0px 0px 30px var(--secondary-dark);
 }
-#menu .row:nth-child(odd) img {
+#menu .row:nth-child(odd) img:hover {
   box-shadow: 20vh 0px 0px 30px var(--secondary-dark);
 }
-#menu .row:nth-child(even):hover img {
+#menu .row:nth-child(even) img {
   box-shadow: 20vh 0px 0px 30px var(--primary-dark);
 }
-#menu .row:nth-child(odd):hover img {
+#menu .row:nth-child(odd) img {
   box-shadow: -20vh 0px 0px 30px var(--primary-dark);
 }
-#menu .row:hover img {
+/* #menu .row:hover img {
   transform: scale(1);
   transition: ease-in 500ms;
   transition-delay: 0ms;
-}
+} */
 
 /* ONLINE ORDER */
 #order img {
