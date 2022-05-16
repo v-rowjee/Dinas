@@ -32,6 +32,9 @@ session_start();
     <!-- AOS animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <!-- Soundcloud -->
+    <script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script>
+
     <!-- My Styles -->
     <link rel="stylesheet" href="css/default.css" />
     
@@ -72,6 +75,6 @@ session_start();
 
 
 include 'navbar.php';
-  ?>
+?>
 
 

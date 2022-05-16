@@ -1,120 +1,46 @@
   <!-- Footer -->
-  <footer class=" text-white pt-5 pb-4">
-        <div class="container text-center text-md-start">
-            <div class="row text-center text-md-start">
-                <div class="col-12 col-md-3 mx-auto mt-1">
-                    <h5 class="text mb-4 font-weight-bold" style="color: #B4A064;"> <img src="images/logo.png" class="avatar" style="filter: invert(68%) sepia(28%) saturate(559%) hue-rotate(7deg) brightness(90%) contrast(84%);"></h5>
-                    <p>An elegant five-star resort in Mauritius, Dinarobin Beachcomber Golf Resort & Spa is a haven of peace and tranquility - the ideal setting for your luxury holiday in Mauritius and the perfect sanctuary to renew your body and soul.</p>
+    <footer>
+        <div class="row row-cols-auto g-4 justify-content-around">
+            <div class="col">
+                <img src="images/logo.png" style="filter:invert(1);" alt="logo">
+                <p class="mt-4">Dina’s is a restaurant with <br> a natural and balanced bistronomy <br> concept based on high-quality <br> local products.</p>
+            </div>
+            <div class="col">
+                <h5 class="ps-3 opacity-100">Explore</h5>
+                <a href="menu.php" class="text-reset nav-link opacity-50">Menu</a>
+                <a href="reservation.php" class="text-reset nav-link opacity-50">Reservation</a>
+                <a href="order.php" class="text-reset nav-link opacity-50">Order Online</a>
+                <a href="about.php" class="text-reset nav-link opacity-50">About Us</a>
 
-                </div>
-                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 font-weight-bold" style="color: #B4A064;">Features Available</h5>
-                    <p>
-                        <a href="#"class="text-white" style="text-decoration: none;">Reservations</a>
-                    </p>
-                    <p>
-                        <a href="#" class="text-white" style="text-decoration:none;"> Book a table</a>
-                    </p>
-                    <p>
-                        <a href="#" class="text-white" style="text-decoration:none;"> Menu</a>
-                    </p>
-                    <p>
-                        <a href="#" class="text-white" style="text-decoration:none;"> Profiles</a>
-                    </p>
-                    
-                </div>
+            </div>
+            <div class="col">
+                <h5 class="ps-3 opacity-100">Visit</h5>
+                <a href="about.php#location" class="text-reset nav-link opacity-50">
+                    <address>
+                        Beachcomber,<br>
+                        Le Morne,<br>
+                        Mauritius
+                    </address>
+                </a>
+            </div>
+            <div class="col">
+                <h5 class="ps-3 opacity-100">Contact</h5>
+                <a href="#contact" class="text-reset nav-link opacity-50">dinasrestaurant.test</br>@gmail.com</a>
+                <a href="tel:+230407-9000" class="text-reset nav-link opacity-50">+230 407-9000</a>
+            </div>
+            <div class="col">
+                <h5 class="ps-3 opacity-100">Follow</h5>
+                <a href="https://www.instagram.com/dinarobinbeachcomber/" target="_blank" class="text-reset nav-link opacity-50">Instagram</a>
+                <a href="https://www.facebook.com/DinarobinBeachcomber/" target="_blank" class="text-reset nav-link opacity-50">Facebook</a>
+                <a href="https://www.youtube.com/c/Beachcomberhotels-official" target="_blank" class="text-reset nav-link opacity-50">Youtube</a>
+                <a href="https://www.tripadvisor.com/Restaurant_Review-g488105-d2571445-Reviews-Dina_s-Le_Morne.html" target="_blank" class="text-reset nav-link opacity-50">TripAdvisor</a>
 
-                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 font-weight-bold" style="color: #B4A064;">useful links</h5>
-                    <p>
-                        <a href="#"class="text-white" style="text-decoration: none;">Admin</a>
-                    </p>
-                    <p>
-                        <a href="#" class="text-white" style="text-decoration:none;"> Affiliates</a>
-                    </p>
-                    <p>
-                        <a href="#" class="text-white" style="text-decoration:none;"> Opening Hours</a>
-                    </p>
-                    <p>
-                        <a href="#" class="text-white" style="text-decoration:none;"> Help</a>
-                    </p>
-                    <p>
-                        <a href="#" class="text-white" style="text-decoration:none;"> Contacts</a>
-                    </p>
-                </div>
-
-                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 font-weight-bold" style="color: #B4A064;">Contact Us</h5>
-                    <p class="nowrap">
-                        <i class="fas fa-home me-3"></i> Beachcomber,Le Morne,Mauritius
-                    </p>
-                    <p class="nowrap">
-                        <i class="fas fa-envelope me-3"></i>Dinasrestaurant.test@gmail.com
-                    </p>
-                    <p class="nowrap">
-                        <i class="fas fa-phone me-3"></i>  (+230) 407-9000
-                    </p>
-                    <p class="nowrap">
-                        <i class="fas fa-print me-3"></i> (+230) 209-1600
-                    </p>
-
-    
             </div>
         </div>
-            <hr class="mb-4" style="color: #B4A064;">
-            <div class="row align-items-center">
-            <div class="col-12 col-md-6">
-                <p>Copyright @2022 All rights reserved by:
-                    <a href="#" style= "text-decoration: none;">
-                    <strong  style="color: #B4A064;">Dina Robin</strong>
-                </a></p>
+    </footer>
 
 
-            </div>
-            
-            <div class="col-12 col-md-6 text-end">
-                <div class="text-center text-right">
-                    <ul class="list-unstyled list-inline">
-                        <li class="list-inline-item">
-                            <a href="#" class="btn-floating btn-sm" style="font-size: 25px;color: #B4A064;"><i class="fab fa-facebook"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#" class="btn-floating btn-sm" style="font-size: 25px;color: #B4A064;"><i class="fab fa-twitter"></i>
-                            </a>
-                        </li><li class="list-inline-item">
-                            <a href="#" class="btn-floating btn-sm" style="font-size: 25px;color: #B4A064;"><i class="fab fa-instagram"></i>
-                            </a>
-                        </li><li class="list-inline-item">
-                            <a href="#" class="btn-floating btn-sm" style="font-size: 25px;color: #B4A064;"><i class="fab fa-google"></i>
-                            </a>
-                        </li><li class="list-inline-item">
-                            <a href="#" class="btn-floating btn-sm" style="font-size: 25px ;color: #B4A064;"><i class="fab fa-linkedin-in"></i>
-                            </a>
-                        </li><li class="list-inline-item">
-                            <a href="#" class="btn-floating btn-sm" style=" font-size:25px ;color: #B4A064;"><i class="fab fa-youtube"></i>
-                            </a>
-                        </li> 
-                    </ul>
-                </div>
 
-            </div>                
-        </footer>
-        <!--Waves Container-->
-        <div class="position-relative w-100">
-                <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-                    <defs>
-                        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-                    </defs>
-                    <g class="parallax">
-                        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(0,0,0,0.7)" />
-                        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(0,0,0,0.5)" />
-                        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(0,0,0,0.3)" />
-                        <use xlink:href="#gentle-wave" x="48" y="7" fill="#111" />
-                    </g>
-                </svg>
-            </div>
-            <!--Waves end-->
     <!-- JQuery -->
     <script src="js/jquery-3.6.0.min.js"></script>
 

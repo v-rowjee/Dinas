@@ -64,6 +64,10 @@
             <a href="cart.php"> <i class="fa-solid fa-bag-shopping px-1"></i> </a>         
         </li> -->
 
+        <!-- <li class="nav-item">          
+          <a href="" id="stream"><i class="fa-solid fa-play px-1"></i> </a>
+        </li> -->
+
         <li class="nav-item">          
           <a href="profile.php"> <i class="fa-solid fa-user px-1"></i> </a>
         </li>
@@ -112,4 +116,28 @@ if ($(".smart-scroll").length > 0) {
     last_scroll_top = scroll_top;
   });
 }
+
+// var client_id = '278594df9a311b2a1a56251b3a2b0fbe';
+// var track_id = '293605256';
+
+
+// SC.initialize({
+//   client_id: client_id
+// });
+
+// $(document).ready(function() {
+//   $("#stream").on("click", function() {
+//     SC.stream("/tracks/" + track_id, function(sound) {
+//       if (sound.currentTime > 0) {
+//         $('button').addClass('pause-sprite');
+//         sound.pause();
+//       } else {
+//         $('button').removeClass('pause-sprite');
+//         sound.play();
+//       }
+//     });
+//   });
+// });
+
 </script>
+
