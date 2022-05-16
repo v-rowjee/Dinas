@@ -83,13 +83,13 @@ if ( window.history.replaceState ) {
 }
 
 // Magic mouse
-$("a,img,button,video,input,select").addClass("magic-hover");
-options = {
-  cursorOuter: "circle-basic",
-  hoverEffect: "pointer-blur",//pointer-overlay
-  hoverItemMove: false,
-  defaultCursor: false,
-  outerWidth: 41, //50
-  outerHeight: 41,  //50
-};
-magicMouse(options);
+// $("a,img,button,video,input,select").addClass("magic-hover");
+// options = {
+//   cursorOuter: "circle-basic",
+//   hoverEffect: "pointer-blur",//pointer-overlay
+//   hoverItemMove: false,
+//   defaultCursor: false,
+//   outerWidth: 41, //50
+//   outerHeight: 41,  //50
+// };
+// magicMouse(options);

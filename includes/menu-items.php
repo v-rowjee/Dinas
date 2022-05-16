@@ -15,7 +15,7 @@
                 <div class="col-sm-6 col-lg-3 col-xxl-3">
                     <div class="card card-shadow">
                     <img
-                        src="images/menu/'.$menu['img'].'"
+                        src="/dinasadmin/images/menu/'.$menu['img'].'"
                         class="card-img-top"
                         alt="'.$menu['name'].'"
                     />

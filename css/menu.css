@@ -1,0 +1,78 @@
+/* MENU PAGE */
+section:nth-of-type(odd) {
+	background-color: transparent;
+}
+main section {
+	padding: 0;
+	padding-bottom: 100px;
+}
+#menu {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/bg-menu.jpg);
+	background-position: center;
+	padding: 100px 0 1rem 0;
+}
+#menu button {
+	padding: 0.5rem 3rem;
+	margin: 1rem 0rem;
+	width: 10rem;
+}
+#menu .nav-link {
+	color: var(--primary-light);
+	border: 1px solid var(--primary-light);
+	background-color: rgba(34, 34, 34, 0.7);
+}
+#menu .nav-link::after {
+	content: none;
+}
+#menu .nav-link:hover {
+	color: var(--bg);
+	background-color: var(--primary-light);
+	opacity: 1;
+}
+#menu .active {
+	color: var(--bg);
+	background-color: var(--primary-light);
+}
+.card {
+	background-color: var(--bg);
+	border: 1px solid var(--primary-dark);
+	overflow: hidden;
+}
+.card:hover {
+	border-color: var(--primary-light);
+}
+.card:hover .price {
+	opacity: 0.9;
+}
+.card:hover .card-cart {
+	opacity: 1;
+	transition: 0.3s ease-in-out;
+}
+.card img {
+	aspect-ratio: 1;
+	object-fit: cover;
+}
+.card .card-text {
+	height: 2.5rem;
+}
+.card p {
+	font-size: 0.8rem;
+}
+.card-title {
+	opacity: 1;
+}
+.card-body .btn {
+	float: right;
+}
+.card-body .price {
+	display: inline-flex;
+	margin-top: 0.5rem;
+}
+.card-cart {
+	opacity: 0;
+}
+@media (max-width: 992px) {
+	.card-cart {
+		opacity: 1;
+   }
+}
