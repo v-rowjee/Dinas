@@ -31,10 +31,10 @@
                 </div>
             ';
             
-        }else if($active == 'index')
+        }else if($active == 'home')
             array_push($items, $menu['name']); // store in array
     }
-    if($active == 'index'){
+    if($active == 'home'){
         $list = implode(' - ', $items);
         echo $list;
     }

@@ -7,7 +7,9 @@ session_start();
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dina's</title>
+    <title>Dina's <?php if(isset($active)) echo ucfirst($active) ?></title>
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 
     <!-- JQueries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -39,7 +41,7 @@ session_start();
     <link rel="stylesheet" href="css/default.css" />
     
     <?php 
-      if($active == "index") echo'<link rel="stylesheet" href="css/index.css" />';
+      if($active == "home") echo'<link rel="stylesheet" href="css/index.css" />';
       if($active == "menu") echo'<link rel="stylesheet" href="css/menu.css" />';
       if($active == "about") echo'<link rel="stylesheet" href="css/about.css" />';
       if($active == "order")  echo'<link rel="stylesheet" href="css/order.css" />';

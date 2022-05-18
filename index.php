@@ -1,5 +1,5 @@
 <?php 
-$active = "index"; 
+$active = "home"; 
 include 'includes/header.php';
 ?>
 
