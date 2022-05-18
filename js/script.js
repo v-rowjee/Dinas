@@ -137,14 +137,18 @@ if ( window.history.replaceState ) {
 $(document).ready(function() {
   if( ! $('#myCanvas').tagcanvas({
     textColour : '#ffffff',
-    outlineThickness : 0.3,
-    maxSpeed : 0.03,
-    depth : 0.75
+    outlineThickness : 0.001,
+    maxSpeed : 0.04,
+    depth : 0.5,
+    decel : 1,
+    shuffleTags : true,
+    wheelZoom : false,
+    initial : [0.1, -0.3]
   })) {
     // TagCanvas failed to load
     $('#myCanvasContainer').hide();
   }
 });
 $('#myCanvas').tagcanvas({
-  depth : 0.75
+  depth : 0.5
 },'tagList');

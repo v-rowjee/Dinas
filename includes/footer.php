@@ -2,8 +2,8 @@
   <footer>
     <div class="row justify-content-around">
       <div class="col-12 col-md-auto flex-shrink-0 text-center">
-        <img src="images/logo.png" alt="logo" style="filter:invert(1);" class="pt-4">
-        <div id="myCanvasContainer" class="pt-4">
+        <img src="images/logo.png" alt="logo" style="filter:invert(1);" class="pb-5">
+        <div id="myCanvasContainer">
             <canvas id="myCanvas" style="height: 100%; width: 100%;">
               <p>Anything in here will be replaced on browsers that support the canvas element</p>
               <ul>
@@ -16,7 +16,7 @@
                   <li><a href="register.php" target="_blank" >Register</a></li>
               </ul>
             </canvas>
-          </div>
+        </div>
       </div>
       <div class="col-12 col-md-auto flex-grow-1 mt-5">
         <div class="row g-4 row-cols-auto justify-content-around align-bottom">
