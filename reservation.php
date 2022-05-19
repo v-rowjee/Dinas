@@ -5,7 +5,7 @@
   
 ?>
 
-<section id="reservation">
+<section id="reservation" class="pb-5">
   <div class="blob">
     <!-- This SVG is from https://codepen.io/Ali_Farooq_/pen/gKOJqx -->
     <svg xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 350">
