@@ -89,6 +89,9 @@
   <!-- TagCanvas -->
   <script src="js/jquery.tagcanvas.min.js" type="text/javascript"></script>
 
+  <!-- show-hide-password.js -->
+  <script src="js/show-hide-password.min.js"></script>
+
   <!-- My script -->
   <script src="js/script.js" type="text/javascript"></script>
 

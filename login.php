@@ -90,7 +90,7 @@ function filter($data){
         Welcom back! To keep connected with us please login with your
         personal information by username and password.
       </h6>
-      <h6 class="pt-3">New Here? <a href="register.php">Create a new account now</a></h6>
+      <h6 class="pt-3">No account yet? <a href="register.php">Create a new account now</a></h6>
       <a
         class="btn btn-outline-secondary mt-4"
         href="<?php echo $client->createAuthUrl() ?>"

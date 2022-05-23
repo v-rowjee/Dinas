@@ -152,3 +152,20 @@ $(document).ready(function() {
 $('#myCanvas').tagcanvas({
   depth : 0.5
 },'tagList');
+
+// toggle visibility of passwords
+$(function(){
+  $('input[type=\'password\']').showHidePassword();
+});
+$(showHideIcon).css({
+  position: 'absolute',
+  display: 'none',
+  top: '0',
+  right: '0',
+  height: $(this).outerHeight(true) - 2,
+  marginTop: '1px',
+  padding: '6px 11px',
+  cursor: 'pointer',
+  zIndex : '999',
+  color : 'white'
+});

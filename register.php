@@ -12,7 +12,7 @@
   else{
 
     require "includes/db_connect.php";
-
+    include 'includes/g_auth.php';
 
     $username = $password = $name = $email = $phone = "";
     $usernameErr = $passwordErr = $nameErr = $emailErr = $phoneErr = "";
@@ -128,12 +128,12 @@
         and to order online.
       </h6>
       <h6 class="pt-3">Already have an account? <a href="login.php">Login now</a></h6>
-      <!-- <a
-        class="btn btn-outline-secondary mb-4"
-        href="&lt;?php echo $client->createAuthUrl() ?>"
+      <a
+        class="btn btn-outline-secondary mt-4"
+        href="<?php echo $client->createAuthUrl() ?>"
       >
-        Sign in with google
-      </a> -->
+        Sign up with google
+      </a>
     </div>
     <div class="col-12 col-lg-5" data-aos="fade-left">
     <form class="needs-validation mt-3" novalidate action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
