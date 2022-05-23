@@ -3,11 +3,12 @@ ob_start();
 $active = "sign-in";
 include 'includes/header.php';
 
-
 if(isset($_SESSION['id'])){
   header('location: index.php');
   die();
 }
+
+include 'includes/g_auth.php';
 
 $username = $password = "";
 $usernameErr = $passwordErr = "";
@@ -52,28 +53,13 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             $hashed_password = $user['password'];
 
             if (password_verify($password,$hashed_password)) { // if password correct
-
-                // $sql2 = "SELECT id FROM reservation WHERE uid = ?";
-                // $statement2 = $conn->prepare($sql2);
-                // $statement2->execute([$user['id']]);
-                // $res = $statement->fetch(PDO::FETCH_ASSOC);
                 $_SESSION['id'] = $user['id'];
                 $_SESSION['username'] = $user['username'];
                 $_SESSION['name'] = $user['name'];
                 $_SESSION['email'] = $user['email'];
                 $_SESSION['phone'] = $user['phone'];
                 $_SESSION['is_admin'] = $user['is_admin'];
-                // $_SESSION['rid'] = $res['id'];
-
-                // if($user['is_admin']=='yes'){ // admin
-                //     header('location: /dinasadmin/dashboard.php');
-                //     die();
-                // }else{ // normal user
-                //     header('location: index.php');
-                //     die();
-                // }
                 header('location: index.php');
-
             } else
                 $passwordErr = "* Invalid password";
         } else{
@@ -105,12 +91,12 @@ function filter($data){
         personal information by username and password.
       </h6>
       <h6 class="pt-3">New Here? <a href="register.php">Create a new account now</a></h6>
-      <!-- <a
-        class="btn btn-outline-secondary mb-4"
-        href="&lt;?php echo $client->createAuthUrl() ?>"
+      <a
+        class="btn btn-outline-secondary mt-4"
+        href="<?php echo $client->createAuthUrl() ?>"
       >
         Sign in with google
-      </a> -->
+      </a>
     </div>
     <div class="col-12 col-lg-5" data-aos="fade-left">
       <form

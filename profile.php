@@ -28,7 +28,7 @@ if(isset($_POST['delete'])){
     header('location: includes/logout.php');
 
 }else if(isset($_POST['cancel'])){
-    header('location: profile.php');
+    header('location: login.php');
 
 }else if(isset($_POST['save'])){
 
