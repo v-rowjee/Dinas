@@ -129,7 +129,7 @@
       </h6>
       <h6 class="pt-3">Already have an account? <a href="login.php">Login now</a></h6>
       <a
-        class="btn btn-outline-secondary mt-4"
+        class="btn btn-outline-secondary my-4"
         href="<?php echo $client->createAuthUrl() ?>"
       >
         Sign up with google

@@ -92,7 +92,7 @@ function filter($data){
       </h6>
       <h6 class="pt-3">No account yet? <a href="register.php">Create a new account now</a></h6>
       <a
-        class="btn btn-outline-secondary mt-4"
+        class="btn btn-outline-secondary my-4"
         href="<?php echo $client->createAuthUrl() ?>"
       >
         Sign in with google

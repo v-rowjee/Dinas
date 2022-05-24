@@ -452,3 +452,7 @@ select.decorated option:hover {
   }
 }
 
+.g-recaptcha {
+  margin: 0 auto;
+  width: 304px;
+}

@@ -156,16 +156,17 @@ $('#myCanvas').tagcanvas({
 // toggle visibility of passwords
 $(function(){
   $('input[type=\'password\']').showHidePassword();
+  $('.show-hide-password').css({
+    position: 'absolute',
+    display: 'none',
+    top: '0',
+    right: '0',
+    height: $(this).outerHeight(true) - 2,
+    marginTop: '1px',
+    padding: '6px 11px',
+    cursor: 'pointer',
+    zIndex : '999',
+    color : 'grey'
+  });
 });
-$(showHideIcon).css({
-  position: 'absolute',
-  display: 'none',
-  top: '0',
-  right: '0',
-  height: $(this).outerHeight(true) - 2,
-  marginTop: '1px',
-  padding: '6px 11px',
-  cursor: 'pointer',
-  zIndex : '999',
-  color : 'white'
-});
+
