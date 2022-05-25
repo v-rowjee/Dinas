@@ -13,7 +13,7 @@
         if($active == 'menu'){
             echo '
                 <div class="col-sm-6 col-lg-3 col-xxl-3">
-                    <div class="card card-shadow">
+                    <div class="card card-shadow card-tilt">
                     <img
                         src="/dinasadmin/images/menu/'.$menu['img'].'"
                         class="card-img-top"
@@ -24,7 +24,6 @@
                         <p class="card-text">'.$menu['caption'].'</p>
                         <div class="d-flex">
                             <h6 class="price">Rs '.$menu['price'].'</h6>
-                            <a href="#" class="btn btn-outline-primary px-3 ms-auto card-cart"><i class="fa-solid fa-bag-shopping"></i></a>
                         </div>
                     </div>
                     </div>
