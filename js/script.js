@@ -151,6 +151,14 @@ $("#send_mail_form").submit(function(e) {
   
 });
 
+// Tilt.js
+$('.card').tilt({
+  maxTilt: 0,
+  perspective: 100,
+  glare: true,
+  maxGlare: .15,
+  transition: false,
+})
 $('.card-tilt').tilt({
   maxTilt: 15,
   perspective: 1000,
@@ -159,10 +167,4 @@ $('.card-tilt').tilt({
   transition: true,
 })
 
-$('.card').tilt({
-  maxTilt: 0,
-  perspective: 100,
-  glare: true,
-  maxGlare: .15,
-  transition: false,
-})
+
