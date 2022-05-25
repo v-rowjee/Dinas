@@ -92,6 +92,9 @@
   <!-- show-hide-password.js -->
   <script src="js/show-hide-password.min.js"></script>
 
+  <!-- Tilt.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+
   <!-- My script -->
   <script src="js/script.js" type="text/javascript"></script>
 

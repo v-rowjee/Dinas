@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         // send mail
         mail($to,$subject,$message,$header);
 
-        echo "Email sent successfully.</br> Thank You for messaging us.";
+        echo "Email sent successfully. Thank You for messaging us.";
     }
 }
 
