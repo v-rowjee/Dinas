@@ -41,7 +41,12 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         mail($to,$subject,$message,$header);
 
         echo "Email sent successfully. Thank You for messaging us.";
+
     }
+    else
+    {
+        echo "There was an error sending feedback.";
+    } 
 }
 
 function filter($data){
@@ -50,6 +55,5 @@ function filter($data){
     $data = htmlspecialchars($data);
     return $data;
 }
-
 
 ?>

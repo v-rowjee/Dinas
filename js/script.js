@@ -131,25 +131,26 @@ $(function(){
   });
 });
 
+
 // send mail
 $("#send_mail_form").submit(function(e) {
 
-  e.preventDefault(); // avoid to execute the actual submit of the form.
+e.preventDefault(); // avoid to execute the actual submit of the form.
 
-  var form = $(this);
-  var actionUrl = form.attr('action');
-  
-  $.ajax({
-      type: "POST",
-      url: actionUrl,
-      data: form.serialize(), // serializes the form's elements.
-      success: function(data)
-      {
-        alert(data); // show response from the php script.
-      }
-  });
-  
+var form = $(this);
+
+$.ajax({
+    type: "POST",
+    url: "includes/send_mail.php",
+    data: form.serialize(), // serializes the form's elements.
+    success: function(data)
+    {
+      alert(data); // show response from the php script.
+    }
 });
+
+});
+
 
 // Tilt.js
 $('.card').tilt({

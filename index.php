@@ -220,7 +220,7 @@ include 'includes/header.php';
         <h6 class="text-gold">Let's get in touch,</h6>
         <h1>Contact Us</h1>
         <!-- FORM with validation to send mail -->
-        <form id="send_mail_form" action="includes/send_mail.php" method="post" class="needs-validation" novalidate>
+        <form id="send_mail_form" class="needs-validation" novalidate>
           <label for="name" class="form-label">Name</label>
           <input
             type="text"

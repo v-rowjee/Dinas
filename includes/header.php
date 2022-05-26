@@ -21,13 +21,6 @@ session_start();
     <script src="https://kit.fontawesome.com/e529e97c19.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <!-- XXX Owl Carousel 2 -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-
-    <!-- XXX Date picker -->
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"> -->
-
     <!-- reCAPTCHA -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
@@ -35,7 +28,7 @@ session_start();
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- Soundcloud -->
-    <script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script>
+    <!-- <script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script> -->
 
     <!-- My Styles -->
     <link rel="stylesheet" href="css/default.css" />
@@ -54,10 +47,6 @@ session_start();
   <body>
     <!-- <div id="cursor"></div> -->
 <?php 
-  // if($active == "index")
-  //   echo '<body data-bs-spy="scroll" data-bs-target="#spy-target" data-bs-offset="100">';
-  // else
-  //   echo '<body>';
 
   if(isset($_SESSION['id'])){
     
