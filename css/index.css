@@ -53,23 +53,21 @@
 #menu a {
   padding-bottom: 10vh;
 }
-#menu .row:nth-child(even) img:hover {
-  box-shadow: -20vh 0px 0px 30px var(--secondary-dark);
+/* #menu .row:nth-child(even) img:hover {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 #menu .row:nth-child(odd) img:hover {
-  box-shadow: 20vh 0px 0px 30px var(--secondary-dark);
-}
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+} */
 #menu .row:nth-child(even) img {
   box-shadow: 20vh 0px 0px 30px var(--primary-dark);
+  clip-path: polygon(25% 0, 100% 0, 75% 100%, 0 100%);
+
 }
 #menu .row:nth-child(odd) img {
   box-shadow: -20vh 0px 0px 30px var(--primary-dark);
+  clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%);
 }
-/* #menu .row:hover img {
-  transform: scale(1);
-  transition: ease-in 500ms;
-  transition-delay: 0ms;
-} */
 
 /* ONLINE ORDER */
 #order img {
