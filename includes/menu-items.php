@@ -37,3 +37,5 @@
         $list = implode(' - ', $items);
         echo $list;
     }
+
+?>

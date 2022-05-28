@@ -168,7 +168,7 @@ $('.card-tilt').tilt({
   transition: true,
 })
 
-
+// Preloader
 $(window).on('load',function(){
   $('#preloader').fadeOut();
   $('#home').css('background-size','100%');
