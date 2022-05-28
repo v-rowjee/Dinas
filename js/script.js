@@ -169,3 +169,7 @@ $('.card-tilt').tilt({
 })
 
 
+$(window).on('load',function(){
+  $('#preloader').fadeOut();
+  $('#home').css('background-size','100%');
+})

@@ -1,16 +1,12 @@
 /* HOME */
 #home {
   background: url(../images/bg-fork.jpg) no-repeat;
-  background-size: cover;
+  background-size: 150%;
   background-position: 85%;
   padding: 0;
   padding-top: 18vh;
-
-  /* height: 95vh; */
+  transition-duration: 1.8s;
 }
-/* #home .row:nth-of-type(1) {
-  height: 75vh;
-} */
 #home h6 {
   color: var(--primary-light);
   opacity: 0.8;

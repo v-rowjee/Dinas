@@ -46,6 +46,10 @@ session_start();
   </head>
   <body>
     <!-- <div id="cursor"></div> -->
+
+
+    <div id="preloader"></div>
+
 <?php 
 
   if(isset($_SESSION['id'])){
@@ -63,7 +67,6 @@ session_start();
       unset($_SESSION['rid']);
   }
     
-
 
 include 'navbar.php';
 ?>
