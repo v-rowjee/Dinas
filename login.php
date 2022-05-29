@@ -81,7 +81,7 @@ function filter($data){
 
 ?>
 
-<main style="margin: 100px 0;">
+<main style="padding: 100px 0;">
 <div class="container">
   <div class="row justify-content-around gx-5">
     <div class="col-12 col-lg-5" data-aos="fade-right">

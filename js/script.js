@@ -170,6 +170,9 @@ $('.card-tilt').tilt({
 
 // Preloader
 $(window).on('load',function(){
-  $('#preloader').fadeOut();
+  // $('#preloader').fadeOut();
+  $('#preloader').css('transition-duration','1s');
+  $('#preloader').css('opacity','0'); 
+  $('#preloader').css('z-index', '-100');
   $('#home').css('background-size','100%');
 })
