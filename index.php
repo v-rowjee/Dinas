@@ -1,6 +1,7 @@
 <?php 
 $active = "home"; 
 include 'includes/header.php';
+include 'includes/menu-item.php';
 ?>
 
 <!-- Home Section -->
@@ -78,7 +79,7 @@ include 'includes/header.php';
       <div class="col-12 col-md-5" data-aos="fade-left">
         <h1>- Starter -</h1>
         <p>
-          <?php $category="starter"; include 'includes/menu-items.php'; ?>
+          <?php getMenuList('starter'); ?>
         </p>
         <a href="menu.php">View Menu</a>
       </div>
@@ -90,7 +91,7 @@ include 'includes/header.php';
       </div>
       <div class="col-12 col-md-5" data-aos="fade-right">
         <h1>- Pasta -</h1>
-        <p><?php $category="pasta"; include 'includes/menu-items.php'?></p>
+          <p><?php getMenuList('pasta')?></p>
         <a href="menu.php">View Menu</a>
       </div>
     </div>
@@ -101,7 +102,7 @@ include 'includes/header.php';
       </div>
       <div class="col-12 col-md-5" data-aos="fade-left">
         <h1>- Pizza -</h1>
-        <p><?php $category="pizza"; include 'includes/menu-items.php'?></p>
+        <p><?php getMenuList('pizza')?></p>
         <a href="menu.php">View Menu</a>
       </div>
     </div>
@@ -112,7 +113,7 @@ include 'includes/header.php';
       </div>
       <div class="col-12 col-md-5" data-aos="fade-right">
         <h1>- Dessert -</h1>
-        <p><?php $category="dessert"; include 'includes/menu-items.php'?></p>
+        <p><?php getMenuList('dessert')?></p>
         <a href="menu.php">View Menu</a>
       </div>
     </div>
@@ -123,7 +124,7 @@ include 'includes/header.php';
       </div>
       <div class="col-12 col-md-5" data-aos="fade-left">
         <h1>- Drinks -</h1>
-        <p><?php $category="drinks"; include 'includes/menu-items.php'?></p>
+        <p><?php getMenuList('drinks')?></p>
         <a href="menu.php">View Menu</a>
       </div>
     </div>

@@ -8,7 +8,7 @@ if(isset($_SESSION['id'])){
   die();
 }
 
-include 'includes/g_auth.php';
+include 'config/g_auth.php';
 
 $username = $password = "";
 $usernameErr = $passwordErr = "";

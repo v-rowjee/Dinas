@@ -2,7 +2,7 @@
 ob_start();
 $active = "profile"; 
 include 'includes/header.php';
-include 'includes/db_connect.php';
+include 'config/db_connect.php';
 
 if(isset($_SESSION['rid'])){
 

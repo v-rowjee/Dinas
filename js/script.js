@@ -78,8 +78,8 @@ $("#interior").on("mouseover", "img", function () {
 });
 
 // Confirm Form Resubmission
-if ( window.history.replaceState ) {
-  window.history.replaceState( null, null, window.location.href );
+if (window.history.replaceState) {
+  window.history.replaceState(null, null, window.location.href);
 }
 
 // Magic mouse *default.css cursor*
@@ -95,84 +95,84 @@ if ( window.history.replaceState ) {
 // magicMouse(options);
 
 // TagCanvas
-$(document).ready(function() {
-  if( ! $('#myCanvas').tagcanvas({
-    textColour : '#ffffff',
-    outlineThickness : 0.001,
-    maxSpeed : 0.04,
-    depth : 0.5,
-    decel : 1,
-    shuffleTags : true,
-    wheelZoom : false,
-    initial : [0.1, -0.3]
-  })) {
+$(document).ready(function () {
+  if (
+    !$("#myCanvas").tagcanvas({
+      textColour: "#ffffff",
+      outlineThickness: 0.001,
+      maxSpeed: 0.04,
+      depth: 0.5,
+      decel: 1,
+      shuffleTags: true,
+      wheelZoom: false,
+      initial: [0.1, -0.3],
+    })
+  ) {
     // TagCanvas failed to load
-    $('#myCanvasContainer').hide();
+    $("#myCanvasContainer").hide();
   }
 });
-$('#myCanvas').tagcanvas({
-  depth : 0.5
-},'tagList');
+$("#myCanvas").tagcanvas(
+  {
+    depth: 0.5,
+  },
+  "tagList"
+);
 
 // toggle visibility of passwords
-$(function(){
-  $('input[type=\'password\']').showHidePassword();
-  $('.show-hide-password').css({
-    position: 'absolute',
-    display: 'none',
-    top: '0',
-    right: '0',
+$(function () {
+  $("input[type='password']").showHidePassword();
+  $(".show-hide-password").css({
+    position: "absolute",
+    display: "none",
+    top: "0",
+    right: "0",
     height: $(this).outerHeight(true) - 2,
-    marginTop: '1px',
-    padding: '6px 11px',
-    cursor: 'pointer',
-    zIndex : '999',
-    color : 'grey'
+    marginTop: "1px",
+    padding: "6px 11px",
+    cursor: "pointer",
+    zIndex: "999",
+    color: "grey",
   });
 });
 
-
 // send mail
-$("#send_mail_form").submit(function(e) {
+$("#send_mail_form").submit(function (e) {
+  e.preventDefault(); // avoid to execute the actual submit of the form.
 
-e.preventDefault(); // avoid to execute the actual submit of the form.
+  var form = $(this);
 
-var form = $(this);
-
-$.ajax({
+  $.ajax({
     type: "POST",
-    url: "includes/send_mail.php",
+    url: "config/send_mail.php",
     data: form.serialize(), // serializes the form's elements.
-    success: function(data)
-    {
+    success: function (data) {
       alert(data); // show response from the php script.
-    }
+    },
+  });
 });
-
-});
-
 
 // Tilt.js
-$('.card').tilt({
+$(".card").tilt({
   maxTilt: 0,
   perspective: 100,
   glare: true,
-  maxGlare: .15,
+  maxGlare: 0.15,
   transition: false,
-})
-$('.card-tilt').tilt({
+});
+$(".card-tilt").tilt({
   maxTilt: 15,
   perspective: 1000,
   glare: true,
-  maxGlare: .25,
+  maxGlare: 0.25,
   transition: true,
-})
+});
 
 // Preloader
-$(window).on('load',function(){
+$(window).on("load", function () {
   // $('#preloader').fadeOut();
-  $('#preloader').css('transition-duration','1s');
-  $('#preloader').css('opacity','0'); 
-  $('#preloader').css('z-index', '-100');
-  $('#home').css('background-size','100%');
-})
+  $("#preloader").css("transition-duration", "1s");
+  $("#preloader").css("opacity", "0");
+  $("#preloader").css("z-index", "-100");
+  $("#home").css("background-size", "100%");
+});

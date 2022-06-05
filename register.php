@@ -12,7 +12,7 @@
   else{
 
     require "includes/db_connect.php";
-    include 'includes/g_auth.php';
+    include 'config/g_auth.php';
 
     $username = $password = $name = $email = $phone = "";
     $usernameErr = $passwordErr = $nameErr = $emailErr = $phoneErr = "";

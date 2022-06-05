@@ -1,7 +1,7 @@
 <?php 
   $active = "menu"; 
   include 'includes/header.php';
-  
+  include 'includes/menu-item.php';
 ?>
     <section id="menu">
       <div class="container">
@@ -119,7 +119,7 @@
               <h1>Starter</h1>
             </div>
             <div class="row g-4">
-              <?php $category = 'starter'; include 'includes/menu-items.php' ?>
+              <?php getMenu('starter') ?>
             </div>
 
           <!-- pasta -->
@@ -127,7 +127,7 @@
               <h1>Pasta</h1>
             </div>
             <div class="row g-4">
-              <?php $category = 'pasta'; include 'includes/menu-items.php' ?>
+              <?php getMenu('pasta') ?>
             </div>
 
           <!-- pizza -->
@@ -135,7 +135,7 @@
               <h1>Pizza</h1>
             </div>
             <div class="row g-4">
-              <?php $category = 'pizza'; include 'includes/menu-items.php' ?>
+              <?php getMenu('pizza') ?>
             </div>
 
           <!-- dessert -->
@@ -143,7 +143,7 @@
               <h1>Dessert</h1>
             </div>
             <div class="row g-4">
-              <?php $category = 'dessert'; include 'includes/menu-items.php' ?>
+              <?php getMenu('dessert') ?>
             </div>
 
           <!-- drinks -->
@@ -151,7 +151,7 @@
               <h1>Drinks</h1>
             </div>
             <div class="row g-4">
-              <?php $category = 'drinks'; include 'includes/menu-items.php' ?>
+              <?php getMenu('drinks') ?>
             </div>
         </div>
       </section>
@@ -162,7 +162,7 @@
               <h1>Starter</h1>
             </div>
             <div class="row g-5">
-              <?php $category = 'starter'; include 'includes/menu-items.php' ?>
+              <?php getMenu('starter') ?>
             </div>
         </div>
       </section>
@@ -173,7 +173,7 @@
               <h1>Pasta</h1>
             </div>
             <div class="row g-5">
-              <?php $category = 'pasta'; include 'includes/menu-items.php' ?>
+              <?php getMenu('pasta') ?>
             </div>
         </div>
       </section>
@@ -184,7 +184,7 @@
               <h1>Pizza</h1>
             </div>
             <div class="row g-5">
-              <?php $category = 'pizza'; include 'includes/menu-items.php' ?>
+              <?php getMenu('pizza') ?>
             </div>
         </div>
       </section>
@@ -195,7 +195,7 @@
               <h1>Dessert</h1>
             </div>
             <div class="row g-5">
-              <?php $category = 'dessert'; include 'includes/menu-items.php' ?>
+              <?php getMenu('dessert') ?>
             </div>
         </div>
       </section>
@@ -206,7 +206,7 @@
               <h1>Drinks</h1>
             </div>
             <div class="row g-5">
-              <?php $category = 'drinks'; include 'includes/menu-items.php' ?>
+              <?php getMenu('drinks') ?>
             </div>
         </div>
       </section>

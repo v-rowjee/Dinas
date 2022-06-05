@@ -54,7 +54,7 @@ session_start();
 
   if(isset($_SESSION['id'])){
     
-    include 'includes/db_connect.php';
+    include 'config/db_connect.php';
 
     $sql = "SELECT id FROM reservation WHERE uid=? AND status<>'check-out'";
     $statement = $conn->prepare($sql);
