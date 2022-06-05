@@ -15,7 +15,7 @@ $usernameErr = $passwordErr = "";
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
-  require "includes/db_connect.php";
+  require 'config/db_connect.php';
 
     // validating username
     if(empty($_POST['username']))

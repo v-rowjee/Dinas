@@ -11,7 +11,7 @@
   
   else{
 
-    require "includes/db_connect.php";
+    require 'config/db_connect.php';
     include 'config/g_auth.php';
 
     $username = $password = $name = $email = $phone = "";
