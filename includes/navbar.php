@@ -23,11 +23,11 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link <?php if($active == "contact")echo "active"?>" href="<?php if($active!='home') echo 'index.php' ?>#contact"
-                        role="button">Contact</a>
+                        >Contact</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link <?php if($active == "about")echo "active"?>" href="<?php if($active!='home') echo 'index.php' ?>#about"
-                        role="button">About Us</a>
+                        >About Us</a>
                 </li>
             </ul>
             <ul class="navbar-nav">
@@ -99,7 +99,7 @@
 
 <!-- SOUNDCLOUD -->
 <iframe id="soundcloud" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" class="mt-5" 
-    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/345582787&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/345582787&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
 </iframe>
 
 <script>

@@ -171,9 +171,10 @@ $(".card-tilt").tilt({
 // SOUNDCLOUD
 var widget = SC.Widget("soundcloud");
 
-$(function(){
+$(document).ready(function(){
+    widget.pause();
     $("#playSC").click(function() {
-      widget.setVolume(30);
+      widget.setVolume(20);
       $('#playSC').toggleClass("fa-play fa-pause");
       $('#playSC').hasClass("fa-pause") ? widget.play() : widget.pause();
     });
