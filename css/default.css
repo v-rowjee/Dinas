@@ -81,9 +81,10 @@ a:hover {
 }
 
 /* Buttons */
-/* .btn {
-  border-radius: 0;
-} */
+.btn:hover {
+  outline: 1.5px solid var(--primary-light);
+  outline-offset: 0.2rem;
+}
 
 .btn-primary {
   color: var(--bg);
