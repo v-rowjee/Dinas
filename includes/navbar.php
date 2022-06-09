@@ -11,22 +11,22 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto mb-2 mb-lg-0" id="spy-target">
                 <li class="nav-item">
-                    <a class="nav-link <?php if($active == "menu")echo "active"?>" href="index.php#menu">Menu</a>
+                    <a class="nav-link <?php if($active == "menu")echo "active"?>" href="<?php if($active!='home') echo 'index.php' ?>#menu">Menu</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link <?php if($active == "reservation")echo "active"?>"
-                        href="index.php#reservation">Reservation</a>
+                        href="<?php if($active!='home') echo 'index.php' ?>#reservation">Reservation</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?php if($active == "order")echo "active"?>" href="index.php#order">Online
+                    <a class="nav-link <?php if($active == "order")echo "active"?>" href="<?php if($active!='home') echo 'index.php' ?>#order">Online
                         Order</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?php if($active == "contact")echo "active"?>" href="index.php#contact"
+                    <a class="nav-link <?php if($active == "contact")echo "active"?>" href="<?php if($active!='home') echo 'index.php' ?>#contact"
                         role="button">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?php if($active == "about")echo "active"?>" href="index.php#about"
+                    <a class="nav-link <?php if($active == "about")echo "active"?>" href="<?php if($active!='home') echo 'index.php' ?>#about"
                         role="button">About Us</a>
                 </li>
             </ul>
