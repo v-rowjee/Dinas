@@ -86,6 +86,9 @@
   <!-- Tilt.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
 
+  <!-- SoundCloud-->
+  <script type="text/javascript" src="http://w.soundcloud.com/player/api.js"></script>
+
   <!-- My script -->
   <script src="js/script.js" type="text/javascript"></script>
 

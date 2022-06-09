@@ -98,7 +98,7 @@ if(isset($_POST['delete'])){
 
 ?>
 
-<main style="margin: 100px 0;">
+<main style="padding: 100px 0;">
     <div class="container">
         <div class="row justify-content-around g-3">
             <!-- USER DETAILS -->
@@ -155,8 +155,9 @@ if(isset($_POST['delete'])){
                     </div>
                 </div>
             </div>
-            <!-- RESERVATION -->
+            <!-- LHS -->
             <div class="col-12 col-lg-4">
+                <!-- RESERVATION -->
                 <div class="card bg-grey shadow p-3" data-aos="fade-left">
                     <h2 class="ms-2">Current Reservation</h2>
                     <?php if(isset($_SESSION['rid'])){ ?>
@@ -173,6 +174,7 @@ if(isset($_POST['delete'])){
                         </div>
                     <?php } ?>
                 </div>
+
             </div>
         </div>
     </div>

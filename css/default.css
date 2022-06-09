@@ -466,3 +466,16 @@ select.decorated option:hover {
   margin: 0 auto;
   width: 304px;
 }
+
+#soundcloud{
+  position: absolute;
+  top: -1000px;
+}
+#playSC{
+  cursor: pointer;
+}
+
+.fa-play, .fa-pause{
+  height: 19px;
+  width: 24px;
+}

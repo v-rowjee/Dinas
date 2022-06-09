@@ -168,11 +168,22 @@ $(".card-tilt").tilt({
   transition: true,
 });
 
+// SOUNDCLOUD
+var widget = SC.Widget("soundcloud");
+
+$(function(){
+    $("#playSC").click(function() {
+      widget.setVolume(30);
+      $('#playSC').toggleClass("fa-play fa-pause");
+      $('#playSC').hasClass("fa-pause") ? widget.play() : widget.pause();
+    });
+})
+
 // Preloader
 $(window).on("load", function () {
-  // $('#preloader').fadeOut();
   $("#preloader").css("transition-duration", "1s");
   $("#preloader").css("opacity", "0");
   $("#preloader").css("z-index", "-100");
   $("#home").css("background-size", "100%");
 });
+

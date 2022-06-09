@@ -330,6 +330,7 @@ include 'includes/menu-item.php';
   </div>
 </section>
 
+<!-- ADD: Reviews from tripadvisor -->
 <!-- Reviews -->
 <section id="reviews">
   <div class="container text-center">
