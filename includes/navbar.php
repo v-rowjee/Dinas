@@ -83,7 +83,7 @@
                 <a class="nav-link" href="login.php">Sign In</a>
             </li>
             <li>
-                <button class="btn btn-primary text-dark nowrap">
+                <button class="btn btn-primary text-dark nowrap" style="margin-top: 6px; padding: 1px 12px">
                     <a class="text-dark" href="register.php">Join Us</a>
                 </button>
             </li>

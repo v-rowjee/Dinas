@@ -130,18 +130,10 @@ video {
 #reservation input::-webkit-inner-spin-button {
   opacity: 0.2;
 }
-
-/* #reservation .ot-button {
-  display: none;
-} */
-/* @media (max-width: 902px) {
-  #reservation .ot-wide {
-    display: none;
-  }
-  #reservation .ot-button {
-    display: initial;
-  }
-} */
+#reservation{
+  overflow: hidden;
+  position: relative;
+}
 
 /* Contact */
 #contact {
@@ -178,32 +170,43 @@ video {
 }
 
 /* Interior */
-#interior img{
-  height: 50vh;
+/* Interior */
+#interior .container {
   width: 100%;
-  object-fit: cover;
-  margin-top: -5vh;
-  filter: grayscale(0.9);
+  display: flex;
+  padding: 10px;
+  user-select: none;
 }
-/* #interior img:hover{
-  filter: grayscale(0);
-  transition: 500ms ease-in-out;
-  transform: scale(1.03);
-} */
-#interior img.active{
-  filter: grayscale(0);
-  transition: 500ms ease;
-  transform: scale(1.03);
-}
-
-#interior img:nth-of-type(even) {
-  clip-path: polygon(0 25%, 90% 0, 90% 100%, 0 75%);
-}
-#interior img:nth-of-type(odd) {
-  clip-path: polygon(10% 0, 100% 25%, 100% 75%, 10% 100%);
-}
-
-#reservation{
-  overflow: hidden;
+#interior .slide {
+  height: 80vh;
+  border-radius: 25px;
+  margin: 10px;
+  cursor: pointer;
+  color: white;
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   position: relative;
+  transition: all 500ms ease-in-out;
+  overflow: hidden;
+}
+
+#interior .slide h3 {
+  position: absolute;
+  font-size: 10vh;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+
+#interior .active {
+  box-shadow: 0 5px 10px #111;
+  flex: 10;
+}
+
+#interior .active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
 }

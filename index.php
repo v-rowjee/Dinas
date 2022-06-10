@@ -291,7 +291,7 @@ include 'includes/menu-item.php';
 </section>
 
 <!-- Photo divider -->
-<section id="interior">
+<!-- <section id="interior">
   <div class="container">
     <div class="row text-end">
       <h1>The Interior</h1>
@@ -301,6 +301,35 @@ include 'includes/menu-item.php';
     <img src="images/interior-outdoor.jpg" class="img-fluid" alt="">
     <img src="images/interior-vip.jpg" class="img-fluid" alt="">
   </div>
+</section> -->
+
+<section id="interior">
+    <div class="container">
+            <div
+                class="slide"
+                style="background-image: url(images/interior.jpg)"
+            >
+                <h3>Interior</h3>
+            </div>
+            <div
+                class="slide"
+                style="background-image: url(images/interior-bar.jpg)"
+            >
+                <h3>Bar</h3>
+            </div>
+            <div
+                class="slide active"
+                style="background-image: url(images/interior-outdoor.jpg)"
+            >
+                <h3>Outdoor</h3>
+            </div>
+            <div
+                class="slide"
+                style="background-image: url(images/interior-vip.jpg)"
+            >
+                <h3>VIP</h3>
+            </div>
+    </div>
 </section>
 
 <!-- About Us -->
