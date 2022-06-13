@@ -36,30 +36,12 @@
         if(isset($_SESSION['id'])){ // if user is logged in
         ?>
 
-    <!-- DROPDOWN -->
-
-        <!-- <li class="nav-item mt-1 me-3" title="Cart">          
-            <a href="cart.php"> <i class="fa-solid fa-bag-shopping"></i> </a>         
-        </li>
-
-        <li class="nav-item">          
-            <div class="btn-group">
-              <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="fa-solid fa-user px-1"></i>
-              </button>
-              <ul class="dropdown-menu dropdown-menu-dark">
-                <li><a class="dropdown-item" href="profile.php">Profile</a></li>
-                <?php if($_SESSION['is_admin'] == 'yes') echo   '<li><a class="dropdown-item" href="/dinasadmin/dashboard.php">Dashboard</a></li>' ?>
-                <li><a class="dropdown-item" href="includes/logout.php">Logout</a></li>
-              </ul>
-            </div>
-        </li> -->
-
-        <!-- ICONS -->
+            <!-- ICONS -->
             <!-- <li class="nav-item" title="Cart">          
                 <a href="cart.php"> <i class="fa-solid fa-bag-shopping px-1"></i> </a>         
             </li> -->
 
+            <!-- SOUNDCLOUD -->
             <li class="nav-item">          
                 <a><i id="playSC" class="fa-solid fa-play px-1"></i> </a>
             </li> 

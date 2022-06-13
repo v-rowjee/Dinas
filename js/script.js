@@ -71,12 +71,6 @@ AOS.init({
   });
 })();
 
-// Interior
-$("#interior").on("mouseover", "img", function () {
-  $("img.active").removeClass("active");
-  $(this).addClass("active");
-});
-
 // Confirm Form Resubmission
 if (window.history.replaceState) {
   window.history.replaceState(null, null, window.location.href);
@@ -86,11 +80,11 @@ if (window.history.replaceState) {
 $("a,img,button,video,input,select").addClass("magic-hover");
 options = {
   cursorOuter: "circle-basic",
-  hoverEffect: "pointer-blur",//pointer-overlay
+  hoverEffect: "pointer-blur", //pointer-overlay
   hoverItemMove: false,
   defaultCursor: false,
   outerWidth: 41, //50
-  outerHeight: 41,  //50
+  outerHeight: 41, //50
 };
 // magicMouse(options);
 
@@ -171,14 +165,14 @@ $(".card-tilt").tilt({
 // SOUNDCLOUD
 var widget = SC.Widget("soundcloud");
 
-$(document).ready(function(){
-    widget.pause();
-    $("#playSC").click(function() {
-      widget.setVolume(20);
-      $('#playSC').toggleClass("fa-play fa-pause");
-      $('#playSC').hasClass("fa-pause") ? widget.play() : widget.pause();
-    });
-})
+$(document).ready(function () {
+  widget.pause();
+  $("#playSC").click(function () {
+    widget.setVolume(20);
+    $("#playSC").toggleClass("fa-play fa-pause");
+    $("#playSC").hasClass("fa-pause") ? widget.play() : widget.pause();
+  });
+});
 
 // Preloader
 $(window).on("load", function () {
@@ -188,18 +182,19 @@ $(window).on("load", function () {
   $("#home").css("background-size", "100%");
 });
 
-let slides = document.querySelectorAll('.slide');
+let slides = document.querySelectorAll(".slide");
 
 for (let slide of slides) {
-  slide.addEventListener('click', () => {
+  slide.addEventListener("click", () => {
     clearActiveClasses();
 
-    slide.classList.add('active');
-  })
+    slide.classList.add("active");
+  });
 }
 
+// Interior
 function clearActiveClasses() {
   slides.forEach((slide) => {
-    slide.classList.remove('active');
-  })
+    slide.classList.remove("active");
+  });
 }

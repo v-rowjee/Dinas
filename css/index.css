@@ -208,5 +208,27 @@ video {
 
 #interior .active h3 {
   opacity: 1;
+  color: var(--text);
+  padding: 2rem;
+  background-image: radial-gradient(#000 ,transparent 80%);
   transition: opacity 0.3s ease-in 0.4s;
+}
+
+/* everything below md */
+@media (max-width: 768px) {
+  #interior .container{
+    display: block;
+  }
+  #interior .slide{
+    height: 30vh;
+    margin: 3rem;
+  }
+  #interior .slide h3{
+    opacity: 1;
+    font-size: 2rem;
+    color: var(--text);
+    padding: 2rem;
+    background-image: radial-gradient(#000 ,transparent 80%);
+    transition: opacity 0.3s ease-in 0.4s;
+  }
 }
