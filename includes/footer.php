@@ -29,7 +29,7 @@
             </div>
             <div class="col">
                 <h5 class="ps-3 opacity-100">Contact</h5>
-                <a href="index.php#contact" class="text-reset nav-link opacity-50">dinasrestaurant.test</br>@gmail.com</a>
+                <a href="#contact" class="text-reset nav-link opacity-50">dinasrestaurant.test</br>@gmail.com</a>
                 <a href="tel:+230407-9000" class="text-reset nav-link opacity-50">+230 407-9000</a>
             </div>
             <div class="col me-4">
@@ -56,6 +56,17 @@
         </div>
       </div>
     </div>
+    <br><hr>
+    <div class="container mt-4">
+        <div class="d-inline-block float-start">
+            <p><small>Copyright &copy; 2022 Dina's. All rights reserved.</small></p>
+        </div>
+        <div class="d-inline-block float-end me-4">
+            <a href="legal/privacy.html" target="_blank" class="text-reset small"><p>Privacy</p></a>
+        </div>
+        <div class="d-inline-block float-end me-4">
+            <a href="legal/terms.html" target="_blank" class="text-reset small"><p>Terms of Use</p></a>
+        </div>
     </div>
   </footer>
 

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy & Policy</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+
+<body style="margin: 0;">
+
+    <div id="adobe-dc-view"></div>
+    
+    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+    <script type="text/javascript">
+        document.addEventListener("adobe_dc_view_sdk.ready", function(){ 
+            var adobeDCView = new AdobeDC.View({clientId: "fb0013dacc914f32828a041a89f193d0", divId: "adobe-dc-view"});
+            adobeDCView.previewFile({
+                content:{location: {url: "PRIVACY&POLICY.pdf" }},
+                metaData:{fileName: "PRIVACY & POLICY"}
+            }, {});
+        });
+    </script>
+    
+</body>
+</html>
