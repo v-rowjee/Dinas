@@ -161,30 +161,6 @@ include 'includes/menu-item.php';
         include 'includes/reservation_cancel.php';
     
     ?>
-
-
-    <!-- OpenTable API -->
-    <!-- <div class="row justify-content-center">
-      <div
-        class="ot-wide"
-        style="filter: hue-rotate(240deg) invert(0.9) saturate(0.8)"
-      >
-        <script
-          type="text/javascript"
-          src="//www.opentable.com/widget/reservation/loader?rid=205668&type=standard&theme=wide&iframe=true&domain=com&lang=en-US&newtab=false&ot_source=Restaurant%20website"
-        ></script>
-      </div>
-
-      <div
-        class="mb-5 ot-button"
-        style="filter: hue-rotate(240deg) invert(0.9) saturate(0.8)"
-      >
-        <script
-          type="text/javascript"
-          src="//www.opentable.com/widget/reservation/loader?rid=205668&type=button&theme=wide&iframe=true&domain=com&lang=en-US&newtab=false&ot_source=Restaurant%20website"
-        ></script>
-      </div>
-    </div> -->
   </div>
 </section>
 
@@ -291,18 +267,6 @@ include 'includes/menu-item.php';
 </section>
 
 <!-- Photo divider -->
-<!-- <section id="interior">
-  <div class="container">
-    <div class="row text-end">
-      <h1>The Interior</h1>
-    </div>
-    <img src="images/interior.jpg" class="img-fluid active" alt="">
-    <img src="images/interior-bar.jpg" class="img-fluid" alt="">
-    <img src="images/interior-outdoor.jpg" class="img-fluid" alt="">
-    <img src="images/interior-vip.jpg" class="img-fluid" alt="">
-  </div>
-</section> -->
-
 <section id="interior">
     <div class="container">
             <div
