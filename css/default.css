@@ -341,7 +341,7 @@ footer {
 .form-select:focus {
   border-color: var(--primary-dark);
   outline: 0;
-  box-shadow: 0 0 0 0.25rem var(--primary-dark);
+  box-shadow: none;
 }
 select.decorated option:hover {
   box-shadow: 0 0 10px 100px var(--primary-dark) inset;
