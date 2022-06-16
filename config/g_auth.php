@@ -31,7 +31,7 @@ if (isset($_GET['code'])) {
         $password = password_hash('12345678',PASSWORD_DEFAULT);
         $name = $google_account_info->name;
         $email = $google_account_info->email;
-        $phone = "";
+        $phone = null;
         $is_admin = "no";
 
         // checking user already exists or not
@@ -81,7 +81,7 @@ if (isset($_GET['code'])) {
                     $_SESSION['email'] = $email;
                     $_SESSION['phone'] = $phone;
                     $_SESSION['is_admin'] = $is_admin;
-                    header('Location: index.php');
+                    header('Location: profile.php');
                     exit;
                 }
             }
