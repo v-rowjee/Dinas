@@ -81,8 +81,12 @@ a:hover {
 }
 
 /* Buttons */
-.btn:hover {
-  outline: 1.5px solid var(--primary-light);
+.btn-secondary:hover {
+  outline: 1.5px solid var(--bs-secondary);
+  outline-offset: 0.2rem;
+}
+.btn-danger:hover {
+  outline: 1.5px solid var(--bs-danger);
   outline-offset: 0.2rem;
 }
 
@@ -95,6 +99,8 @@ a:hover {
   color: var(--bg);
   background-color: var(--primary-light);
   border-color: var(--primary-light);
+  outline: 1.5px solid var(--primary-light);
+  outline-offset: 0.2rem;
   opacity: 0.9;
 }
 .btn-check:focus + .btn-primary,
@@ -251,6 +257,12 @@ footer {
   background-color: rgba(1, 1, 1, 0.3);
   padding: 3rem;
 }
+footer h5{
+  margin-bottom: 1rem;
+}
+footer .nav-link{
+  margin-bottom: 0.8rem;
+}
 
 /* NAVBAR */
 .nav-item {
@@ -259,6 +271,10 @@ footer {
 .nav-link {
   position: relative;
   white-space: nowrap;
+}
+nav .nav-link{
+  padding-bottom: 3px;
+  margin-bottom: 5px;
 }
 .nav-link:hover {
   opacity: 1;
@@ -407,23 +423,6 @@ select.decorated option:hover {
   backdrop-filter: blur(10px);
 }
 
-
-/* footer */
-.waves {
-  position: absolute;
-  width: 100%;
-  height: 15vh;
-  margin-bottom: -7px;
-  /*Fix for safari gap*/
-  min-height: 100px;
-  max-height: 150px;
-}
-.content {
-  position: relative;
-  height: 20vh;
-  text-align: center;
-  background-color: var(--bg);
-}
 /* Animation */
 .parallax>use {
   animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;

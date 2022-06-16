@@ -1,7 +1,7 @@
 <!-- Nav Bar -->
 <nav class="navbar navbar-expand-lg smart-scroll navbar-dark bg-grey fixed-top my-md-3 mx-md-5 rounded shadow">
     <div class="container">
-        <a class="navbar-brand" href="index.php">
+        <a class="navbar-brand" href="">
             <img src="images/logo.png" alt="" />
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"

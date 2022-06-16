@@ -21,19 +21,19 @@
       <div class="col-12 col-md-auto flex-grow-1 mt-5">
         <div class="row g-4 row-cols-auto justify-content-around align-bottom">
             <div class="col">
-                <h5 class="ps-3 opacity-100">Explore</h5>
+                <h5 class="opacity-100">Explore</h5>
                 <a href="menu.php" class="text-reset nav-link opacity-50">Menu</a>
                 <a href="reservation.php" class="text-reset nav-link opacity-50">Reservation</a>
                 <a href="order.php" class="text-reset nav-link opacity-50">Order Online</a>
                 <a href="about.php" class="text-reset nav-link opacity-50">About Us</a>
             </div>
             <div class="col">
-                <h5 class="ps-3 opacity-100">Contact</h5>
+                <h5 class="opacity-100">Contact</h5>
                 <a href="#contact" class="text-reset nav-link opacity-50">dinasrestaurant.test</br>@gmail.com</a>
                 <a href="tel:+230407-9000" class="text-reset nav-link opacity-50">+230 407-9000</a>
             </div>
             <div class="col me-4">
-                <h5 class="ps-3 opacity-100">Follow</h5>
+                <h5 class="opacity-100">Follow</h5>
                 <a href="https://www.instagram.com/dinarobinbeachcomber/" target="_blank"
                     class="text-reset nav-link opacity-50">Instagram</a>
                 <a href="https://www.facebook.com/DinarobinBeachcomber/" target="_blank"
@@ -44,7 +44,7 @@
                     target="_blank" class="text-reset nav-link opacity-50">TripAdvisor</a>
             </div>
             <div class="col">
-                <h5 class="ps-3 opacity-100">Visit</h5>
+                <h5 class="opacity-100">Visit</h5>
                 <a href="about.php#location" class="text-reset nav-link opacity-50">
                     <address>
                         Beachcomber,<br>
@@ -60,6 +60,9 @@
     <div class="container mt-4">
         <div class="d-inline-block float-start">
             <p><small>Copyright &copy; 2022 Dina's. All rights reserved.</small></p>
+        </div>
+        <div class="d-inline-block float-end me-4">
+            <a href="legal/eula.html" target="_blank" class="text-reset small"><p>EULA</p></a>
         </div>
         <div class="d-inline-block float-end me-4">
             <a href="legal/privacy.html" target="_blank" class="text-reset small"><p>Privacy</p></a>
