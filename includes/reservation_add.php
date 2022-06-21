@@ -138,7 +138,7 @@ if (isset($_POST['submit-reservation'])) {
                     </select>
                 </div>
                 <div class="col-12 col-lg-3">
-                    <label></label>
+                    <label class="opacity-0">.</label>
                     <input
                     type="submit"
                     name="submit-reservation"
