@@ -175,6 +175,12 @@ if(isset($_POST['delete'])){
                     <?php } ?>
                 </div>
 
+                <div class="card bg-grey shadow p-3 mt-5">
+                    <h2 class="ms-2">See You Soon!</h2>
+                    <div class="card-body">
+                        <a href="includes/logout.php" class="nowrap btn btn-primary mt-3">Sign Out</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

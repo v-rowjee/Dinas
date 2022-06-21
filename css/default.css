@@ -81,14 +81,14 @@ a:hover {
 }
 
 /* Buttons */
-.btn-secondary:hover {
+/* .btn-secondary:hover {
   outline: 1.5px solid var(--bs-secondary);
   outline-offset: 0.2rem;
 }
 .btn-danger:hover {
   outline: 1.5px solid var(--bs-danger);
   outline-offset: 0.2rem;
-}
+} */
 
 .btn-primary {
   color: var(--bg);
@@ -99,8 +99,6 @@ a:hover {
   color: var(--bg);
   background-color: var(--primary-light);
   border-color: var(--primary-light);
-  outline: 1.5px solid var(--primary-light);
-  outline-offset: 0.2rem;
   opacity: 0.9;
 }
 .btn-check:focus + .btn-primary,

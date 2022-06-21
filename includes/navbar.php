@@ -1,7 +1,7 @@
 <!-- Nav Bar -->
 <nav class="navbar navbar-expand-lg smart-scroll navbar-dark bg-grey fixed-top my-md-3 mx-md-5 rounded shadow">
     <div class="container">
-        <a class="navbar-brand" href="">
+        <a class="navbar-brand" href="/dinas/">
             <img src="images/logo.png" alt="" />
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -18,8 +18,9 @@
                         href="<?php if($active!='home') echo 'index.php' ?>#reservation">Reservation</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?php if($active == "order")echo "active"?>" href="<?php if($active!='home') echo 'index.php' ?>#order">Online
-                        Order</a>
+                    <a class="nav-link <?php if($active == "order")echo "active"?>" href="<?php if($active!='home') echo 'index.php' ?>#order">
+                        Online Order
+                    </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link <?php if($active == "contact")echo "active"?>" href="<?php if($active!='home') echo 'index.php' ?>#contact"

@@ -198,3 +198,42 @@ function clearActiveClasses() {
     slide.classList.remove("active");
   });
 }
+
+
+// GOOGLE one tap sign in
+// callback function that will be called when the user is successfully logged-in with Google
+function googleLoginEndpoint(googleUser) {
+  // get user information from Google
+  console.log(googleUser);
+
+  // send an AJAX request to register the user in your website
+  var ajax = new XMLHttpRequest();
+
+  // path of server file
+  ajax.open("POST", "config/g_one_tap.php", true);
+
+  // callback when the status of AJAX is changed
+  ajax.onreadystatechange = function () {
+
+      // when the request is completed
+      if (this.readyState == 4) {
+
+          // when the response is okay
+          if (this.status == 200) {
+            window.location.reload();
+            console.log(this.responseText);
+          }
+
+          // if there is any server error
+          if (this.status == 500) {
+            console.log(this.responseText);
+          }
+      }
+  };
+  
+
+  // send google credentials in the AJAX request
+  var formData = new FormData();
+  formData.append("id_token", googleUser.credential);
+  ajax.send(formData);
+}

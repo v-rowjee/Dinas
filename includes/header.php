@@ -1,6 +1,22 @@
 <?php
 session_start();
-?>
+// paste google client ID and client secret keys
+$google_oauth_client_id = "66337706486-4iapsrv46e3uo9mpslthqgeh0ukst225.apps.googleusercontent.com";
+$google_oauth_client_secret = "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";
+
+if (!isset($_SESSION['id'])): ?>
+ 
+ <!-- display the login prompt -->
+ <script src="https://accounts.google.com/gsi/client" async defer></script>
+ <div id="g_id_onload"
+     data-client_id="<?php echo $google_oauth_client_id; ?>"
+     data-context="signin"
+     data-callback="googleLoginEndpoint"
+     data-close_on_tap_outside="false">
+ </div>
+  
+<?php endif; ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
