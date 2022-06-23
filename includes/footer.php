@@ -75,9 +75,6 @@
 
 
 
-  <!-- JQuery -->
-  <script src="js/jquery-3.6.0.min.js"></script>
-
   <!-- Bootstrap -->
   <script src="bootstrap/bootstrap.bundle.min.js" type="text/javascript"></script>
 

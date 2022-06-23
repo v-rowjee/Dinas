@@ -1,21 +1,8 @@
 <?php
 session_start();
-// paste google client ID and client secret keys
 $google_oauth_client_id = "66337706486-4iapsrv46e3uo9mpslthqgeh0ukst225.apps.googleusercontent.com";
 $google_oauth_client_secret = "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";
-
-if (!isset($_SESSION['id'])): ?>
- 
- <!-- display the login prompt -->
- <script src="https://accounts.google.com/gsi/client" async defer></script>
- <div id="g_id_onload"
-     data-client_id="<?php echo $google_oauth_client_id; ?>"
-     data-context="signin"
-     data-callback="googleLoginEndpoint"
-     data-close_on_tap_outside="false">
- </div>
-  
-<?php endif; ?>
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,10 +12,10 @@ if (!isset($_SESSION['id'])): ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dina's <?php if(isset($active)) echo ucfirst($active) ?></title>
 
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
     <!-- JQueries -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/dinas/js/jquery-3.6.0.min.js"></script>
     
     <!-- Bootstrap -->
     <link rel="stylesheet" href="bootstrap/bootstrap.min.css" />
@@ -79,7 +66,20 @@ if (!isset($_SESSION['id'])): ?>
       $_SESSION['rid'] = $res['id'];
     else
       unset($_SESSION['rid']);
-  }
+  
+  }else{ ?>
+    <!-- display the login prompt -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <div id="g_id_onload"
+        data-client_id="<?php echo $google_oauth_client_id; ?>"
+        data-context="signin"
+        data-callback="googleLoginEndpoint"
+        data-close_on_tap_outside="false"
+        data-prompt_parent_id="g_id_onload"
+        style="position: absolute; top: calc(60px + 2rem); right: calc(400px + 2rem);
+            width: 0; height: 0; z-index: 1001;">
+    </div>
+  <?php }
     
 
 include 'navbar.php';
