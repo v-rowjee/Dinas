@@ -12,7 +12,7 @@ $google_oauth_client_secret = "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";
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dina's <?php if(isset($active)) echo ucfirst($active) ?></title>
 
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/dinas/favicon.ico">
 
     <!-- JQueries -->
     <script src="/dinas/js/jquery-3.6.0.min.js"></script>
