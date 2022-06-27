@@ -74,10 +74,7 @@ $google_oauth_client_secret = "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";
         data-client_id="<?php echo $google_oauth_client_id; ?>"
         data-context="signin"
         data-callback="googleLoginEndpoint"
-        data-close_on_tap_outside="false"
-        data-prompt_parent_id="g_id_onload"
-        style="position: absolute; top: calc(60px + 2rem); right: calc(400px + 2rem);
-            width: 0; height: 0; z-index: 1001;">
+        data-close_on_tap_outside="false">
     </div>
   <?php }
     
