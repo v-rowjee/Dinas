@@ -1,5 +1,5 @@
 <?php
-require 'google/vendor/autoload.php';
+require 'vendor/autoload.php';
 include 'config/db_connect.php';
 
 $clientID = '66337706486-a7dh1uhviacp9ujqumtcjm9eq25aaagf.apps.googleusercontent.com';
