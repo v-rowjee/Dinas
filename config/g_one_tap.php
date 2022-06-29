@@ -3,7 +3,7 @@
     session_start();
  
     // include google API client
-    require "../google/vendor/autoload.php";
+    require "../vendor/autoload.php";
     include "db_connect.php";
      
     // set google client ID

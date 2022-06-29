@@ -2,3 +2,6 @@
 google/
 # idea
 .idea/
+
+#vendor
+vendor/
