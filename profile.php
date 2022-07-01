@@ -120,7 +120,7 @@ $phone = $_SESSION['phone'];
 <script>
     $('#cancel').click((e)=>{
         e.preventDefault()
-        window.location.href = "/"
+        window.location.href = "/dinas/"
     })
     $('#save').click((e)=>{
         e.preventDefault()
