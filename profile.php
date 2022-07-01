@@ -11,14 +11,6 @@ if(isset($_SESSION['rid'])){
     $query->execute([$_SESSION['rid']]);
     $res = $query->fetch(PDO::FETCH_ASSOC);
 }
-$msg='';
-
-$username = $_SESSION['username'];
-$password_old = '';
-$password_new = '';
-$name = $_SESSION['name'];
-$email = $_SESSION['email'];
-$phone = $_SESSION['phone'];
 
 if(isset($_POST['delete'])){
     $sql_d = "DELETE FROM users WHERE id = ?";
@@ -26,75 +18,14 @@ if(isset($_POST['delete'])){
     $query_d->execute([$_SESSION['id']]);
 
     header('location: includes/logout.php');
-
-}else if(isset($_POST['cancel'])){
-    header('location: login.php');
-
-}else if(isset($_POST['save'])){
-
-    $msg = '';
-    
-    $username = strtolower($_POST['username']);
-    $password_old = $_POST['password_old'];
-    $password_new = $_POST['password_new'];
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
-
-    if($username == '') $msg="Username required";
-    if($name == '') $msg="Name required";
-    if($email == '') $msg="Email required";
-    if($phone == '') $msg="Phone required";
-
-    if(!empty($_POST['password_new']) && empty($_POST['password_old'])) 
-        $msg="Leave password fields blank or enter old password";
-    if(empty($_POST['password_new']) && !empty($_POST['password_old'])) 
-        $msg="Leave password fields blank or enter new password";
-
-    else if(!empty($_POST['password_old']) && !empty($_POST['password_new'])){
-
-        $sql_p = "SELECT password FROM users WHERE id =?";
-        $query_p = $conn->prepare($sql_p);
-        $query_p->execute([$_SESSION['id']]);
-        $password_actual = $query_p->fetchColumn();
-        
-        if (!password_verify($password_old,$password_actual)) // if password incorrect
-            $msg="Old password wrong";
-
-    }
-
-    if($msg == ''){
-        if(empty($_POST['password_new']) && empty($_POST['password_old'])){
-            $sql_u = "UPDATE users SET username = :username, name = :name, phone = :phone, email = :email WHERE id = :id";
-            $query_u = $conn->prepare($sql_u);
-            $query_u->execute([
-                ':username' => $username,
-                ':name' => $name,
-                ':email' => $email,
-                ':phone' => $phone,
-                ':id' => $_SESSION['id']
-            ]);
-        }else if(password_verify($password_old,$password_actual)){
-
-            $hashed_password = password_hash($password_new,PASSWORD_DEFAULT);
-            $sql_u = "UPDATE users SET username = :username, name = :name, phone = :phone, email = :email, password = :password WHERE id = :id";
-            $query_u = $conn->prepare($sql_u);
-            $query_u->execute([
-                ':username' => $username,
-                ':name' => $name,
-                ':email' => $email,
-                ':phone' => $phone,
-                ':password' => $hashed_password,
-                ':id' => $_SESSION['id']
-            ]);
-        }else {
-            $msg = "Some error occured";
-        }
-
-        header('location: includes/logout.php');
-    }
-    
 }
+
+$username = $_SESSION['username'];
+$password_old = '';
+$password_new = '';
+$name = $_SESSION['name'];
+$email = $_SESSION['email'];
+$phone = $_SESSION['phone'];
 
 ?>
 
@@ -106,7 +37,7 @@ if(isset($_POST['delete'])){
                 <div class="card bg-grey shadow p-3" data-aos="fade-right">
                     <h2 class="ps-3">User Details</h2>
                     <div class="card-body">
-                        <form action="" method="post">
+                        <form action="" method="post" id="form-profile">
                             <div class="row">
                                 <div class="col-12 col-lg-6">
                                     <label class="form-label">Username</label>
@@ -130,8 +61,8 @@ if(isset($_POST['delete'])){
                             <hr>
                             <div class="row">
                                 <div class="col-12 col-lg-6">
-                                    <label class="form-label">Old Password</label>
-                                    <input type="password" class="form-control mb-3" maxlength="16" name="password_old" value="<?php echo $password_old ?>">
+                                    <label class="form-label">Password</label>
+                                    <input type="password" class="form-control mb-3" maxlength="16" name="password_old" value="<?php echo $password_old ?>" required>
                                 </div>
                                 <div class="col-12 col-lg-6">
                                     <label class="form-label">New Password</label>
@@ -139,16 +70,16 @@ if(isset($_POST['delete'])){
                                 </div>
                             </div>
                             <hr>
-                            <p class="msg text-center"><?php echo $msg ?></p>
+                            <p class="msg text-center" id="msg"></p>
                             <div class="row mt-4">
                                 <div class="col-4">
                                     <button type="submit" name="delete" class="btn btn-danger w-100">Delete</button>
                                 </div>
                                 <div class="col-4">
-                                    <button type="submit" name="cancel" class="btn btn-secondary w-100">Cancel</button>
+                                    <button id="cancel" class="btn btn-secondary w-100">Cancel</button>
                                 </div>
                                 <div class="col-4">
-                                    <button type="submit" name="save" class="btn btn-primary w-100">Save</button>
+                                    <button id="save" class="btn btn-primary w-100">Save</button>
                                 </div>
                             </div>
                         </form>
@@ -175,7 +106,7 @@ if(isset($_POST['delete'])){
                     <?php } ?>
                 </div>
 
-                <div class="card bg-grey shadow p-3 mt-5">
+                <div class="card bg-grey shadow p-3 mt-5" data-aos="fade-left">
                     <h2 class="ms-2">See You Soon!</h2>
                     <div class="card-body">
                         <a href="includes/logout.php" class="nowrap btn btn-primary mt-3">Sign Out</a>
@@ -185,6 +116,35 @@ if(isset($_POST['delete'])){
         </div>
     </div>
 </main>
+
+<script>
+    $('#cancel').click((e)=>{
+        e.preventDefault()
+        window.location.href = "/"
+    })
+    $('#save').click((e)=>{
+        e.preventDefault()
+        var p_old = $('#form-profile input[name="password_old"]').val().trim()
+        var p_new = $('#form-profile input[name="password_new"]').val().trim()
+
+        if(p_old === ''){
+            $('#msg').html('Enter your password to continue')
+        }
+        else if(!p_old === '' && p_new === ''){
+            $('#msg').html('New password should be filled')
+        }
+        else{
+            $.ajax({
+                url: "ajax/profile-update.php",
+                method: "POST",
+                data: $('#form-profile').serialize(),
+                success: (data)=>{
+                    $('#msg').html(data)
+                }
+            })
+        }
+    })
+</script>
 
 <?php 
 include 'includes/footer.php';
