@@ -38,6 +38,7 @@
         $query->execute([$user_google_id]);
         $user = $query->fetch(PDO::FETCH_ASSOC);
 
+        // user exist so sign in
         if($query->rowCount() > 0){
             $_SESSION['id'] = $user['id'];
             $_SESSION['username'] = $user['username'];
@@ -49,7 +50,9 @@
             header('Location: /dinas/');
             exit;
         }
+        // user do not exist so create new account
         else{
+            // check if username already exist
             $sql2 = "SELECT * FROM users WHERE username = ?";
             $query2 = $conn->prepare($sql2);
             $query2->execute([$username]);
@@ -90,6 +93,6 @@
     else
     {
         // token is not verified or expired
-        echo  "<script>alert('hi');</script>";
+        echo  "<script>alert('error with token');</script>";
     }
 ?>

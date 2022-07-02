@@ -52,7 +52,7 @@
               <h6 class="text-gold">When are we open?</h6>
               <h1 class="sm-h1">Opening Hours</h1>
             </div>
-            <div class="row text-center justify-content-around mx-5" data-aos="fade-up">
+            <div class="row text-center justify-content-around mx-5">
               <!-- <table class="table table-dark table-borderless table-hover rounded-5">
                 <tr>
                   <td>Monday - Saturday</td>
@@ -235,7 +235,7 @@
             <h1 class="sm-h1">Know more about us!</h1>
           </div>
         </div>
-        <div class="row justify-content-around nowrap text-center gy-3" style="overflow-y: hidden" data-aos="fade-up">
+        <div class="row justify-content-around nowrap text-center gy-3">
           
           <div class="col-12 col-md-6 col-lg-2">
             <i class="fa fa-phone d-block"></i>

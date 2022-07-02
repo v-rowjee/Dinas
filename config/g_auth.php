@@ -25,7 +25,7 @@ if (isset($_GET['code'])) {
         $google_oauth = new Google_Service_Oauth2($client);
         $google_account_info = $google_oauth->userinfo->get();
     
-        // Storing data into database
+        // initialising variables using data received
         $google_id = $google_account_info->id;
         $username = strtolower(str_replace(' ', '', $google_account_info->name));
         $password = password_hash('12345678',PASSWORD_DEFAULT);
@@ -40,6 +40,7 @@ if (isset($_GET['code'])) {
         $query2->execute([$google_id]);
         $user = $query2->fetch(PDO::FETCH_ASSOC);
 
+        // if user exist sign him in
         if($query2->rowCount() > 0){
             $_SESSION['id'] = $user['id'];
             $_SESSION['username'] = $user['username'];
@@ -51,40 +52,43 @@ if (isset($_GET['code'])) {
             header('Location: index.php');
             exit;
         }
+        // if user does not exist create new account
         else{
+            // check if username already exist
             $sql2 = "SELECT * FROM users WHERE username = ?";
             $query2 = $conn->prepare($sql2);
             $query2->execute([$username]);
+            // if username exist we concatenate the username with his unique id
             if($query2->rowCount() > 0){
-                header('Location: login.php');
-                exit;
-            }else{
-                // if user not exists we will insert the user
-                $sql = "INSERT INTO users(username,password,name,email,phone,is_admin,google_id) VALUES(:username,:password,:name,:email,:phone,:is_admin,:google_id)";
-                $query = $conn->prepare($sql);
-                $query->execute([
-                    ':username' => $username,
-                    ':password' => $password,
-                    ':name' => $name,
-                    ':email' => $email,
-                    ':phone' => $phone,
-                    ':is_admin' => $is_admin,
-                    ':google_id' => $google_id
-                ]);
-
-                $id = $conn->lastInsertId();
-
-                if($query->rowCount() > 0){
-                    $_SESSION['id'] = $id;
-                    $_SESSION['username'] = $username;
-                    $_SESSION['name'] = $name;
-                    $_SESSION['email'] = $email;
-                    $_SESSION['phone'] = $phone;
-                    $_SESSION['is_admin'] = $is_admin;
-                    header('Location: profile.php');
-                    exit;
-                }
+                $username = $username . $user['id'];
             }
+            // we insert the user in db
+            $sql = "INSERT INTO users(username,password,name,email,phone,is_admin,google_id) VALUES(:username,:password,:name,:email,:phone,:is_admin,:google_id)";
+            $query = $conn->prepare($sql);
+            $query->execute([
+                ':username' => $username,
+                ':password' => $password,
+                ':name' => $name,
+                ':email' => $email,
+                ':phone' => $phone,
+                ':is_admin' => $is_admin,
+                ':google_id' => $google_id
+            ]);
+
+            $id = $conn->lastInsertId();
+
+            // initialise session variables
+            if($query->rowCount() > 0){
+                $_SESSION['id'] = $id;
+                $_SESSION['username'] = $username;
+                $_SESSION['name'] = $name;
+                $_SESSION['email'] = $email;
+                $_SESSION['phone'] = $phone;
+                $_SESSION['is_admin'] = $is_admin;
+                header('Location: profile.php');
+                exit;
+            }
+            
         }
 
     }

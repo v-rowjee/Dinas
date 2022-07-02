@@ -33,6 +33,7 @@ if(isset($_POST['username'])){
             }
         }
 
+        // check if user in changing password too, if new password empty = No
         if(empty($_POST['password_new'])){
             $sql_u = "UPDATE users SET username = :username, name = :name, phone = :phone, email = :email WHERE id = :id";
             $query_u = $conn->prepare($sql_u);
@@ -65,8 +66,8 @@ if(isset($_POST['username'])){
         $msg = "Incorrect Password";
     }
 
+    // if there is no error we change the session variable
     if($msg == ''){
-        // header('location: includes/logout.php');
         $sql_s = "SELECT * FROM users WHERE id = ?";
         $query_s = $conn->prepare($sql_s);
         $query_s->execute([$_SESSION['id']]);
