@@ -54,35 +54,34 @@
             $query2 = $conn->prepare($sql2);
             $query2->execute([$username]);
             if($query2->rowCount() > 0){
-                header('Location: /dinas/login.php');
-                exit;
-            }else{
-                // if user not exists we will insert the user
-                $sql = "INSERT INTO users(username,password,name,email,phone,is_admin,google_id) VALUES(:username,:password,:name,:email,:phone,:is_admin,:google_id)";
-                $query = $conn->prepare($sql);
-                $query->execute([
-                    ':username' => $username,
-                    ':password' => $password,
-                    ':name' => $name,
-                    ':email' => $email,
-                    ':phone' => $phone,
-                    ':is_admin' => $is_admin,
-                    ':google_id' => $user_google_id
-                ]);
-
-                $id = $conn->lastInsertId();
-
-                if($query->rowCount() > 0){
-                    $_SESSION['id'] = $id;
-                    $_SESSION['username'] = $username;
-                    $_SESSION['name'] = $name;
-                    $_SESSION['email'] = $email;
-                    $_SESSION['phone'] = $phone;
-                    $_SESSION['is_admin'] = $is_admin;
-                    header('Location: /dinas/profile.php');
-                    exit;
-                }
+                $username = $username . $user['id'];
             }
+            // if user not exists we will insert the user
+            $sql = "INSERT INTO users(username,password,name,email,phone,is_admin,google_id) VALUES(:username,:password,:name,:email,:phone,:is_admin,:google_id)";
+            $query = $conn->prepare($sql);
+            $query->execute([
+                ':username' => $username,
+                ':password' => $password,
+                ':name' => $name,
+                ':email' => $email,
+                ':phone' => $phone,
+                ':is_admin' => $is_admin,
+                ':google_id' => $user_google_id
+            ]);
+
+            $id = $conn->lastInsertId();
+
+            if($query->rowCount() > 0){
+                $_SESSION['id'] = $id;
+                $_SESSION['username'] = $username;
+                $_SESSION['name'] = $name;
+                $_SESSION['email'] = $email;
+                $_SESSION['phone'] = $phone;
+                $_SESSION['is_admin'] = $is_admin;
+                header('Location: /dinas/profile.php');
+                exit;
+            }
+            
         }
  
         // send the response back to client side

@@ -87,9 +87,9 @@ $phone = $_SESSION['phone'];
                 </div>
             </div>
             <!-- LHS -->
-            <div class="col-12 col-lg-4">
+            <div class="col-12 col-lg-4" data-aos="fade-left">
                 <!-- RESERVATION -->
-                <div class="card bg-grey shadow p-3" data-aos="fade-left">
+                <div class="card bg-grey shadow p-3">
                     <h2 class="ms-2">Current Reservation</h2>
                     <?php if(isset($_SESSION['rid'])){ ?>
                         <div class="card-body">
@@ -106,7 +106,7 @@ $phone = $_SESSION['phone'];
                     <?php } ?>
                 </div>
 
-                <div class="card bg-grey shadow p-3 mt-5" data-aos="fade-left">
+                <div class="card bg-grey shadow p-3 mt-5">
                     <h2 class="ms-2">See You Soon!</h2>
                     <div class="card-body">
                         <a href="includes/logout.php" class="nowrap btn btn-primary mt-3">Sign Out</a>

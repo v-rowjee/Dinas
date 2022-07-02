@@ -13,15 +13,40 @@ if(isset($_POST['username'])){
     $email = $_POST['email'];
     $phone = $_POST['phone'];
 
-    if(!empty($_POST['password_new'])){
+    $sql_p = "SELECT password FROM users WHERE id =?";
+    $query_p = $conn->prepare($sql_p);
+    $query_p->execute([$_SESSION['id']]);
+    $password_db = $query_p->fetchColumn();
 
-        $sql_p = "SELECT password FROM users WHERE id =?";
-        $query_p = $conn->prepare($sql_p);
-        $query_p->execute([$_SESSION['id']]);
-        $password_actual = $query_p->fetchColumn();
-        
-        if(password_verify($password_old,$password_actual)){
-            $hashed_password = password_hash($password_new,PASSWORD_DEFAULT);
+    // verify if password entered correctly
+    if(password_verify($password_old,$password_db)){
+
+        if($username != $_SESSION['username']){ // username changed
+            $sql_v = "SELECT * FROM users WHERE username = ?";
+            $query_v = $conn->prepare($sql_v);
+            $query_v->execute([$username]);
+            $rowCount = $query_v->rowCount();
+            if($rowCount > 0){  //username already taken
+                $msg = "Username taken";
+                echo $msg;
+                exit;
+            }
+        }
+
+        if(empty($_POST['password_new'])){
+            $sql_u = "UPDATE users SET username = :username, name = :name, phone = :phone, email = :email WHERE id = :id";
+            $query_u = $conn->prepare($sql_u);
+            $query_u->execute([
+                ':username' => $username,
+                ':name' => $name,
+                ':email' => $email,
+                ':phone' => $phone,
+                ':id' => $_SESSION['id']
+            ]);
+            $msg = "";
+        }
+        else{
+            $password_new_hashed = password_hash($password_new,PASSWORD_DEFAULT);
             $sql_u = "UPDATE users SET username = :username, name = :name, phone = :phone, email = :email, password = :password WHERE id = :id";
             $query_u = $conn->prepare($sql_u);
             $query_u->execute([
@@ -29,28 +54,15 @@ if(isset($_POST['username'])){
                 ':name' => $name,
                 ':email' => $email,
                 ':phone' => $phone,
-                ':password' => $hashed_password,
+                ':password' => $password_new_hashed,
                 ':id' => $_SESSION['id']
             ]);
-        }
-        else{
-            $msg="Old password wrong";
+            $msg = "";
         }
 
     }
-    else if(empty($_POST['password_new'])){
-        $sql_u = "UPDATE users SET username = :username, name = :name, phone = :phone, email = :email WHERE id = :id";
-        $query_u = $conn->prepare($sql_u);
-        $query_u->execute([
-            ':username' => $username,
-            ':name' => $name,
-            ':email' => $email,
-            ':phone' => $phone,
-            ':id' => $_SESSION['id']
-        ]);
-    }
     else{
-        $msg = "An error occured";
+        $msg = "Incorrect Password";
     }
 
     if($msg == ''){
