@@ -1,0 +1,18 @@
+User-agent: *
+Disallow: /
+
+User-agent: Googlebot
+Allow: /
+Disallow: /*/
+
+User-agent: Googlebot-Image
+Allow: /images/
+Disallow: /
+
+User-agent: Slurp
+Allow: /
+Disallow: /*/
+
+User-Agent: msnbot
+Allow: /
+Disallow: /*/
