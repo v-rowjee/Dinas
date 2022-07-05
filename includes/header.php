@@ -10,6 +10,11 @@ $google_oauth_client_secret = "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";
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="Dina's">
+    <meta name="description" content="Treat yourself to a moment of bistronomic delight at Dina's! The
+          gourmet bistro's specials feature the “Trust Me” six-course
+          discovery menu designed and regularly updated by the chef.">
+    <meta name="robots" content="index nofollow" />
     <title>Dina's <?php if(isset($active)) echo ucfirst($active) ?></title>
 
     <link rel="icon" type="image/x-icon" href="/dinas/favicon.ico">
