@@ -100,6 +100,10 @@
   <!-- SoundCloud-->
   <script type="text/javascript" src="http://w.soundcloud.com/player/api.js"></script>
 
+  <!-- Snackbar -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/node-snackbar@latest/src/js/snackbar.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/node-snackbar@latest/dist/snackbar.min.css" />
+
   <!-- My script -->
   <script src="js/script.js" type="text/javascript"></script>
 

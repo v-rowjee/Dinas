@@ -93,6 +93,6 @@
     else
     {
         // token is not verified or expired
-        echo  "<script>alert('error with token');</script>";
+        echo  "<script>alert('Error with token');</script>";
     }
 ?>

@@ -141,11 +141,13 @@ $("#send_mail_form").submit(function (e) {
     url: "config/send_mail.php",
     data: form.serialize(), // serializes the form's elements.
     success: function (data) {
-      alert(data); // show response from the php script.
+      Snackbar.show({text: data}); // show response from the php script.
     },
     error: (xhr) => {
-        alert("Error Occured: "+xhr.status+" "+xhr.statusText)
-    }
+      Snackbar.show({
+        text: "Error Occured: " + xhr.status + " " + xhr.statusText,
+      });
+    },
   });
 });
 
@@ -202,7 +204,6 @@ function clearActiveClasses() {
   });
 }
 
-
 // GOOGLE one tap sign in
 // callback function that will be called when the user is successfully logged-in with Google
 function googleLoginEndpoint(googleUser) {
@@ -217,23 +218,20 @@ function googleLoginEndpoint(googleUser) {
 
   // callback when the status of AJAX is changed
   ajax.onreadystatechange = function () {
-
-      // when the request is completed
-      if (this.readyState == 4) {
-
-          // when the response is okay
-          if (this.status == 200) {
-            window.location.reload();
-            console.log(this.responseText);
-          }
-
-          // if there is any server error
-          if (this.status == 500) {
-            console.log(this.responseText);
-          }
+    // when the request is completed
+    if (this.readyState == 4) {
+      // when the response is okay
+      if (this.status == 200) {
+        window.location.reload();
+        console.log(this.responseText);
       }
+
+      // if there is any server error
+      if (this.status == 500) {
+        console.log(this.responseText);
+      }
+    }
   };
-  
 
   // send google credentials in the AJAX request
   var formData = new FormData();
