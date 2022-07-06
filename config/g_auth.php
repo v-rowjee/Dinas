@@ -7,7 +7,7 @@ $clientSecret = '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';
 $redirectUri = 'http://localhost/Dinas/login.php';
 
 //creating client request to google
-$client = new Google_Client();
+$client = new Google\Client();
 $client->setClientId($clientID);
 $client->setClientSecret($clientSecret);
 $client->setRedirectUri($redirectUri);
@@ -22,7 +22,7 @@ if (isset($_GET['code'])) {
         $client->setAccessToken($token['access_token']);
 
         // getting profile information
-        $google_oauth = new Google_Service_Oauth2($client);
+        $google_oauth = new Google\Service\Oauth2($client);
         $google_account_info = $google_oauth->userinfo->get();
     
         // initialising variables using data received

@@ -1,7 +1,7 @@
 <?php 
   $active = "menu"; 
   include 'includes/header.php';
-  include 'includes/menu-item.php';
+  include 'config/menu-item.php';
 ?>
     <section id="menu">
       <div class="container">

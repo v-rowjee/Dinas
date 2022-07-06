@@ -1,7 +1,7 @@
 <?php 
 $active = "home"; 
 include 'includes/header.php';
-include 'includes/menu-item.php';
+include 'config/menu-item.php';
 ?>
 
 <!-- Home Section -->
