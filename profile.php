@@ -138,8 +138,11 @@ $phone = $_SESSION['phone'];
                 url: "ajax/profile-update.php",
                 method: "POST",
                 data: $('#form-profile').serialize(),
-                success: (data)=>{
+                success: (data) => {
                     $('#msg').html(data)
+                },
+                error: (xhr) => {
+                    alert("Error Occured: "+xhr.status+" "+xhr.statusText)
                 }
             })
         }

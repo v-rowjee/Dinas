@@ -143,6 +143,9 @@ $("#send_mail_form").submit(function (e) {
     success: function (data) {
       alert(data); // show response from the php script.
     },
+    error: (xhr) => {
+        alert("Error Occured: "+xhr.status+" "+xhr.statusText)
+    }
   });
 });
 
