@@ -141,11 +141,12 @@ $("#send_mail_form").submit(function (e) {
     url: "config/send_mail.php",
     data: form.serialize(), // serializes the form's elements.
     success: function (data) {
-      Snackbar.show({text: data}); // show response from the php script.
+      Snackbar.show({text: data,actionTextColor:"#B4A064"}); // show response from the php script.
     },
     error: (xhr) => {
       Snackbar.show({
         text: "Error Occured: " + xhr.status + " " + xhr.statusText,
+        actionTextColor:"#B4A064"
       });
     },
   });
