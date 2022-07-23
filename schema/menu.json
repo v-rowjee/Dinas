@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://localhost/schema/menu.json",
+  "type": "object",
+  "properties": {
+	"name": {
+	  "type": "string",
+	  "minLength": 1,
+	  "maxlength": 50
+	},
+	"price": {
+	  "type": "integer",
+	  "minLength": 1,
+	  "maxlength": 4
+	},
+	"desc": {
+	  "type": "string",
+	  "minLength": 1,
+	  "maxlength": 200
+	},
+	"category": {
+	  "type": "string",
+	  "minLength": 1,
+	  "maxlength": 32
+	},
+	"img": {
+	  "type": "string",
+	  "minLength": 1,
+	  "maxlength": 50
+	}
+  },
+  "required": ["name", "price", "desc", "category", "img"],
+  "additionalProperties": false
+}

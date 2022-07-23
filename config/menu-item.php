@@ -1,5 +1,11 @@
 <?php
 
+use Opis\JsonSchema\{
+    Validator,
+    ValidationResult,
+    Errors\ErrorFormatter,
+};
+
 // function to get menu cards of a category
 function getMenu($category){
 
@@ -56,7 +62,37 @@ function getData(){
     $sql = "SELECT * FROM menu";
     $query = $conn->prepare($sql);
     $query->execute();
-    $data = $query->fetchAll(PDO::FETCH_ASSOC);
+    $array_result = $query->fetchAll(PDO::FETCH_ASSOC);
 
-    return json_encode($data);
+    $data = json_encode($array_result, JSON_NUMERIC_CHECK);
+
+    // JSONSchema($data);
+
+    return $data;
+}
+
+function JSONSchema($json){
+    // Create a new validator
+    $validator = new Validator();
+
+    // Register our schema
+    $validator->resolver()->registerFile(
+        'http://localhost/schema/menu.json', 
+        '/schema/menu.json'
+    );
+
+    $data = json_decode($json);
+
+    /** @var ValidationResult $result */
+    $result = $validator->validate($data, 'http://localhost/schema/menu.json');
+
+    if ($result->isValid()) {
+        // echo "Valid", PHP_EOL;
+        return $json;
+    } else {
+        // Print errors
+        print_r((new ErrorFormatter())->format($result->error()));
+        return $json;
+    }
+
 }
