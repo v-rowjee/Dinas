@@ -83,6 +83,7 @@
 
   <!-- AOS Animation -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- <script src="node_modules/aos-animations/dist/animations.min.js"></script> -->
 
   <!-- MagicMouseJs -->
   <script type="text/javascript" src="https://res.cloudinary.com/veseylab/raw/upload/v1636192990/magicmouse/magic_mouse-1.2.1.cdn.min.js"></script>
@@ -95,7 +96,8 @@
   <script src="js/show-hide-password.min.js"></script>
 
   <!-- Tilt.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script> -->
+  <script src="node_modules/tilt.js/dest/tilt.jquery.min.js"></script>
 
   <!-- SoundCloud-->
   <script type="text/javascript" src="http://w.soundcloud.com/player/api.js"></script>

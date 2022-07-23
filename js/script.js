@@ -1,3 +1,7 @@
+// NPM IMPORTS
+// import 'aos-animations/dist/animations.min.css';
+// import 'aos-animations/dist/animations.min.js';
+
 // AUTHENTICATION
 $(document).ready(function () {
   // toggle passwod visibility
