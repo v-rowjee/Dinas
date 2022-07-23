@@ -180,7 +180,7 @@ include 'config/menu-item.php';
           tempore deleniti fugit, delectus.
         </p>
         <a
-          href="order.php"
+          href="http://localhost:8000/"
           class="btn btn-outline-primary px-5"
           >View your order</a
         >

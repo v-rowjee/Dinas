@@ -37,7 +37,7 @@ $google_oauth_client_secret = "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";
 
 
     <!-- My Styles -->
-    <link rel="stylesheet" href="css/default.css" />
+    <link rel="stylesheet" href="css/default.min.css" />
     
     <?php 
       if($active == "home") echo'<link rel="stylesheet" href="css/index.css" />';

@@ -1,0 +1,10 @@
+{
+  "name": "jquery-tagcanvas",
+  "version": "2.9.0",
+  "description": "TagCanvas HTML5 canvas tag cloud",
+  "main": "jquery.tagcanvas.min.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/iCAPLyon1/TagCanvas.git"
+  }
+}
