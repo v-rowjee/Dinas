@@ -233,7 +233,7 @@ include 'config/menu-item.php';
           ></textarea>
           <div class="invalid-feedback">* Required</div>
 
-          <button type="submit" class="btn btn-outline-primary mt-5">
+          <button type="submit" class="btn btn-outline-primary mt-5 w-25">
             Send
           </button>
         </form>

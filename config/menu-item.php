@@ -66,12 +66,12 @@ function getData(){
 
     $data = json_encode($array_result, JSON_NUMERIC_CHECK);
 
-    // JSONSchema($data);
+    // $data = JSONSchemaValidator($data);
 
     return $data;
 }
 
-function JSONSchema($json){
+function JSONSchemaValidator($json){
     // Create a new validator
     $validator = new Validator();
 
@@ -95,4 +95,5 @@ function JSONSchema($json){
         return $json;
     }
 
+    return $json;
 }
