@@ -85,11 +85,11 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <!-- MagicMouseJs -->
-  <script type="text/javascript"
-      src="https://res.cloudinary.com/veseylab/raw/upload/v1636192990/magicmouse/magic_mouse-1.2.1.cdn.min.js"></script>
+  <script type="text/javascript" src="https://res.cloudinary.com/veseylab/raw/upload/v1636192990/magicmouse/magic_mouse-1.2.1.cdn.min.js"></script>
 
   <!-- TagCanvas -->
-  <script src="js/jquery.tagcanvas.min.js" type="text/javascript"></script>
+  <!-- <script src="js/jquery.tagcanvas.min.js" type="text/javascript"></script> -->
+  <script src="node_modules/jquery-tagcanvas/jquery.tagcanvas.min.js"></script>
 
   <!-- show-hide-password.js -->
   <script src="js/show-hide-password.min.js"></script>
