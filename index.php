@@ -17,7 +17,7 @@ include 'config/menu-item.php';
           discovery menu designed and regularly updated by the chef.
         </h5>
 
-        <a href="<?php if(isset($_SESSION['id'])) echo 'reservation.php'; else echo 'login.php' ?>" class="btn btn-outline-primary my-5"
+        <a href="<?php if(isset($_SESSION['id'])) echo 'reservation.php'; else echo 'login.php' ?>" class="btn btn-outline-primary my-5 px-5"
           ><?php if(!isset($_SESSION['rid'])) echo 'Reserve a table now'; else echo 'View your reservation'?></a>
       </div>
     </div>
