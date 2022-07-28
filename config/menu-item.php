@@ -77,14 +77,14 @@ function JSONSchemaValidator($json){
 
     // Register our schema
     $validator->resolver()->registerFile(
-        'http://localhost/schema/menu.json', 
+        'http://localhost/dinas/schema/menu.json', 
         '/schema/menu.json'
     );
 
     $data = json_decode($json);
 
     /** @var ValidationResult $result */
-    $result = $validator->validate($data, 'http://localhost/schema/menu.json');
+    $result = $validator->validate($data, 'http://localhost/dinas/schema/menu.json');
 
     if ($result->isValid()) {
         // echo "Valid", PHP_EOL;

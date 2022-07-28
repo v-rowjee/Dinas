@@ -90,7 +90,7 @@ options = {
   outerWidth: 41, //50
   outerHeight: 41, //50
 };
-// magicMouse(options);
+magicMouse(options);
 
 // TagCanvas
 $(document).ready(function () {
